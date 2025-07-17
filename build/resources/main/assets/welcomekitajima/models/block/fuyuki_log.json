@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "welcomekitajima:block/fuyuki_log_top",
+    "up": "welcomekitajima:block/fuyuki_log_top",
+    "north": "welcomekitajima:block/fuyuki_log_side",
+    "east": "welcomekitajima:block/fuyuki_log_side",
+    "south": "welcomekitajima:block/fuyuki_log_side",
+    "west": "welcomekitajima:block/fuyuki_log_side",
+    "particle": "welcomekitajima:block/fuyuki_log_top"
+  },
+  "render_type": "solid"
+}

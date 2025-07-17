@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_top_right_open",
+  "textures": {
+    "particle": "welcomekitajima:block/fuyuki_door_bottom",
+    "bottom": "welcomekitajima:block/fuyuki_door_bottom",
+    "top": "welcomekitajima:block/fuyuki_door_top"
+  },
+  "render_type": "cutout_mipped"
+}

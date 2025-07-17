@@ -1,0 +1,10 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "particle": "welcomekitajima:block/smooth_studiopolis_concrete",
+    "bottom": "welcomekitajima:block/smooth_studiopolis_concrete",
+    "top": "welcomekitajima:block/smooth_studiopolis_concrete",
+    "side": "welcomekitajima:block/smooth_studiopolis_concrete"
+  },
+  "render_type": "solid"
+}

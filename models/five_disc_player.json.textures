@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "disc_drive",
+        "1": "player_top",
+        "2": "player_front"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "record_studiopoliszone_act1": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:studiopolis_act1",
+        "stream": true
+      }
+    ]
+  },
+  "block_drive_spinning": {
+    "category": "block",
+    "subtitle": "subtitles.block_drive_spinning",
+    "sounds": [
+      {
+        "name": "welcomekitajima:cd_spinning",
+        "stream": false
+      }
+    ]
+  },
+  "record_kuyamutokaitemirai": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:kuyamu",
+        "stream": true
+      }
+    ]
+  },
+  "block_drive_eject": {
+    "category": "block",
+    "subtitle": "subtitles.block_drive_eject",
+    "sounds": [
+      {
+        "name": "welcomekitajima:eject_disc",
+        "stream": false
+      }
+    ]
+  },
+  "block_drive_close": {
+    "category": "block",
+    "subtitle": "subtitles.block_drive_close",
+    "sounds": [
+      {
+        "name": "welcomekitajima:tray_close",
+        "stream": false
+      }
+    ]
+  },
+  "record_hagu": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:hagu",
+        "stream": true
+      }
+    ]
+  },
+  "music_food_mart": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "welcomekitajima:food_mart",
+        "stream": false
+      }
+    ]
+  },
+  "music_interior_shop": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "welcomekitajima:interior_shop",
+        "stream": false
+      }
+    ]
+  },
+  "tf2_crit": {
+    "category": "player",
+    "subtitle": "subtitles.tf2_crit",
+    "sounds": [
+      {
+        "name": "welcomekitajima:tf2_crit",
+        "stream": false
+      }
+    ]
+  },
+  "record_turnpike": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:toad_turnpike",
+        "stream": true
+      }
+    ]
+  },
+  "record_smb2_overworld_smas": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:smb2_overworld",
+        "stream": true
+      }
+    ]
+  },
+  "record_smb3_overworld_smas": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:smb3_overworld_smas",
+        "stream": true
+      }
+    ]
+  },
+  "record_story": {
+    "category": "music",
+    "sounds": [
+      {
+        "name": "welcomekitajima:story",
+        "stream": true
+      }
+    ]
+  },
+  "record_specialzone": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:smw_special",
+        "stream": true
+      }
+    ]
+  },
+  "record_studiopoliscomplex_calm": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:studiopoliscomplex_calm",
+        "stream": true
+      }
+    ]
+  },
+  "record_smile_symphony": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:smile_symphony",
+        "stream": true
+      }
+    ]
+  },
+  "empty_sekai": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "welcomekitajima:school_refusal",
+        "stream": false
+      }
+    ]
+  }
+}

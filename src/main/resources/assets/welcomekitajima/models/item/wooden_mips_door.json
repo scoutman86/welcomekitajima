@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "welcomekitajima:item/wooden_mips_door_item_singlestar"
+  },
+  "render_type": "translucent"
+}

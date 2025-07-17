@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "welcomekitajima:block/studiopolis_tile_slab"
+    },
+    "type=top": {
+      "model": "welcomekitajima:block/studiopolis_tile_slab_top"
+    },
+    "type=double": {
+      "model": "welcomekitajima:block/studiopolis_tile_slab_full"
+    }
+  }
+}

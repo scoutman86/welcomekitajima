@@ -1,0 +1,156 @@
+{
+  "startedEpoch": 1752761359667,
+  "endedEpoch": 1752761368032,
+  "durationMs": 8364,
+  "heap": {
+    "allocationRateBytesPerSecond": 1.1504376685714285E8,
+    "gcCount": 2,
+    "gcOverHeadPercent": 0.06133429,
+    "gcTotalDurationMs": 513
+  },
+  "cpuPercent": {
+    "jvm": {
+      "min": 0.03671339526772499,
+      "average": 0.07972544750996999,
+      "max": 0.12484531104564667
+    },
+    "userJvm": {
+      "min": 0.4178701639175415,
+      "average": 0.4958605170249939,
+      "max": 0.605771005153656
+    },
+    "system": {
+      "min": 0.9684774875640869,
+      "average": 0.9954967839377267,
+      "max": 1.0
+    }
+  },
+  "network": {
+    "sent": {
+      "totalBytes": 0,
+      "count": 0,
+      "bytesPerSecond": 0.0,
+      "countPerSecond": 0.0,
+      "topContributors": []
+    },
+    "received": {
+      "totalBytes": 0,
+      "count": 0,
+      "bytesPerSecond": 0.0,
+      "countPerSecond": 0.0,
+      "topContributors": []
+    }
+  },
+  "fileIO": {
+    "write": {
+      "totalBytes": 10251240,
+      "count": 2579,
+      "bytesPerSecond": 1281405.0,
+      "countPerSecond": 322.375,
+      "topContributors": [
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.-1.0.mca",
+          "totalBytes": 2103816
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.0.-1.mca",
+          "totalBytes": 1879336
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.0.0.mca",
+          "totalBytes": 1864078
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.-1.-1.mca",
+          "totalBytes": 1666363
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\entities\\r.-1.0.mca",
+          "totalBytes": 1398920
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.-1.1.mca",
+          "totalBytes": 551190
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.-2.0.mca",
+          "totalBytes": 275571
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.0.1.mca",
+          "totalBytes": 189424
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\entities\\r.-1.-1.mca",
+          "totalBytes": 124355
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\run\\saves\\New World\\region\\r.-2.-1.mca",
+          "totalBytes": 94724
+        }
+      ]
+    },
+    "read": {
+      "totalBytes": 154564,
+      "count": 110,
+      "bytesPerSecond": 19320.5,
+      "countPerSecond": 13.75,
+      "topContributors": [
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\.gradle\\loom-cache\\minecraftMaven\\net\\minecraft\\minecraft-merged-63e60c6ac7\\1.20.1-loom.mappings.1_20_1.layered+hash.2198-v2\\minecraft-merged-63e60c6ac7-1.20.1-loom.mappings.1_20_1.layered+hash.2198-v2.jar",
+          "totalBytes": 52863
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\fabric-loom\\assets\\objects\\78\\783ddccf4681a0c50d3e651f4e6ac27a0f4ea76f",
+          "totalBytes": 40671
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\fabric-loom\\assets\\objects\\98\\98a918eb2694defd19726436d4b9dca9e7dd6a65",
+          "totalBytes": 24169
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\modules-2\\files-2.1\\commons-io\\commons-io\\2.11.0\\a2503f302b11ebde7ebc3df41daebe0e4eea3689\\commons-io-2.11.0.jar",
+          "totalBytes": 21785
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\modules-2\\files-2.1\\it.unimi.dsi\\fastutil\\8.5.9\\bb7ea75ecdb216654237830b3a96d87ad91f8cc5\\fastutil-8.5.9.jar",
+          "totalBytes": 8951
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\modules-2\\files-2.1\\io.netty\\netty-transport\\4.1.82.Final\\e431a218d91acb6476ccad5f5aafde50aa3945ca\\netty-transport-4.1.82.Final.jar",
+          "totalBytes": 2027
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\modules-2\\files-2.1\\org.apache.commons\\commons-lang3\\3.12.0\\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\\commons-lang3-3.12.0.jar",
+          "totalBytes": 1145
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\modules-2\\files-2.1\\com.google.code.gson\\gson\\2.10\\dd9b193aef96e973d5a11ab13cd17430c2e4306b\\gson-2.10.jar",
+          "totalBytes": 1036
+        },
+        {
+          "path": "C:\\Users\\coutman\\.mcreator\\gradle\\caches\\modules-2\\files-2.1\\org.lwjgl\\lwjgl-glfw\\3.3.2\\757920418805fb90bfebb3d46b1d9e7669fca2eb\\lwjgl-glfw-3.3.2.jar",
+          "totalBytes": 996
+        },
+        {
+          "path": "P:\\Kazooiopolis\\kz_extras\\welcomekitajima-fabric\\.gradle\\loom-cache\\remapped_mods\\loom_mappings_1_20_1_layered_hash_2198_v2\\net\\fabricmc\\fabric-api\\fabric-events-lifecycle-v0\\0.2.62+df3654b377\\fabric-events-lifecycle-v0-0.2.62+df3654b377.jar",
+          "totalBytes": 921
+        }
+      ]
+    }
+  },
+  "serverTick": {
+    "minMs": 60.08598,
+    "averageMs": 76.015632,
+    "maxMs": 128.544784,
+    "p99": 125.05839616,
+    "p90": 93.6809056,
+    "p75": 70.43832,
+    "p50": 70.43832
+  },
+  "threadAllocation": [],
+  "chunkGen": {
+    "durationNanosTotal": 0.0,
+    "status": []
+  }
+}

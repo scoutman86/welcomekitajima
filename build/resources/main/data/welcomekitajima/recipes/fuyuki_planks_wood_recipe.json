@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:fuyuki_wood"
+    }
+  ],
+  "result": {
+    "item": "welcomekitajima:fuyuki_planks",
+    "count": 4
+  }
+}

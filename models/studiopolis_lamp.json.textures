@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "studiopolis_lamp_glass",
+        "1": "studiopolis_lamp_bulb",
+        "2": "studiopolis_lamp_ring"
+      },
+      "name": "default"
+    }
+  }
+}

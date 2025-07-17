@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="Not specified"
+
+[[mods]]
+modId="welcomekitajima"
+version="1.0.0"
+displayName="Welcome to Kitajima Server Mod"
+displayURL="https://mcreator.net"
+credits="cock knocker"
+authors="coutman"
+description="penis"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.welcomekitajima]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.2]"
+    ordering="AFTER"
+    side="BOTH"
+
+
+
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

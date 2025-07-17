@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_bottom_left",
+  "textures": {
+    "particle": "welcomekitajima:block/mips_metal_door_bottom",
+    "bottom": "welcomekitajima:block/mips_metal_door_bottom",
+    "top": "welcomekitajima:block/mips_metal_door_top"
+  },
+  "render_type": "solid"
+}

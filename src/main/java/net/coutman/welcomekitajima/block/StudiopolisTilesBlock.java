@@ -1,6 +1,7 @@
 
 package net.coutman.welcomekitajima.block;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -29,7 +30,7 @@ public class StudiopolisTilesBlock extends Block {
 
 	public StudiopolisTilesBlock() {
 		super(PROPERTIES);
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
 
 	@Override

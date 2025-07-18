@@ -1,5 +1,5 @@
 {
-  "record_studiopoliszone_act1": {
+  "record.studiopoliszone.act1": {
     "category": "record",
     "sounds": [
       {
@@ -8,9 +8,9 @@
       }
     ]
   },
-  "block_drive_spinning": {
+  "block.drive.spinning": {
     "category": "block",
-    "subtitle": "subtitles.block_drive_spinning",
+    "subtitle": "subtitles.block.drive_spinning",
     "sounds": [
       {
         "name": "welcomekitajima:cd_spinning",
@@ -18,7 +18,16 @@
       }
     ]
   },
-  "record_kuyamutokaitemirai": {
+  "record.worldnostart": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:world_no_start",
+        "stream": true
+      }
+    ]
+  },
+  "record.kuyamutokaitemirai": {
     "category": "record",
     "sounds": [
       {
@@ -27,9 +36,9 @@
       }
     ]
   },
-  "block_drive_eject": {
+  "block.drive.eject": {
     "category": "block",
-    "subtitle": "subtitles.block_drive_eject",
+    "subtitle": "subtitles.block.drive_eject",
     "sounds": [
       {
         "name": "welcomekitajima:eject_disc",
@@ -37,9 +46,9 @@
       }
     ]
   },
-  "block_drive_close": {
+  "block.drive.close": {
     "category": "block",
-    "subtitle": "subtitles.block_drive_close",
+    "subtitle": "subtitles.block.drive_close",
     "sounds": [
       {
         "name": "welcomekitajima:tray_close",
@@ -47,7 +56,7 @@
       }
     ]
   },
-  "record_hagu": {
+  "record.hagu": {
     "category": "record",
     "sounds": [
       {
@@ -56,7 +65,7 @@
       }
     ]
   },
-  "music_food_mart": {
+  "music.food_mart": {
     "category": "neutral",
     "sounds": [
       {
@@ -65,7 +74,7 @@
       }
     ]
   },
-  "music_interior_shop": {
+  "music.interior_shop": {
     "category": "neutral",
     "sounds": [
       {
@@ -84,7 +93,7 @@
       }
     ]
   },
-  "record_turnpike": {
+  "record.turnpike": {
     "category": "record",
     "sounds": [
       {
@@ -93,7 +102,7 @@
       }
     ]
   },
-  "record_smb2_overworld_smas": {
+  "record.smb2_overworld_smas": {
     "category": "record",
     "sounds": [
       {
@@ -102,7 +111,7 @@
       }
     ]
   },
-  "record_smb3_overworld_smas": {
+  "record.smb3_overworld_smas": {
     "category": "record",
     "sounds": [
       {
@@ -111,7 +120,7 @@
       }
     ]
   },
-  "record_story": {
+  "record.story": {
     "category": "music",
     "sounds": [
       {
@@ -120,7 +129,7 @@
       }
     ]
   },
-  "record_specialzone": {
+  "record.specialzone": {
     "category": "record",
     "sounds": [
       {
@@ -129,7 +138,7 @@
       }
     ]
   },
-  "record_studiopoliscomplex_calm": {
+  "record.studiopoliscomplex.calm": {
     "category": "record",
     "sounds": [
       {
@@ -138,7 +147,7 @@
       }
     ]
   },
-  "record_smile_symphony": {
+  "record.smile_symphony": {
     "category": "record",
     "sounds": [
       {

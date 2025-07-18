@@ -1,6 +1,8 @@
 package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
+import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.Rarity;
@@ -22,11 +24,13 @@ public class SMB2OverworldSMASItem extends RecordItem {
                 .rarity(Rarity.COMMON),
             2022 // track length in ticks
         );
+        ItemGroupEvents.modifyEntriesEvent(
+                WelcomekitajimaModTabs.TAB_CDS
+        ).register(content -> content.accept(this));
     }
 
     @Override
     public void appendHoverText(ItemStack stack, Level world, List<Component> tooltip, TooltipFlag context) {
-        tooltip.add(Component.literal("Super Mario Bros. 2 Overworld (SMAS) - Soyo Oka"));
         super.appendHoverText(stack, world, tooltip, context);
     }
 }

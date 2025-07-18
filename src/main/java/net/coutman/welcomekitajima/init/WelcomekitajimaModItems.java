@@ -12,20 +12,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 
-import net.coutman.welcomekitajima.item.TomatoItem;
-import net.coutman.welcomekitajima.item.ToadsTurnpikeItem;
-import net.coutman.welcomekitajima.item.StudiopolisZoneAct1Item;
-import net.coutman.welcomekitajima.item.StudiopolisComplexCalmItem;
-import net.coutman.welcomekitajima.item.SmileSymphonyItem;
-import net.coutman.welcomekitajima.item.SToRYItem;
-import net.coutman.welcomekitajima.item.SMWSpecialItem;
-import net.coutman.welcomekitajima.item.SMB3OverworldSMASItem;
-import net.coutman.welcomekitajima.item.SMB2OverworldSMASItem;
-import net.coutman.welcomekitajima.item.KuyamuItem;
-import net.coutman.welcomekitajima.item.HaguItem;
-import net.coutman.welcomekitajima.item.BlankDVDItem;
-import net.coutman.welcomekitajima.item.BlankCompactDiscItem;
-import net.coutman.welcomekitajima.item.BlankBDItem;
+import net.coutman.welcomekitajima.item.*;
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
 
 public class WelcomekitajimaModItems {
@@ -50,6 +37,7 @@ public class WelcomekitajimaModItems {
 	public static Item BLANK_DVD;
 	public static Item BLANK_BD;
 	public static Item STUDIOPOLIS_ZONE_ACT_1;
+	public static Item WORLDNOSTART;
 	public static Item KUYAMU;
 	public static Item HAGU;
 	public static Item TOADS_TURNPIKE;
@@ -95,6 +83,7 @@ public class WelcomekitajimaModItems {
 		BLANK_DVD = register("blank_dvd", new BlankDVDItem());
 		BLANK_BD = register("blank_bd", new BlankBDItem());
 		STUDIOPOLIS_ZONE_ACT_1 = register("studiopolis_zone_act_1", new StudiopolisZoneAct1Item());
+		WORLDNOSTART = register("the_world_hasnt_started_yet", new WorldNoStartItem());
 		KUYAMU = register("kuyamu", new KuyamuItem());
 		HAGU = register("hagu", new HaguItem());
 		TOADS_TURNPIKE = register("toads_turnpike", new ToadsTurnpikeItem());

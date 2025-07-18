@@ -22,7 +22,7 @@ public class TeleportToAndFromEmptySEKAIProcedure {
 			return;
 		if ((entity.level().dimension()) == Level.OVERWORLD) {
 			if (entity instanceof ServerPlayer _player && !_player.level().isClientSide()) {
-				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("welcomekitajima:sekai_empty"));
+				ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("welcomekitajima:empty_sekai"));
 				if (_player.level().dimension() == destinationType)
 					return;
 				ServerLevel nextLevel = _player.server.getLevel(destinationType);

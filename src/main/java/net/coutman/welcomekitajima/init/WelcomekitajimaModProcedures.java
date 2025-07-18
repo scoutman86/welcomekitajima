@@ -4,6 +4,8 @@
  */
 package net.coutman.welcomekitajima.init;
 
+import net.coutman.welcomekitajima.procedures.TeleportToAndFromSchoolSEKAIProcedure;
+import net.coutman.welcomekitajima.procedures.TeleportToAndFromWonderlandSEKAIProcedure;
 import net.coutman.welcomekitajima.procedures.TeleportToAndFromEmptySEKAIProcedure;
 import net.coutman.welcomekitajima.procedures.DiscEnterNoiseProcedure;
 import net.coutman.welcomekitajima.procedures.DiscEjectNoiseProcedure;
@@ -14,5 +16,7 @@ public class WelcomekitajimaModProcedures {
 		new DiscEjectNoiseProcedure();
 		new DiscEnterNoiseProcedure();
 		new TeleportToAndFromEmptySEKAIProcedure();
+		new TeleportToAndFromSchoolSEKAIProcedure();
+		new TeleportToAndFromWonderlandSEKAIProcedure();
 	}
 }

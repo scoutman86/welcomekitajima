@@ -1,6 +1,11 @@
 
 package net.coutman.welcomekitajima.block;
 
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.impl.itemgroup.FabricItemGroup;
+import net.fabricmc.fabric.mixin.itemgroup.ItemGroupAccessor;
+import net.fabricmc.fabric.mixin.itemgroup.ItemGroupsMixin;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -28,7 +33,7 @@ public class EmptySEKAIStoneBlock extends Block {
 
 	public EmptySEKAIStoneBlock() {
 		super(PROPERTIES);
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
 
 	@Override

@@ -22,6 +22,6 @@ public class WelcomekitajimaModTabs {
 
 	public static void load() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_CDS,
-				FabricItemGroup.builder().title(Component.translatable("item_group." + WelcomekitajimaMod.MODID + ".cds")).icon(() -> new ItemStack(WelcomekitajimaModBlocks.EMPTY_SEKAI_TRUSS)).build());
+				FabricItemGroup.builder().title(Component.translatable("item_group." + WelcomekitajimaMod.MODID + ".cds")).icon(() -> new ItemStack(WelcomekitajimaModItems.BLANK_COMPACT_DISC)).build());
 	}
 }

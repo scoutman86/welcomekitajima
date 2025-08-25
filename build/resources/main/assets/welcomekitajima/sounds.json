@@ -18,6 +18,15 @@
       }
     ]
   },
+  "record.worldnostart": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:world_no_start",
+        "stream": true
+      }
+    ]
+  },
   "record.kuyamutokaitemirai": {
     "category": "record",
     "sounds": [

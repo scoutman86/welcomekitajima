@@ -25,7 +25,7 @@ public class WelcomekitajimaModSounds {
 	public static SoundEvent RECORD_SMB3_OVERWORLD_SMAS = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.smb3_overworld_smas"));
 	public static SoundEvent RECORD_STORY = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.story"));
 	public static SoundEvent RECORD_SPECIALZONE = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.specialzone"));
-	public static SoundEvent RECORD_STUDIOPOLISCOMPLEX_CALM = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.studiopoliscomplex_calm"));
+	public static SoundEvent RECORD_STUDIOPOLISCOMPLEX_CALM = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.studiopoliscomplex.calm"));
 	public static SoundEvent RECORD_SMILE_SYMPHONY = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.smile_symphony"));
 	public static SoundEvent EMPTY_SEKAI = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "empty_sekai"));
 

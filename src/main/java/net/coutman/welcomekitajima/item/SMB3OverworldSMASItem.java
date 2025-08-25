@@ -1,24 +1,33 @@
-
 package net.coutman.welcomekitajima.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.network.chat.Component;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-
+import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
 import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.RecordItem;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
+import net.minecraft.network.chat.Component;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 import java.util.List;
 
-public class SMB3OverworldSMASItem extends Item {
+public class SMB3OverworldSMASItem extends RecordItem {
 	public SMB3OverworldSMASItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		super(
+				0, // comparator output
+				WelcomekitajimaModSounds.RECORD_SMB3_OVERWORLD_SMAS,
+				new FabricItemSettings()
+						.maxCount(1)
+						.rarity(Rarity.COMMON),
+				2022 // track length in ticks
+		);
+		ItemGroupEvents.modifyEntriesEvent(
+				WelcomekitajimaModTabs.TAB_CDS
+		).register(content -> content.accept(this));
 	}
+
 
 	@Override
 	public int getUseDuration(ItemStack itemstack) {

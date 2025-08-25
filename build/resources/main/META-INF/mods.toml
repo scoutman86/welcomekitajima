@@ -4,12 +4,12 @@ license="Not specified"
 
 [[mods]]
 modId="welcomekitajima"
-version="1.0.0"
+version="2.0.3"
 displayName="Welcome to Kitajima Server Mod"
-displayURL="https://mcreator.net"
-credits="cock knocker"
+displayURL="https://coutman.neocities.org"
+credits="the"
 authors="coutman"
-description="penis"
+description="Season 2"
 
 # Start of user code block mod configuration
 # End of user code block mod configuration
@@ -17,7 +17,7 @@ description="penis"
 [[dependencies.welcomekitajima]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.20.2]"
+    versionRange="[1.20.1]"
     ordering="AFTER"
     side="BOTH"
 

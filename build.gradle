@@ -1,5 +1,5 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.11-SNAPSHOT'
 }
 
 sourceCompatibility = JavaVersion.VERSION_17
@@ -14,8 +14,6 @@ loom {
     mixin {
         defaultRefmapName = actualmodid + ".refmap.json"
     }
-    if (file("src/main/resources/welcomekitajima.accesswidener").exists())
-        accessWidenerPath = file("src/main/resources/welcomekitajima.accesswidener")
 }
 
 dependencies {
@@ -23,7 +21,6 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:0.14.21"
 
-    //Fabric api
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.90.7+1.20.1"
 }
 

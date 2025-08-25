@@ -9,35 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
-import net.coutman.welcomekitajima.block.WoodenMIPSDoorBlock;
-import net.coutman.welcomekitajima.block.StudiopolisTrussBlock;
-import net.coutman.welcomekitajima.block.StudiopolisTilesBlock;
-import net.coutman.welcomekitajima.block.StudiopolisTileStairsBlock;
-import net.coutman.welcomekitajima.block.StudiopolisTileSlabBlock;
-import net.coutman.welcomekitajima.block.StudiopolisTilePillarBlock;
-import net.coutman.welcomekitajima.block.StudiopolisLampBlock;
-import net.coutman.welcomekitajima.block.SmoothStudiopolisConcreteStairsBlock;
-import net.coutman.welcomekitajima.block.SmoothStudiopolisConcreteSlabBlock;
-import net.coutman.welcomekitajima.block.SmoothStudiopolisConcreteBlock;
-import net.coutman.welcomekitajima.block.SingleStarWoodenMIPSDoorBlock;
-import net.coutman.welcomekitajima.block.PolishedStudiopolisConcreteBlock;
-import net.coutman.welcomekitajima.block.MetalMIPSDoorBlock;
-import net.coutman.welcomekitajima.block.FuyukiWoodBlock;
-import net.coutman.welcomekitajima.block.FuyukiTrapdoorBlock;
-import net.coutman.welcomekitajima.block.FuyukiStairsBlock;
-import net.coutman.welcomekitajima.block.FuyukiSlabBlock;
-import net.coutman.welcomekitajima.block.FuyukiPressurePlateBlock;
-import net.coutman.welcomekitajima.block.FuyukiPlanksBlock;
-import net.coutman.welcomekitajima.block.FuyukiLogBlock;
-import net.coutman.welcomekitajima.block.FuyukiLeavesBlock;
-import net.coutman.welcomekitajima.block.FuyukiFenceGateBlock;
-import net.coutman.welcomekitajima.block.FuyukiFenceBlock;
-import net.coutman.welcomekitajima.block.FuyukiDoorBlock;
-import net.coutman.welcomekitajima.block.FuyukiButtonBlock;
-import net.coutman.welcomekitajima.block.FrameworkBlockBlock;
-import net.coutman.welcomekitajima.block.EmptySEKAITrussBlock;
-import net.coutman.welcomekitajima.block.EmptySEKAITilesBlock;
-import net.coutman.welcomekitajima.block.EmptySEKAIStoneBlock;
+import net.coutman.welcomekitajima.block.*;
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
 
 public class WelcomekitajimaModBlocks {

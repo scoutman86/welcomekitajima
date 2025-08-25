@@ -12,19 +12,12 @@
  */
 package net.coutman.welcomekitajima;
 
+import net.coutman.welcomekitajima.init.*;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.api.ModInitializer;
-
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModProcedures;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModPaintings;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModItems;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBiomes;
 
 public class WelcomekitajimaMod implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger();

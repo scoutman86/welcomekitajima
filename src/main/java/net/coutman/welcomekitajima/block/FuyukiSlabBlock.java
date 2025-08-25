@@ -1,6 +1,7 @@
 
 package net.coutman.welcomekitajima.block;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.SlabType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -31,7 +32,7 @@ public class FuyukiSlabBlock extends SlabBlock {
 	public FuyukiSlabBlock() {
 		super(PROPERTIES);
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
 
 	@Override

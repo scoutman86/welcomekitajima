@@ -1,6 +1,7 @@
 
 package net.coutman.welcomekitajima.block;
 
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -30,7 +31,7 @@ public class MetalMIPSDoorBlock extends DoorBlock {
 
 	public MetalMIPSDoorBlock() {
 		super(PROPERTIES, BlockSetType.STONE);
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
 
 	@Override

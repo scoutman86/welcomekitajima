@@ -1,27 +1,37 @@
 
 package net.coutman.welcomekitajima.item;
 
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.Rarity;
+import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
+import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.RecordItem;
+import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
-
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 import net.coutman.welcomekitajima.procedures.TeleportToAndFromWonderlandSEKAIProcedure;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
 
 import java.util.List;
 
-public class WorldNoStartItem extends Item {
+public class WorldNoStartItem extends RecordItem {
 	public WorldNoStartItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC));
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		super(
+				0, // comparator output
+				WelcomekitajimaModSounds.RECORD_WORLDNOSTART,
+				new FabricItemSettings()
+						.maxCount(1)
+						.rarity(Rarity.EPIC),
+				2022 // track length in ticks
+		);
+		ItemGroupEvents.modifyEntriesEvent(
+				WelcomekitajimaModTabs.TAB_CDS
+		).register(content -> content.accept(this));
 	}
 
 	@Override

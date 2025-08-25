@@ -45,7 +45,8 @@ public class FuyukiSlabBlock extends SlabBlock {
 		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
 		if (!dropsOriginal.isEmpty())
 			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, state.getValue(TYPE) == SlabType.DOUBLE ? 2 : 1));
+		return Collections.singletonList(
+				new ItemStack(this, state.getValue(TYPE) == SlabType.DOUBLE ? 2 : 1));
 	}
 
 	@Environment(EnvType.CLIENT)

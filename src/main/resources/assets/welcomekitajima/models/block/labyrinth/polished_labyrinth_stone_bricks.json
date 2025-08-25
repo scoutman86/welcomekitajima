@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_bricks",
+    "particle": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_bricks"
+  },
+  "render_type": "solid"
+}

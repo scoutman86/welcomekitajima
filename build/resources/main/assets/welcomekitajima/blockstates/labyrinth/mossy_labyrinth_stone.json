@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "welcomekitajima:block/labyrinth/mossy_labyrinth_stone"
+      },
+      {
+        "model": "welcomekitajima:block/labyrinth/mossy_labyrinth_stone_mirrored"
+      },
+      {
+        "model": "welcomekitajima:block/labyrinth/mossy_labyrinth_stone",
+        "y": 180
+      },
+      {
+        "model": "welcomekitajima:block/labyrinth/mossy_labyrinth_stone_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

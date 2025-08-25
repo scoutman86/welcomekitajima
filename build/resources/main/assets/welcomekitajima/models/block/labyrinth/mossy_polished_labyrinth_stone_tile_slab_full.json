@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tiles",
+    "bottom": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tiles",
+    "top": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tiles",
+    "side": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tiles"
+  },
+  "render_type": "solid"
+}

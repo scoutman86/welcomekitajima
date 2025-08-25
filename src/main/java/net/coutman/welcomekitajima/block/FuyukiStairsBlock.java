@@ -27,7 +27,12 @@ import java.util.List;
 import java.util.Collections;
 
 public class FuyukiStairsBlock extends StairBlock {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(3f, 2f).dynamicShape();
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
+			.ignitedByLava()
+			.instrument(NoteBlockInstrument.BASS)
+			.sound(SoundType.WOOD)
+			.strength(3f, 2f)
+			.dynamicShape();
 
 	public FuyukiStairsBlock() {
 		super(Blocks.AIR.defaultBlockState(), PROPERTIES);

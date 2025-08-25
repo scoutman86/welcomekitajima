@@ -1,0 +1,11 @@
+{
+  "parent": "block/grass_block",
+  "textures": {
+    "bottom": "welcomekitajima:block/labyrinth/polished_labyrinth_stone",
+    "top": "welcomekitajima:block/labyrinth/polished_labyrinth_stone",
+    "side": "welcomekitajima:block/labyrinth/chiseled_labyrinth_stone",
+    "overlay": "welcomekitajima:block/labyrinth/chiseled_labyrinth_stone",
+    "particle": "welcomekitajima:block/labyrinth/polished_labyrinth_stone"
+  },
+  "render_type": "solid"
+}

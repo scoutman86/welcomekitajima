@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "welcomekitajima:block/labyrinth/cobbled_labyrinth_stone",
+    "bottom": "welcomekitajima:block/labyrinth/cobbled_labyrinth_stone",
+    "top": "welcomekitajima:block/labyrinth/cobbled_labyrinth_stone",
+    "side": "welcomekitajima:block/labyrinth/cobbled_labyrinth_stone"
+  },
+  "render_type": "solid"
+}

@@ -10,26 +10,30 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
 import net.coutman.welcomekitajima.block.*;
+import net.coutman.welcomekitajima.block.labyrinth.*;
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
 
 public class WelcomekitajimaModBlocks {
 	public static Block EMPTY_SEKAI_STONE;
 	public static Block EMPTY_SEKAI_TILES;
 	public static Block EMPTY_SEKAI_TRUSS;
+	// studiopolis
 	public static Block POLISHED_STUDIOPOLIS_CONCRETE;
 	public static Block SMOOTH_STUDIOPOLIS_CONCRETE;
+	public static Block SMOOTH_STUDIOPOLIS_CONCRETE_STAIRS;
+	public static Block SMOOTH_STUDIOPOLIS_CONCRETE_SLAB;
 	public static Block STUDIOPOLIS_TILES;
 	public static Block STUDIOPOLIS_TILE_STAIRS;
 	public static Block STUDIOPOLIS_TILE_SLAB;
-	public static Block SMOOTH_STUDIOPOLIS_CONCRETE_STAIRS;
-	public static Block SMOOTH_STUDIOPOLIS_CONCRETE_SLAB;
 	public static Block STUDIOPOLIS_TILE_PILLAR;
 	public static Block STUDIOPOLIS_TRUSS;
 	public static Block STUDIOPOLIS_LAMP;
+	// misc
 	public static Block WOODEN_MIPS_DOOR;
 	public static Block SINGLE_STAR_WOODEN_MIPS_DOOR;
 	public static Block METAL_MIPS_DOOR;
 	public static Block FRAMEWORK_BLOCK;
+	// fuyuki
 	public static Block FUYUKI_WOOD;
 	public static Block FUYUKI_LOG;
 	public static Block FUYUKI_PLANKS;
@@ -42,37 +46,128 @@ public class WelcomekitajimaModBlocks {
 	public static Block FUYUKI_BUTTON;
 	public static Block FUYUKI_DOOR;
 	public static Block FUYUKI_TRAPDOOR;
+	// labyrinth
+	public static Block LABYRINTH_STONE;
+	public static Block LABYRINTH_COAL_ORE;
+	public static Block LABYRINTH_COPPER_ORE;
+	public static Block LABYRINTH_DIAMOND_ORE;
+	public static Block LABYRINTH_EMERALD_ORE;
+	public static Block LABYRINTH_GOLD_ORE;
+	public static Block LABYRINTH_IRON_ORE;
+	public static Block LABYRINTH_LAPIS_ORE;
+	public static Block LABYRINTH_REDSTONE_ORE;
+	public static Block COBBLED_LABYRINTH_STONE;
+	public static Block COBBLED_LABYRINTH_STONE_STAIRS;
+	public static Block COBBLED_LABYRINTH_STONE_SLAB;
+	public static Block POLISHED_LABYRINTH_STONE;
+	public static Block POLISHED_LABYRINTH_STONE_STAIRS;
+	public static Block POLISHED_LABYRINTH_STONE_SLAB;
+	public static Block POLISHED_LABYRINTH_STONE_BRICKS;
+	public static Block POLISHED_LABYRINTH_STONE_BRICK_STAIRS;
+	public static Block POLISHED_LABYRINTH_STONE_BRICK_SLAB;
+	public static Block POLISHED_LABYRINTH_STONE_TILES;
+	public static Block POLISHED_LABYRINTH_STONE_TILE_STAIRS;
+	public static Block POLISHED_LABYRINTH_STONE_TILE_SLAB;
+	public static Block CHISELED_LABYRINTH_STONE;
+	public static Block CHISELED_LABYRINTH_STONE_STAIRS;
+	public static Block CHISELED_LABYRINTH_STONE_SLAB;
+	// i really hate this
+	public static Block MOSSY_LABYRINTH_STONE;
+	public static Block MOSSY_COBBLED_LABYRINTH_STONE;
+	public static Block MOSSY_COBBLED_LABYRINTH_STONE_STAIRS;
+	public static Block MOSSY_COBBLED_LABYRINTH_STONE_SLAB;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_STAIRS;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_SLAB;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_BRICKS;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_TILES;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS;
+	public static Block MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB;
+	public static Block MOSSY_CHISELED_LABYRINTH_STONE;
+	public static Block MOSSY_CHISELED_LABYRINTH_STONE_STAIRS;
+	public static Block MOSSY_CHISELED_LABYRINTH_STONE_SLAB;
 
 	public static void load() {
 		EMPTY_SEKAI_STONE = register("empty_sekai_stone", new EmptySEKAIStoneBlock());
 		EMPTY_SEKAI_TILES = register("empty_sekai_tiles", new EmptySEKAITilesBlock());
 		EMPTY_SEKAI_TRUSS = register("empty_sekai_truss", new EmptySEKAITrussBlock());
-		POLISHED_STUDIOPOLIS_CONCRETE = register("polished_studiopolis_concrete", new PolishedStudiopolisConcreteBlock());
-		SMOOTH_STUDIOPOLIS_CONCRETE = register("smooth_studiopolis_concrete", new SmoothStudiopolisConcreteBlock());
-		STUDIOPOLIS_TILES = register("studiopolis_tiles", new StudiopolisTilesBlock());
-		STUDIOPOLIS_TILE_STAIRS = register("studiopolis_tile_stairs", new StudiopolisTileStairsBlock());
-		STUDIOPOLIS_TILE_SLAB = register("studiopolis_tile_slab", new StudiopolisTileSlabBlock());
-		SMOOTH_STUDIOPOLIS_CONCRETE_STAIRS = register("smooth_studiopolis_concrete_stairs", new SmoothStudiopolisConcreteStairsBlock());
-		SMOOTH_STUDIOPOLIS_CONCRETE_SLAB = register("smooth_studiopolis_concrete_slab", new SmoothStudiopolisConcreteSlabBlock());
-		STUDIOPOLIS_TILE_PILLAR = register("studiopolis_tile_pillar", new StudiopolisTilePillarBlock());
-		STUDIOPOLIS_TRUSS = register("studiopolis_truss", new StudiopolisTrussBlock());
-		STUDIOPOLIS_LAMP = register("studiopolis_lamp", new StudiopolisLampBlock());
+		// Studiopolis Blocks
+		POLISHED_STUDIOPOLIS_CONCRETE = register("studiopolis/polished_studiopolis_concrete", new PolishedStudiopolisConcreteBlock());
+		SMOOTH_STUDIOPOLIS_CONCRETE = register("studiopolis/smooth_studiopolis_concrete", new SmoothStudiopolisConcreteBlock());
+		STUDIOPOLIS_TILES = register("studiopolis/studiopolis_tiles", new StudiopolisTilesBlock());
+		STUDIOPOLIS_TILE_STAIRS = register("studiopolis/studiopolis_tile_stairs", new StudiopolisTileStairsBlock());
+		STUDIOPOLIS_TILE_SLAB = register("studiopolis/studiopolis_tile_slab", new StudiopolisTileSlabBlock());
+		SMOOTH_STUDIOPOLIS_CONCRETE_STAIRS = register("studiopolis/smooth_studiopolis_concrete_stairs", new SmoothStudiopolisConcreteStairsBlock());
+		SMOOTH_STUDIOPOLIS_CONCRETE_SLAB = register("studiopolis/smooth_studiopolis_concrete_slab", new SmoothStudiopolisConcreteSlabBlock());
+		STUDIOPOLIS_TILE_PILLAR = register("studiopolis/studiopolis_tile_pillar", new StudiopolisTilePillarBlock());
+		STUDIOPOLIS_TRUSS = register("studiopolis/studiopolis_truss", new StudiopolisTrussBlock());
+		STUDIOPOLIS_LAMP = register("studiopolis/studiopolis_lamp", new StudiopolisLampBlock());
+		// this shit
 		WOODEN_MIPS_DOOR = register("wooden_mips_door", new WoodenMIPSDoorBlock());
 		SINGLE_STAR_WOODEN_MIPS_DOOR = register("single_star_wooden_mips_door", new SingleStarWoodenMIPSDoorBlock());
 		METAL_MIPS_DOOR = register("metal_mips_door", new MetalMIPSDoorBlock());
 		FRAMEWORK_BLOCK = register("framework_block", new FrameworkBlockBlock());
-		FUYUKI_WOOD = register("fuyuki_wood", new FuyukiWoodBlock());
-		FUYUKI_LOG = register("fuyuki_log", new FuyukiLogBlock());
-		FUYUKI_PLANKS = register("fuyuki_planks", new FuyukiPlanksBlock());
-		FUYUKI_LEAVES = register("fuyuki_leaves", new FuyukiLeavesBlock());
-		FUYUKI_STAIRS = register("fuyuki_stairs", new FuyukiStairsBlock());
-		FUYUKI_SLAB = register("fuyuki_slab", new FuyukiSlabBlock());
-		FUYUKI_FENCE = register("fuyuki_fence", new FuyukiFenceBlock());
-		FUYUKI_FENCE_GATE = register("fuyuki_fence_gate", new FuyukiFenceGateBlock());
-		FUYUKI_PRESSURE_PLATE = register("fuyuki_pressure_plate", new FuyukiPressurePlateBlock());
-		FUYUKI_BUTTON = register("fuyuki_button", new FuyukiButtonBlock());
-		FUYUKI_DOOR = register("fuyuki_door", new FuyukiDoorBlock());
-		FUYUKI_TRAPDOOR = register("fuyuki_trapdoor", new FuyukiTrapdoorBlock());
+		// Fuyuki Blocks
+		FUYUKI_WOOD = register("fuyuki/fuyuki_wood", new FuyukiWoodBlock());
+		FUYUKI_LOG = register("fuyuki/fuyuki_log", new FuyukiLogBlock());
+		FUYUKI_PLANKS = register("fuyuki/fuyuki_planks", new FuyukiPlanksBlock());
+		FUYUKI_LEAVES = register("fuyuki/fuyuki_leaves", new FuyukiLeavesBlock());
+		FUYUKI_STAIRS = register("fuyuki/fuyuki_stairs", new FuyukiStairsBlock());
+		FUYUKI_SLAB = register("fuyuki/fuyuki_slab", new FuyukiSlabBlock());
+		FUYUKI_FENCE = register("fuyuki/fuyuki_fence", new FuyukiFenceBlock());
+		FUYUKI_FENCE_GATE = register("fuyuki/fuyuki_fence_gate", new FuyukiFenceGateBlock());
+		FUYUKI_PRESSURE_PLATE = register("fuyuki/fuyuki_pressure_plate", new FuyukiPressurePlateBlock());
+		FUYUKI_BUTTON = register("fuyuki/fuyuki_button", new FuyukiButtonBlock());
+		FUYUKI_DOOR = register("fuyuki/fuyuki_door", new FuyukiDoorBlock());
+		FUYUKI_TRAPDOOR = register("fuyuki/fuyuki_trapdoor", new FuyukiTrapdoorBlock());
+		// fuck you
+		LABYRINTH_STONE = register("labyrinth/labyrinth_stone", new LabyrinthStoneBlock());
+		// ore
+		LABYRINTH_COAL_ORE = register("labyrinth/labyrinth_coal_ore", new LabyrinthCoalOreBlock());
+		LABYRINTH_COPPER_ORE = register("labyrinth/labyrinth_copper_ore", new LabyrinthCopperOreBlock());
+		LABYRINTH_DIAMOND_ORE = register("labyrinth/labyrinth_diamond_ore", new LabyrinthDiamondOreBlock());
+		LABYRINTH_EMERALD_ORE = register("labyrinth/labyrinth_emerald_ore", new LabyrinthEmeraldOreBlock());
+		LABYRINTH_GOLD_ORE = register("labyrinth/labyrinth_gold_ore", new LabyrinthGoldOreBlock());
+		LABYRINTH_IRON_ORE = register("labyrinth/labyrinth_iron_ore", new LabyrinthIronOreBlock());
+		LABYRINTH_LAPIS_ORE = register("labyrinth/labyrinth_lapis_ore", new LabyrinthLapisOreBlock());
+		LABYRINTH_REDSTONE_ORE = register("labyrinth/labyrinth_redstone_ore", new LabyrinthRedstoneOreBlock());
+		// cobbled
+		COBBLED_LABYRINTH_STONE = register("labyrinth/cobbled_labyrinth_stone", new CobbledLabyrinthStoneBlock());
+		COBBLED_LABYRINTH_STONE_STAIRS = register("labyrinth/cobbled_labyrinth_stone_stairs", new CobbledLabyrinthStoneStairsBlock());
+		COBBLED_LABYRINTH_STONE_SLAB = register("labyrinth/cobbled_labyrinth_stone_slab", new CobbledLabyrinthStoneSlabBlock());
+		// polished
+		POLISHED_LABYRINTH_STONE = register("labyrinth/polished_labyrinth_stone", new PolishedLabyrinthStoneBlock());
+		POLISHED_LABYRINTH_STONE_STAIRS = register("labyrinth/polished_labyrinth_stone_stairs", new PolishedLabyrinthStoneStairsBlock());
+		POLISHED_LABYRINTH_STONE_SLAB = register("labyrinth/polished_labyrinth_stone_slab", new PolishedLabyrinthStoneSlabBlock());
+		POLISHED_LABYRINTH_STONE_BRICKS = register("labyrinth/polished_labyrinth_stone_bricks", new PolishedLabyrinthStoneBricksBlock());
+		POLISHED_LABYRINTH_STONE_BRICK_STAIRS = register("labyrinth/polished_labyrinth_stone_brick_stairs", new PolishedLabyrinthStoneBrickStairsBlock());
+		POLISHED_LABYRINTH_STONE_BRICK_SLAB = register("labyrinth/polished_labyrinth_stone_brick_slab", new PolishedLabyrinthStoneBrickSlabBlock());
+		POLISHED_LABYRINTH_STONE_TILES = register("labyrinth/polished_labyrinth_stone_tiles", new PolishedLabyrinthStoneTilesBlock());
+		POLISHED_LABYRINTH_STONE_TILE_STAIRS = register("labyrinth/polished_labyrinth_stone_tile_stairs", new PolishedLabyrinthStoneTileStairsBlock());
+		POLISHED_LABYRINTH_STONE_TILE_SLAB = register("labyrinth/polished_labyrinth_stone_tile_slab", new PolishedLabyrinthStoneTileSlabBlock());
+		CHISELED_LABYRINTH_STONE = register("labyrinth/chiseled_labyrinth_stone", new ChiseledLabyrinthStoneBlock());
+		CHISELED_LABYRINTH_STONE_STAIRS = register("labyrinth/chiseled_labyrinth_stone_stairs", new ChiseledLabyrinthStoneStairsBlock());
+		CHISELED_LABYRINTH_STONE_SLAB = register("labyrinth/chiseled_labyrinth_stone_slab", new ChiseledLabyrinthStoneSlabBlock());
+
+		// AAAAAAAAAAAAAAAAAAA
+		MOSSY_LABYRINTH_STONE = register("labyrinth/mossy_labyrinth_stone", new MossyLabyrinthStoneBlock());
+		MOSSY_COBBLED_LABYRINTH_STONE = register("labyrinth/mossy_cobbled_labyrinth_stone", new MossyCobbledLabyrinthStoneBlock());
+		MOSSY_COBBLED_LABYRINTH_STONE_STAIRS = register("labyrinth/mossy_cobbled_labyrinth_stone_stairs", new MossyCobbledLabyrinthStoneStairsBlock());
+		MOSSY_COBBLED_LABYRINTH_STONE_SLAB = register("labyrinth/mossy_cobbled_labyrinth_stone_slab", new MossyCobbledLabyrinthStoneSlabBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE = register("labyrinth/mossy_polished_labyrinth_stone", new MossyPolishedLabyrinthStoneBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_STAIRS = register("labyrinth/mossy_polished_labyrinth_stone_stairs", new MossyPolishedLabyrinthStoneStairsBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_SLAB = register("labyrinth/mossy_polished_labyrinth_stone_slab", new MossyPolishedLabyrinthStoneSlabBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_BRICKS = register("labyrinth/mossy_polished_labyrinth_stone_bricks", new MossyPolishedLabyrinthStoneBricksBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS = register("labyrinth/mossy_polished_labyrinth_stone_brick_stairs", new MossyPolishedLabyrinthStoneBrickStairsBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB = register("labyrinth/mossy_polished_labyrinth_stone_brick_slab", new MossyPolishedLabyrinthStoneBrickSlabBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_TILES = register("labyrinth/mossy_polished_labyrinth_stone_tiles", new MossyPolishedLabyrinthStoneTilesBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS = register("labyrinth/mossy_polished_labyrinth_stone_tile_stairs", new MossyPolishedLabyrinthStoneTileStairsBlock());
+		MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB = register("labyrinth/mossy_polished_labyrinth_stone_tile_slab", new MossyPolishedLabyrinthStoneTileSlabBlock());
+		MOSSY_CHISELED_LABYRINTH_STONE = register("labyrinth/mossy_chiseled_labyrinth_stone", new MossyChiseledLabyrinthStoneBlock());
+		MOSSY_CHISELED_LABYRINTH_STONE_STAIRS = register("labyrinth/mossy_chiseled_labyrinth_stone_stairs", new MossyChiseledLabyrinthStoneStairsBlock());
+		MOSSY_CHISELED_LABYRINTH_STONE_SLAB = register("labyrinth/mossy_chiseled_labyrinth_stone_slab", new MossyChiseledLabyrinthStoneSlabBlock());
 	}
 
 	public static void clientLoad() {
@@ -81,11 +176,11 @@ public class WelcomekitajimaModBlocks {
 		EmptySEKAITrussBlock.clientInit();
 		PolishedStudiopolisConcreteBlock.clientInit();
 		SmoothStudiopolisConcreteBlock.clientInit();
+		SmoothStudiopolisConcreteStairsBlock.clientInit();
+		SmoothStudiopolisConcreteSlabBlock.clientInit();
 		StudiopolisTilesBlock.clientInit();
 		StudiopolisTileStairsBlock.clientInit();
 		StudiopolisTileSlabBlock.clientInit();
-		SmoothStudiopolisConcreteStairsBlock.clientInit();
-		SmoothStudiopolisConcreteSlabBlock.clientInit();
 		StudiopolisTilePillarBlock.clientInit();
 		StudiopolisTrussBlock.clientInit();
 		StudiopolisLampBlock.clientInit();
@@ -105,6 +200,46 @@ public class WelcomekitajimaModBlocks {
 		FuyukiButtonBlock.clientInit();
 		FuyukiDoorBlock.clientInit();
 		FuyukiTrapdoorBlock.clientInit();
+		LabyrinthStoneBlock.clientInit();
+		LabyrinthCoalOreBlock.clientInit();
+		LabyrinthCopperOreBlock.clientInit();
+		LabyrinthDiamondOreBlock.clientInit();
+		LabyrinthEmeraldOreBlock.clientInit();
+		LabyrinthGoldOreBlock.clientInit();
+		LabyrinthIronOreBlock.clientInit();
+		LabyrinthLapisOreBlock.clientInit();
+		LabyrinthRedstoneOreBlock.clientInit();
+		CobbledLabyrinthStoneBlock.clientInit();
+		CobbledLabyrinthStoneStairsBlock.clientInit();
+		CobbledLabyrinthStoneSlabBlock.clientInit();
+		PolishedLabyrinthStoneBlock.clientInit();
+		PolishedLabyrinthStoneStairsBlock.clientInit();
+		PolishedLabyrinthStoneSlabBlock.clientInit();
+		PolishedLabyrinthStoneBricksBlock.clientInit();
+		PolishedLabyrinthStoneBrickStairsBlock.clientInit();
+		PolishedLabyrinthStoneBrickSlabBlock.clientInit();
+		PolishedLabyrinthStoneTilesBlock.clientInit();
+		PolishedLabyrinthStoneTileStairsBlock.clientInit();
+		PolishedLabyrinthStoneTileSlabBlock.clientInit();
+		ChiseledLabyrinthStoneBlock.clientInit();
+		ChiseledLabyrinthStoneStairsBlock.clientInit();
+		ChiseledLabyrinthStoneSlabBlock.clientInit();
+		MossyLabyrinthStoneBlock.clientInit();
+		MossyCobbledLabyrinthStoneBlock.clientInit();
+		MossyCobbledLabyrinthStoneStairsBlock.clientInit();
+		MossyCobbledLabyrinthStoneSlabBlock.clientInit();
+		MossyPolishedLabyrinthStoneBlock.clientInit();
+		MossyPolishedLabyrinthStoneStairsBlock.clientInit();
+		MossyPolishedLabyrinthStoneSlabBlock.clientInit();
+		MossyPolishedLabyrinthStoneBricksBlock.clientInit();
+		MossyPolishedLabyrinthStoneBrickStairsBlock.clientInit();
+		MossyPolishedLabyrinthStoneBrickSlabBlock.clientInit();
+		MossyPolishedLabyrinthStoneTilesBlock.clientInit();
+		MossyPolishedLabyrinthStoneTileStairsBlock.clientInit();
+		MossyPolishedLabyrinthStoneTileSlabBlock.clientInit();
+		MossyChiseledLabyrinthStoneBlock.clientInit();
+		MossyChiseledLabyrinthStoneStairsBlock.clientInit();
+		MossyChiseledLabyrinthStoneSlabBlock.clientInit();
 	}
 
 	private static Block register(String registryName, Block block) {

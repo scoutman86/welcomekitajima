@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_brick_slab"
+    },
+    "type=double": {
+      "model": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_brick"
+    },
+    "type=top": {
+      "model": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_brick_slab_top"
+    }
+  }
+}

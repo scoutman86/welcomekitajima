@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_bricks",
+    "bottom": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_bricks",
+    "top": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_bricks",
+    "side": "welcomekitajima:block/labyrinth/polished_labyrinth_stone_bricks"
+  },
+  "render_type": "solid"
+}

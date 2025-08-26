@@ -13,8 +13,7 @@ public class WelcomekitajimaMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hi there. I have no idea what to put here, but if you see this, chances are you're good to go.");
-
+		LOGGER.info("Stuff's going, give it a moment.");
 		WelcomekitajimaModTabs.load();
 
 		WelcomekitajimaModBlocks.load();
@@ -26,8 +25,7 @@ public class WelcomekitajimaMod implements ModInitializer {
 		WelcomekitajimaModSounds.load();
 
 		WelcomekitajimaModBiomes.loadEndBiomes();
-		ServerLifecycleEvents.SERVER_STARTING.register((server) -> {
-			WelcomekitajimaModBiomes.load(server);
-		});
+		LOGGER.info("Hi there. I have no idea what to put here, but if you see this, chances are you're good to go.");
+		ServerLifecycleEvents.SERVER_STARTING.register(WelcomekitajimaModBiomes::load);
 	}
 }

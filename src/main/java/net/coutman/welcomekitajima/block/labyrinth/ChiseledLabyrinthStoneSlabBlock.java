@@ -25,7 +25,7 @@ public class ChiseledLabyrinthStoneSlabBlock extends SlabBlock {
     public static Properties PROPERTIES = Properties.of()
             .instrument(NoteBlockInstrument.BASEDRUM)
             .sound(SoundType.STONE)
-            .strength(1.8f, 10f)
+            .strength(1.8f, 3f)
             .requiresCorrectToolForDrops()
             .dynamicShape();
 

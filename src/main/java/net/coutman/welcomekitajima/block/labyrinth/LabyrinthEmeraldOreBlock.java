@@ -24,7 +24,7 @@ public class LabyrinthEmeraldOreBlock extends Block {
     public static Properties PROPERTIES = Properties.of()
             .instrument(NoteBlockInstrument.BASEDRUM)
             .sound(SoundType.STONE)
-            .strength(1.8f, 10f)
+            .strength(1.8f, 3f)
             .requiresCorrectToolForDrops();
 
     public LabyrinthEmeraldOreBlock() {

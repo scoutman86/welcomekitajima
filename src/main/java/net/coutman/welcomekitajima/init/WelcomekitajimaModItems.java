@@ -51,6 +51,9 @@ public class WelcomekitajimaModItems {
 	public static Item STUDIOPOLIS_COMPLEX_CALM;
 	public static Item S_TO_RY;
 	public static Item SMILE_SYMPHONY;
+	public static Item RUDE_BUSTER;
+	public static Item JOKER;
+	public static Item NEWLY_EDGY_IDOLS;
 	// fuyuki
 	public static Item FUYUKI_WOOD;
 	public static Item FUYUKI_LOG;
@@ -142,6 +145,9 @@ public class WelcomekitajimaModItems {
 		STUDIOPOLIS_COMPLEX_CALM = register("studiopolis_complex_calm", new StudiopolisComplexCalmItem());
 		S_TO_RY = register("s_to_ry", new SToRYItem());
 		SMILE_SYMPHONY = register("smile_symphony", new SmileSymphonyItem());
+		RUDE_BUSTER = register("rude_buster", new RudeBusterItem());
+		JOKER = register("joker", new JokerItem());
+		NEWLY_EDGY_IDOLS = register("newly_edgy_idols", new NewlyEdgyIdolsItem());
 		// fuyuki
 		FUYUKI_WOOD = register("fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_WOOD, new Item.Properties()));
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));

@@ -27,6 +27,33 @@
       }
     ]
   },
+  "record.rude_buster": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:rude_buster",
+        "stream": true
+      }
+    ]
+  },
+    "record.joker": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:joker",
+        "stream": true
+      }
+    ]
+  },
+    "record.newly_edgy_idols": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:newly_edgy_idols",
+        "stream": true
+      }
+    ]
+  },
   "record.kuyamutokaitemirai": {
     "category": "record",
     "sounds": [

@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "welcomekitajima:labyrinth_copper_ore",
+	"welcomekitajima:labyrinth_iron_ore",
+	"welcomekitajima:labyrinth_lapis_ore"
+  ]
+}

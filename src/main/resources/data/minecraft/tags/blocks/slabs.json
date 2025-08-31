@@ -2,6 +2,15 @@
   "replace": false,
   "values": [
     "welcomekitajima:smooth_studiopolis_concrete_slab",
-    "welcomekitajima:studiopolis_tile_slab"
+    "welcomekitajima:studiopolis_tile_slab",
+	"welcomekitajima:fuyuki_slab",
+	"welcomekitajima:cobbled_labyrinth_stone_slab",
+	"welcomekitajima:polished_labyrinth_stone_slab",
+	"welcomekitajima:polished_labyrinth_stone_brick_slab",
+	"welcomekitajima:polished_labyrinth_stone_tile_slab",
+	"welcomekitajima:mossy_cobbled_labyrinth_stone_slab",
+	"welcomekitajima:mossy_polished_labyrinth_stone_slab",
+	"welcomekitajima:mossy_polished_labyrinth_stone_brick_slab",
+	"welcomekitajima:mossy_polished_labyrinth_stone_tile_slab"
   ]
 }

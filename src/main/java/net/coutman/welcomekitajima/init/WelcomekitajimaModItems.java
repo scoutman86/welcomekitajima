@@ -1,16 +1,17 @@
-/*
- *	MCreator note: This file will be REGENERATED on each build.
- */
 package net.coutman.welcomekitajima.init;
 
-import net.minecraft.world.item.Items;
+
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
-import net.minecraft.client.renderer.item.ItemProperties;
-import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
+
+// these imports were only required for the legacy mcreator functions, no idea if they still are needed
+
+// import net.minecraft.world.item.Items;
+// import net.minecraft.client.renderer.item.ItemProperties;
+// import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 
 import net.coutman.welcomekitajima.item.*;
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
@@ -40,20 +41,35 @@ public class WelcomekitajimaModItems {
 	public static Item BLANK_DVD;
 	public static Item BLANK_BD;
 	public static Item STUDIOPOLIS_ZONE_ACT_1;
-	public static Item WORLDNOSTART;
-	public static Item KUYAMU;
 	public static Item HAGU;
 	public static Item TOADS_TURNPIKE;
+	public static Item RACEWAYS;
 	public static Item SMB_2_OVERWORLD_SMAS;
 	public static Item SMB_3_OVERWORLD_SMAS;
 	public static Item SMW_SPECIAL;
 	public static Item STUDIOPOLIS_COMPLEX_CALM;
-	public static Item S_TO_RY;
-	public static Item SMILE_SYMPHONY;
 	public static Item RUDE_BUSTER;
 	public static Item JOKER;
-	public static Item NEWLY_EDGY_IDOLS;
+	public static Item BIG_SHOT;
+	public static Item TV_TIME;
 	public static Item THE_FIRST_DROP;
+	public static Item EVER_DRIER;
+	public static Item DAYTIME_WANDERING;
+	// untitleds
+	public static Item NEEDLE;
+	public static Item NEWLY_EDGY_IDOLS;
+	public static Item READY_STEADY;
+	public static Item WORLDNOSTART;
+	public static Item KUYAMU;
+	// movie songs
+	public static Item STORY;
+	public static Item FUN;
+	public static Item FIRE_DANCE;
+	public static Item SMILE_SYMPHONY;
+	public static Item LIGHT_DWELL;
+	// real items
+	public static Item CRYSTAL;
+	public static Item WISH_PIECE;
 	// fuyuki
 	public static Item FUYUKI_WOOD;
 	public static Item FUYUKI_LOG;
@@ -135,20 +151,35 @@ public class WelcomekitajimaModItems {
 		BLANK_DVD = register("blank_dvd", new BlankDVDItem());
 		BLANK_BD = register("blank_bd", new BlankBDItem());
 		STUDIOPOLIS_ZONE_ACT_1 = register("studiopolis_zone_act_1", new StudiopolisZoneAct1Item());
-		WORLDNOSTART = register("the_world_hasnt_started_yet", new WorldNoStartItem());
-		KUYAMU = register("kuyamu", new KuyamuItem());
 		HAGU = register("hagu", new HaguItem());
 		TOADS_TURNPIKE = register("toads_turnpike", new ToadsTurnpikeItem());
+		RACEWAYS = register("raceways", new RacewaysItem());
 		SMB_2_OVERWORLD_SMAS = register("smb_2_overworld_smas", new SMB2OverworldSMASItem());
 		SMB_3_OVERWORLD_SMAS = register("smb_3_overworld_smas", new SMB3OverworldSMASItem());
 		SMW_SPECIAL = register("smw_special", new SMWSpecialItem());
 		STUDIOPOLIS_COMPLEX_CALM = register("studiopolis_complex_calm", new StudiopolisComplexCalmItem());
-		S_TO_RY = register("s_to_ry", new SToRYItem());
-		SMILE_SYMPHONY = register("smile_symphony", new SmileSymphonyItem());
 		RUDE_BUSTER = register("rude_buster", new RudeBusterItem());
 		JOKER = register("joker", new JokerItem());
-		NEWLY_EDGY_IDOLS = register("newly_edgy_idols", new NewlyEdgyIdolsItem());
+		BIG_SHOT = register("big_shot", new BigShotItem());
+		TV_TIME = register("its_tv_time", new TVTimeItem());
 		THE_FIRST_DROP = register("the_first_drop", new FirstDropItem());
+		EVER_DRIER = register("ever_drier", new EverDrierItem());
+		DAYTIME_WANDERING = register("daytime_wandering", new DaytimeWanderingItem());
+		// untitleds
+		NEEDLE = register("needle", new NeedleItem());
+		NEWLY_EDGY_IDOLS = register("newly_edgy_idols", new NewlyEdgyIdolsItem());
+		READY_STEADY = register("ready_steady", new ReadySteadyItem());
+		WORLDNOSTART = register("the_world_hasnt_started_yet", new WorldNoStartItem());
+		KUYAMU = register("kuyamu", new KuyamuItem());
+		// movie songs
+		STORY = register("story", new SToRYItem());
+		FUN = register("fun", new FunItem());
+		FIRE_DANCE = register("fire_dance", new FireDanceItem());
+		SMILE_SYMPHONY = register("smile_symphony", new SmileSymphonyItem());
+		LIGHT_DWELL = register("the_light_that_dwells_here", new LightDwellItem());
+		// okay real items
+		CRYSTAL = register("crystal", new SEKAICrystalItem());
+		WISH_PIECE = register("wish_piece", new WishPieceItem());
 		// fuyuki
 		FUYUKI_WOOD = register("fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_WOOD, new Item.Properties()));
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));
@@ -204,15 +235,15 @@ public class WelcomekitajimaModItems {
 		MOSSY_CHISELED_LABYRINTH_STONE_STAIRS = register("mossy_chiseled_labyrinth_stone_stairs", new BlockItem(WelcomekitajimaModBlocks.MOSSY_CHISELED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
 		MOSSY_CHISELED_LABYRINTH_STONE_SLAB = register("mossy_chiseled_labyrinth_stone_slab", new BlockItem(WelcomekitajimaModBlocks.MOSSY_CHISELED_LABYRINTH_STONE_SLAB, new Item.Properties()));
 	}
-
-	public static void clientLoad() { // legacy method leftover from mcreator
-	}
+	// legacy method leftover from mcreator
+	// public static void clientLoad() {
+	// }
 
 	private static Item register(String registryName, Item item) {
 		return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomekitajimaMod.MODID, registryName), item);
 	}
-
-	private static void registerBlockingProperty(Item item) { // legacy method leftover from mcreator
-		ItemProperties.register(item, new ResourceLocation("blocking"), (ClampedItemPropertyFunction) ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
-	}
+	// another legacy method leftover from mcreator
+	// private static void registerBlockingProperty(Item item) {
+		// ItemProperties.register(item, new ResourceLocation("blocking"), (ClampedItemPropertyFunction) ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
+	// }
 }

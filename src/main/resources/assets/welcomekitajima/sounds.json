@@ -36,6 +36,15 @@
       }
     ]
   },
+    "record.raceway": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:raceway",
+        "stream": true
+      }
+    ]
+  },
     "record.joker": {
     "category": "record",
     "sounds": [
@@ -189,6 +198,96 @@
       {
         "name": "welcomekitajima:school_refusal",
         "stream": false
+      }
+    ]
+  },
+    "record.needle": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:needle",
+        "stream": true
+      }
+    ]
+  },
+    "record.fire_dance": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:fire_dance",
+        "stream": true
+      }
+    ]
+  },
+    "record.light_dwell": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:light_dwell",
+        "stream": true
+      }
+    ]
+  },
+  "record.fun": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:fun",
+        "stream": true
+      }
+    ]
+  },
+  "record.ready_steady": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:ready_steady",
+        "stream": true
+      }
+    ]
+  },
+  "record.ever_drier": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:ever_drier",
+        "stream": true
+      }
+    ]
+  },
+  "record.the_first_drop": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:the_first_drop",
+        "stream": true
+      }
+    ]
+  },
+  "record.daytime_wandering": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:daytime_wandering",
+        "stream": true
+      }
+    ]
+  },
+    "record.tv_time": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:tenna_battle",
+        "stream": true
+      }
+    ]
+  },
+    "record.big_shot": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:spamton_neo_mix_ex_wip",
+        "stream": true
       }
     ]
   }

@@ -1,22 +1,33 @@
 {
   "replace": false,
   "values": [
-    "welcomekitajima:smile_symphony",
     "welcomekitajima:studiopolis_complex_calm",
     "welcomekitajima:smw_special",
-    "welcomekitajima:s_to_ry",
     "welcomekitajima:smb_3_overworld_smas",
     "welcomekitajima:smb_2_overworld_smas",
     "welcomekitajima:toads_turnpike",
+	"welcomekitajima:raceways",
     "welcomekitajima:hagu",
-    "welcomekitajima:kuyamu",
     "welcomekitajima:studiopolis_zone_act_1",
     "welcomekitajima:blank_bd",
     "welcomekitajima:blank_dvd",
     "welcomekitajima:blank_compact_disc",
-    "welcomekitajima:the_world_hasnt_started_yet",
 	"welcomekitajima:rude_buster",
 	"welcomekitajima:joker",
-	"welcomekitajima:newly_edgy_idols"
+	"welcomekitajima:its_tv_time",
+	"welcomekitajima:big_shot",
+    "welcomekitajima:the_first_drop",
+    "welcomekitajima:ever_drier",
+    "welcomekitajima:daytime_wandering",
+    "welcomekitajima:needle",
+	"welcomekitajima:newly_edgy_idols",
+	"welcomekitajima:ready_steady",
+    "welcomekitajima:the_world_hasnt_started_yet",
+    "welcomekitajima:kuyamu",
+	"welcomekitajima:story",
+	"welcomekitajima:fun",
+	"welcomekitajima:fire_dance",
+	"welcomekitajima:smile_symphony",
+	"welcomekitajima:the_light_that_dwells_here"
   ]
 }

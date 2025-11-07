@@ -1,14 +1,6 @@
-
-/*
- *	MCreator note: This file will be REGENERATED on each build.
- */
 package net.coutman.welcomekitajima.init;
 
-import net.coutman.welcomekitajima.procedures.TeleportToAndFromSchoolSEKAIProcedure;
-import net.coutman.welcomekitajima.procedures.TeleportToAndFromWonderlandSEKAIProcedure;
-import net.coutman.welcomekitajima.procedures.TeleportToAndFromEmptySEKAIProcedure;
-import net.coutman.welcomekitajima.procedures.DiscEnterNoiseProcedure;
-import net.coutman.welcomekitajima.procedures.DiscEjectNoiseProcedure;
+import net.coutman.welcomekitajima.procedures.*;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
 public class WelcomekitajimaModProcedures {
@@ -18,5 +10,6 @@ public class WelcomekitajimaModProcedures {
 		new TeleportToAndFromEmptySEKAIProcedure();
 		new TeleportToAndFromSchoolSEKAIProcedure();
 		new TeleportToAndFromWonderlandSEKAIProcedure();
+		new TeleportToAndFromStreetSEKAIProcedure();
 	}
 }

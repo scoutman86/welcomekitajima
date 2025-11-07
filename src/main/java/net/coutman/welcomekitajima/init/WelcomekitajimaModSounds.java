@@ -1,7 +1,3 @@
-
-/*
- *	MCreator note: This file will be REGENERATED on each build.
- */
 package net.coutman.welcomekitajima.init;
 
 import net.minecraft.sounds.SoundEvent;
@@ -25,6 +21,7 @@ public class WelcomekitajimaModSounds {
 	public static SoundEvent RECORD_RUDE_BUSTER = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.rude_buster"));
 	public static SoundEvent RECORD_JOKER = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.joker"));
 	public static SoundEvent RECORD_NEWLY_EDGY_IDOLS = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.newly_edgy_idols"));
+	public static SoundEvent RECORD_THEFIRSTDROP = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.the_first_drop"));
 
 	// Block sounds
 	public static SoundEvent BLOCK_DRIVE_SPINNING = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "block.drive.spinning"));
@@ -60,6 +57,7 @@ public class WelcomekitajimaModSounds {
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.rude_buster"), RECORD_RUDE_BUSTER);
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.joker"), RECORD_JOKER);
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.newly_edgy_idols"), RECORD_NEWLY_EDGY_IDOLS);
+		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.the_first_drop"), RECORD_THEFIRSTDROP);
 		// Block registry events
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "block.drive.spinning"), BLOCK_DRIVE_SPINNING);
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "block.drive.eject"), BLOCK_DRIVE_EJECT);

@@ -14,7 +14,6 @@ import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 
 import net.coutman.welcomekitajima.item.*;
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
-import net.minecraft.world.level.block.Block;
 
 public class WelcomekitajimaModItems {
 	public static Item EMPTY_SEKAI_STONE;
@@ -54,6 +53,7 @@ public class WelcomekitajimaModItems {
 	public static Item RUDE_BUSTER;
 	public static Item JOKER;
 	public static Item NEWLY_EDGY_IDOLS;
+	public static Item THE_FIRST_DROP;
 	// fuyuki
 	public static Item FUYUKI_WOOD;
 	public static Item FUYUKI_LOG;
@@ -92,7 +92,7 @@ public class WelcomekitajimaModItems {
 	public static Item CHISELED_LABYRINTH_STONE;
 	public static Item CHISELED_LABYRINTH_STONE_STAIRS;
 	public static Item CHISELED_LABYRINTH_STONE_SLAB;
-	// i really hate this
+	// i really fucking hate this
 	public static Item MOSSY_LABYRINTH_STONE;
 	public static Item MOSSY_COBBLED_LABYRINTH_STONE;
 	public static Item MOSSY_COBBLED_LABYRINTH_STONE_STAIRS;
@@ -148,6 +148,7 @@ public class WelcomekitajimaModItems {
 		RUDE_BUSTER = register("rude_buster", new RudeBusterItem());
 		JOKER = register("joker", new JokerItem());
 		NEWLY_EDGY_IDOLS = register("newly_edgy_idols", new NewlyEdgyIdolsItem());
+		THE_FIRST_DROP = register("the_first_drop", new FirstDropItem());
 		// fuyuki
 		FUYUKI_WOOD = register("fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_WOOD, new Item.Properties()));
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));
@@ -204,14 +205,14 @@ public class WelcomekitajimaModItems {
 		MOSSY_CHISELED_LABYRINTH_STONE_SLAB = register("mossy_chiseled_labyrinth_stone_slab", new BlockItem(WelcomekitajimaModBlocks.MOSSY_CHISELED_LABYRINTH_STONE_SLAB, new Item.Properties()));
 	}
 
-	public static void clientLoad() {
+	public static void clientLoad() { // legacy method leftover from mcreator
 	}
 
 	private static Item register(String registryName, Item item) {
 		return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomekitajimaMod.MODID, registryName), item);
 	}
 
-	private static void registerBlockingProperty(Item item) {
+	private static void registerBlockingProperty(Item item) { // legacy method leftover from mcreator
 		ItemProperties.register(item, new ResourceLocation("blocking"), (ClampedItemPropertyFunction) ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
 	}
 }

@@ -1,6 +1,5 @@
 package net.coutman.welcomekitajima.init;
 
-import net.minecraft.client.resources.sounds.Sound;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -23,6 +22,8 @@ public class WelcomekitajimaModSounds {
 	public static SoundEvent RECORD_THEFIRSTDROP = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.the_first_drop"));
 	public static SoundEvent RECORD_EVER_DRIER = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.ever_drier"));
 	public static SoundEvent RECORD_DAYTIME_WANDERING = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.daytime_wandering"));
+	public static SoundEvent RECORD_ZUNDAMON_FIGHT = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.zundamon_fight"));
+	public static SoundEvent RECORD_MESMERIZER_NERU_FIGHT = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.mesmerizer_neru_fight"));
 
 	// Untitleds
 	public static SoundEvent RECORD_NEEDLE = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.needle"));
@@ -74,6 +75,8 @@ public class WelcomekitajimaModSounds {
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.big_shot"), RECORD_BIG_SHOT);
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.tv_time"), RECORD_TV_TIME);
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.the_first_drop"), RECORD_THEFIRSTDROP);
+		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.zundamon_fight"), RECORD_ZUNDAMON_FIGHT);
+		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.mesmerizer_neru_fight"), RECORD_MESMERIZER_NERU_FIGHT);
 
 		// Untitled registry events
 		Registry.register(BuiltInRegistries.SOUND_EVENT, new ResourceLocation("welcomekitajima", "record.needle"), RECORD_NEEDLE);

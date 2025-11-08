@@ -55,7 +55,9 @@ public class WelcomekitajimaModItems {
 	public static Item THE_FIRST_DROP;
 	public static Item EVER_DRIER;
 	public static Item DAYTIME_WANDERING;
-	// untitleds
+	public static Item ZUNDAMON_FIGHT;
+	public static Item MESMERIZER_NERU_FIGHT;
+	// untitled
 	public static Item NEEDLE;
 	public static Item NEWLY_EDGY_IDOLS;
 	public static Item READY_STEADY;
@@ -127,9 +129,11 @@ public class WelcomekitajimaModItems {
 	public static Item MOSSY_CHISELED_LABYRINTH_STONE_SLAB;
 
 	public static void load() {
+		// empty sekai blocks
 		EMPTY_SEKAI_STONE = register("empty_sekai_stone", new BlockItem(WelcomekitajimaModBlocks.EMPTY_SEKAI_STONE, new Item.Properties()));
 		EMPTY_SEKAI_TILES = register("empty_sekai_tiles", new BlockItem(WelcomekitajimaModBlocks.EMPTY_SEKAI_TILES, new Item.Properties()));
 		EMPTY_SEKAI_TRUSS = register("empty_sekai_truss", new BlockItem(WelcomekitajimaModBlocks.EMPTY_SEKAI_TRUSS, new Item.Properties()));
+
 		// studiopolis
 		POLISHED_STUDIOPOLIS_CONCRETE = register("polished_studiopolis_concrete", new BlockItem(WelcomekitajimaModBlocks.POLISHED_STUDIOPOLIS_CONCRETE, new Item.Properties()));
 		SMOOTH_STUDIOPOLIS_CONCRETE = register("smooth_studiopolis_concrete", new BlockItem(WelcomekitajimaModBlocks.SMOOTH_STUDIOPOLIS_CONCRETE, new Item.Properties()));
@@ -141,11 +145,13 @@ public class WelcomekitajimaModItems {
 		STUDIOPOLIS_TILE_PILLAR = register("studiopolis_tile_pillar", new BlockItem(WelcomekitajimaModBlocks.STUDIOPOLIS_TILE_PILLAR, new Item.Properties()));
 		STUDIOPOLIS_TRUSS = register("studiopolis_truss", new BlockItem(WelcomekitajimaModBlocks.STUDIOPOLIS_TRUSS, new Item.Properties()));
 		STUDIOPOLIS_LAMP = register("studiopolis_lamp", new BlockItem(WelcomekitajimaModBlocks.STUDIOPOLIS_LAMP, new Item.Properties()));
+
 		// misc
 		WOODEN_MIPS_DOOR = register("wooden_mips_door", new BlockItem(WelcomekitajimaModBlocks.WOODEN_MIPS_DOOR, new Item.Properties()));
 		SINGLE_STAR_WOODEN_MIPS_DOOR = register("single_star_wooden_mips_door", new BlockItem(WelcomekitajimaModBlocks.SINGLE_STAR_WOODEN_MIPS_DOOR, new Item.Properties()));
 		METAL_MIPS_DOOR = register("metal_mips_door", new BlockItem(WelcomekitajimaModBlocks.METAL_MIPS_DOOR, new Item.Properties()));
 		FRAMEWORK_BLOCK = register("framework_block", new BlockItem(WelcomekitajimaModBlocks.FRAMEWORK_BLOCK, new Item.Properties()));
+
 		// discs
 		BLANK_COMPACT_DISC = register("blank_compact_disc", new BlankCompactDiscItem());
 		BLANK_DVD = register("blank_dvd", new BlankDVDItem());
@@ -165,21 +171,27 @@ public class WelcomekitajimaModItems {
 		THE_FIRST_DROP = register("the_first_drop", new FirstDropItem());
 		EVER_DRIER = register("ever_drier", new EverDrierItem());
 		DAYTIME_WANDERING = register("daytime_wandering", new DaytimeWanderingItem());
-		// untitleds
+		ZUNDAMON_FIGHT = register("zundamon_fight", new ZundamonFightItem());
+		MESMERIZER_NERU_FIGHT = register("mesmerizer_neru_fight", new MesmerizerNeruFightItem());
+
+		// untitled
 		NEEDLE = register("needle", new NeedleItem());
 		NEWLY_EDGY_IDOLS = register("newly_edgy_idols", new NewlyEdgyIdolsItem());
 		READY_STEADY = register("ready_steady", new ReadySteadyItem());
 		WORLDNOSTART = register("the_world_hasnt_started_yet", new WorldNoStartItem());
 		KUYAMU = register("kuyamu", new KuyamuItem());
+
 		// movie songs
 		STORY = register("story", new SToRYItem());
 		FUN = register("fun", new FunItem());
 		FIRE_DANCE = register("fire_dance", new FireDanceItem());
 		SMILE_SYMPHONY = register("smile_symphony", new SmileSymphonyItem());
 		LIGHT_DWELL = register("the_light_that_dwells_here", new LightDwellItem());
+
 		// okay real items
 		CRYSTAL = register("crystal", new SEKAICrystalItem());
 		WISH_PIECE = register("wish_piece", new WishPieceItem());
+
 		// fuyuki
 		FUYUKI_WOOD = register("fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_WOOD, new Item.Properties()));
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));
@@ -193,6 +205,7 @@ public class WelcomekitajimaModItems {
 		FUYUKI_BUTTON = register("fuyuki_button", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_BUTTON, new Item.Properties()));
 		FUYUKI_DOOR = register("fuyuki_door", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_DOOR, new Item.Properties()));
 		FUYUKI_TRAPDOOR = register("fuyuki_trapdoor", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_TRAPDOOR, new Item.Properties()));
+
 		// fucking piece of shit I hate you
 		LABYRINTH_STONE = register("labyrinth_stone", new BlockItem(WelcomekitajimaModBlocks.LABYRINTH_STONE, new Item.Properties()));
 		LABYRINTH_COAL_ORE = register("labyrinth_coal_ore", new BlockItem(WelcomekitajimaModBlocks.LABYRINTH_COAL_ORE, new Item.Properties()));

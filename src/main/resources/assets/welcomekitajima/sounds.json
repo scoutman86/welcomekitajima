@@ -63,6 +63,24 @@
       }
     ]
   },
+    "record.zundamon_fight": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:zunda_boss",
+        "stream": true
+      }
+    ]
+  },
+    "record.mesmerizer_neru_fight": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "welcomekitajima:neru_fight",
+        "stream": true
+      }
+    ]
+  },
   "record.kuyamutokaitemirai": {
     "category": "record",
     "sounds": [

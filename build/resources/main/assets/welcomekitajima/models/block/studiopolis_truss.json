@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "welcomekitajima:block/studiopolis_truss",
-    "particle": "welcomekitajima:block/studiopolis_truss"
-  },
-  "render_type": "cutout"
-}

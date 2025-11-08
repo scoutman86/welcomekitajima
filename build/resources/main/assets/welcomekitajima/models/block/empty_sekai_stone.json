@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "welcomekitajima:block/empty_sekai_stone",
-    "particle": "welcomekitajima:block/empty_sekai_stone"
-  },
-  "render_type": "solid"
-}

@@ -1,8 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "welcomekitajima:block/labyrinth/labyrinth_diamond_ore",
-    "particle": "welcomekitajima:block/labyrinth/labyrinth_diamond_ore"
-  },
-  "render_type": "solid"
-}

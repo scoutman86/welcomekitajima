@@ -1,8 +1,0 @@
-{
-  "parent": "block/fence_inventory",
-  "textures": {
-    "texture": "welcomekitajima:block/fuyuki_planks",
-    "particle": "welcomekitajima:block/fuyuki_planks"
-  },
-  "render_type": "solid"
-}

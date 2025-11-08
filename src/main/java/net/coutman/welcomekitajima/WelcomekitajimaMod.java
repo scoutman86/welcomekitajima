@@ -1,6 +1,7 @@
 package net.coutman.welcomekitajima;
 
 import net.coutman.welcomekitajima.init.*;
+import net.fabricmc.loader.api.FabricLoader;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -26,6 +27,11 @@ public class WelcomekitajimaMod implements ModInitializer {
 
 		WelcomekitajimaModBiomes.loadEndBiomes();
 		LOGGER.info("Hi there. I have no idea what to put here, but if you see this, chances are you're good to go.");
+		if (FabricLoader.getInstance().isModLoaded("dazzle")) {
+			LOGGER.info("Dazzle 2 is loaded, so the new textures will take priority.");
+		} else {
+			LOGGER.info("Dazzle 2 is not loaded, so the new textures will go unused.");
+		}
 		ServerLifecycleEvents.SERVER_STARTING.register(WelcomekitajimaModBiomes::load);
 	}
 }

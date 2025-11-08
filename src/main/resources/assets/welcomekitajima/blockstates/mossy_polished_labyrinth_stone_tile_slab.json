@@ -4,7 +4,7 @@
       "model": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tile_slab"
     },
     "type=double": {
-      "model": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tile"
+      "model": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tiles"
     },
     "type=top": {
       "model": "welcomekitajima:block/labyrinth/mossy_polished_labyrinth_stone_tile_slab_top"

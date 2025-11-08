@@ -22,7 +22,7 @@ public class SmileSymphonyItem extends RecordItem {
 				new FabricItemSettings()
 						.maxCount(1)
 						.rarity(Rarity.EPIC),
-				2022 // track length in ticks
+				4629 // track length in ticks
 		);
 		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
 	}

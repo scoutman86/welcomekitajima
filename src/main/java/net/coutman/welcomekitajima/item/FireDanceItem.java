@@ -22,7 +22,7 @@ public class FireDanceItem extends RecordItem {
 				new FabricItemSettings()
 						.maxCount(1)
 						.rarity(Rarity.EPIC),
-				2022 // track length in ticks
+				4164 // track length in ticks
 		);
 		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
 	}

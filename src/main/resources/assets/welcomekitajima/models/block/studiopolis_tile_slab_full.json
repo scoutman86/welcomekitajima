@@ -1,9 +1,7 @@
 {
-  "parent": "block/cube_bottom_top",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "particle": "welcomekitajima:block/studiopolis_tiles_crosssection",
-    "bottom": "welcomekitajima:block/studiopolis_tiles_crosssection",
-    "top": "welcomekitajima:block/studiopolis_tiles_crosssection",
+    "end": "welcomekitajima:block/studiopolis_tiles_crosssection",
     "side": "welcomekitajima:block/studiopolis_tiles"
   },
   "render_type": "solid"

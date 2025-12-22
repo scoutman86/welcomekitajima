@@ -48,6 +48,6 @@ public class FuyukiLeavesBlock extends LeavesBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_LEAVES, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_LEAVES, RenderType.cutoutMipped());
 	}
 }

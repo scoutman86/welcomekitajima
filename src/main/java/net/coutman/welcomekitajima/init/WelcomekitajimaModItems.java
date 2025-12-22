@@ -85,6 +85,8 @@ public class WelcomekitajimaModItems {
 	public static Item FUYUKI_BUTTON;
 	public static Item FUYUKI_DOOR;
 	public static Item FUYUKI_TRAPDOOR;
+	public static Item STRIPPED_FUYUKI_LOG;
+	public static Item STRIPPED_FUYUKI_WOOD;
 	// fuck off
 	public static Item LABYRINTH_STONE;
 	public static Item LABYRINTH_COAL_ORE;
@@ -193,18 +195,20 @@ public class WelcomekitajimaModItems {
 		WISH_PIECE = register("wish_piece", new WishPieceItem());
 
 		// fuyuki
-		FUYUKI_WOOD = register("fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_WOOD, new Item.Properties()));
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));
-		FUYUKI_PLANKS = register("fuyuki_planks", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_PLANKS, new Item.Properties()));
+		FUYUKI_WOOD = register("fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_WOOD, new Item.Properties()));
+		STRIPPED_FUYUKI_LOG = register("stripped_fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.STRIPPED_FUYUKI_LOG, new Item.Properties()));
+		STRIPPED_FUYUKI_WOOD = register("stripped_fuyuki_wood", new BlockItem(WelcomekitajimaModBlocks.STRIPPED_FUYUKI_WOOD, new Item.Properties()));
 		FUYUKI_LEAVES = register("fuyuki_leaves", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LEAVES, new Item.Properties()));
+		FUYUKI_PLANKS = register("fuyuki_planks", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_PLANKS, new Item.Properties()));
 		FUYUKI_STAIRS = register("fuyuki_stairs", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_STAIRS, new Item.Properties()));
 		FUYUKI_SLAB = register("fuyuki_slab", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_SLAB, new Item.Properties()));
 		FUYUKI_FENCE = register("fuyuki_fence", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_FENCE, new Item.Properties()));
 		FUYUKI_FENCE_GATE = register("fuyuki_fence_gate", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_FENCE_GATE, new Item.Properties()));
-		FUYUKI_PRESSURE_PLATE = register("fuyuki_pressure_plate", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_PRESSURE_PLATE, new Item.Properties()));
-		FUYUKI_BUTTON = register("fuyuki_button", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_BUTTON, new Item.Properties()));
 		FUYUKI_DOOR = register("fuyuki_door", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_DOOR, new Item.Properties()));
 		FUYUKI_TRAPDOOR = register("fuyuki_trapdoor", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_TRAPDOOR, new Item.Properties()));
+		FUYUKI_PRESSURE_PLATE = register("fuyuki_pressure_plate", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_PRESSURE_PLATE, new Item.Properties()));
+		FUYUKI_BUTTON = register("fuyuki_button", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_BUTTON, new Item.Properties()));
 
 		// fucking piece of shit I hate you
 		LABYRINTH_STONE = register("labyrinth_stone", new BlockItem(WelcomekitajimaModBlocks.LABYRINTH_STONE, new Item.Properties()));

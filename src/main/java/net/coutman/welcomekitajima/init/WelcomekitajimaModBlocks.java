@@ -46,6 +46,8 @@ public class WelcomekitajimaModBlocks {
 	public static Block FUYUKI_BUTTON;
 	public static Block FUYUKI_DOOR;
 	public static Block FUYUKI_TRAPDOOR;
+	public static Block STRIPPED_FUYUKI_LOG;
+	public static Block STRIPPED_FUYUKI_WOOD;
 	// labyrinth
 	public static Block LABYRINTH_STONE;
 	public static Block LABYRINTH_COAL_ORE;
@@ -122,6 +124,8 @@ public class WelcomekitajimaModBlocks {
 		FUYUKI_BUTTON = register("fuyuki_button", new FuyukiButtonBlock());
 		FUYUKI_DOOR = register("fuyuki_door", new FuyukiDoorBlock());
 		FUYUKI_TRAPDOOR = register("fuyuki_trapdoor", new FuyukiTrapdoorBlock());
+		STRIPPED_FUYUKI_LOG = register("stripped_fuyuki_log", new FuyukiStrippedLogBlock());
+		STRIPPED_FUYUKI_WOOD = register("stripped_fuyuki_wood", new FuyukiStrippedWoodBlock());
 		// fuck you
 		LABYRINTH_STONE = register("labyrinth_stone", new LabyrinthStoneBlock());
 		// ore

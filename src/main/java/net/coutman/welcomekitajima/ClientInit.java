@@ -17,13 +17,29 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.world.level.FoliageColor;
 
 @Environment(EnvType.CLIENT)
 public class ClientInit implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
-
+		// I have no idea what I'm doing so hopefully this works and I don't explode
 		WelcomekitajimaModBlocks.clientLoad();
+		ColorProviderRegistry.BLOCK.register(
+				(state, world, pos, tintIndex) -> {
+					if (world != null && pos != null) {
+						return BiomeColors.getAverageFoliageColor(world, pos);
+					}
+					return FoliageColor.getDefaultColor();
+				},
+				WelcomekitajimaModBlocks.FUYUKI_LEAVES
+		);
 
+		ColorProviderRegistry.ITEM.register(
+				(stack, tintIndex) -> FoliageColor.getDefaultColor(),
+				WelcomekitajimaModBlocks.FUYUKI_LEAVES
+		);
 	}
 }

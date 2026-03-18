@@ -1,6 +1,8 @@
 package net.coutman.welcomekitajima.init;
 
 
+import net.coutman.welcomekitajima.item.specialty.CitlaliTataco;
+import net.coutman.welcomekitajima.item.specialty.KnucklesToast;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
@@ -72,6 +74,9 @@ public class WelcomekitajimaModItems {
 	// real items
 	public static Item CRYSTAL;
 	public static Item WISH_PIECE;
+	// specialties
+	public static Item SECRET_ART;
+	public static Item KNUCKLE_SANDWICH;
 	// fuyuki
 	public static Item FUYUKI_WOOD;
 	public static Item FUYUKI_LOG;
@@ -193,6 +198,10 @@ public class WelcomekitajimaModItems {
 		// okay real items
 		CRYSTAL = register("crystal", new SEKAICrystalItem());
 		WISH_PIECE = register("wish_piece", new WishPieceItem());
+
+		// specialty foods
+		SECRET_ART = register("secret_art", new CitlaliTataco());
+		KNUCKLE_SANDWICH = register("knuckle_sandwich", new KnucklesToast());
 
 		// fuyuki
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));

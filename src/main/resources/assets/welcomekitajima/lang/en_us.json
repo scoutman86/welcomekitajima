@@ -154,5 +154,11 @@
   "item.welcomekitajima.stripped_fuyuki_log": "Stripped Fuyuki Log",
   "item.welcomekitajima.stripped_fuyuki_wood": "Stripped Fuyuki Wood",
   "block.welcomekitajima.stripped_fuyuki_log": "Stripped Fuyuki Log",
-  "block.welcomekitajima.stripped_fuyuki_wood": "Stripped Fuyuki Wood"
+  "block.welcomekitajima.stripped_fuyuki_wood": "Stripped Fuyuki Wood",
+  "itemGroup.welcomekitajima.tab_specialties": "Specialty Dishes",
+  "item_group.welcomekitajima.specialties": "Specialty Dishes",
+  "item.welcomekitajima.secret_art": "Secret Art",
+  "itemTooltip.welcomekitajima.secret_art": "Citlali's specialty.",
+  "item.welcomekitajima.knuckle_sandwich": "Knuckle Sandwich",
+  "itemTooltip.welcomekitajima.knuckle_sandwich": "Knuckles' specialty."
 }

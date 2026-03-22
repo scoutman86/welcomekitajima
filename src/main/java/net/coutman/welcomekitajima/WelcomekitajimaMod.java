@@ -24,6 +24,7 @@ public class WelcomekitajimaMod implements ModInitializer {
 		WelcomekitajimaModProcedures.load();
 
 		WelcomekitajimaModSounds.load();
+		RegisterBannerPatterns.load();
 
 		WelcomekitajimaModBiomes.loadEndBiomes();
 		LOGGER.info("Hi there. I have no idea what to put here, but if you see this, chances are you're good to go.");

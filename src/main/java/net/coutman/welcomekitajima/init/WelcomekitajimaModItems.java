@@ -77,6 +77,15 @@ public class WelcomekitajimaModItems {
 	// specialties
 	public static Item SECRET_ART;
 	public static Item KNUCKLE_SANDWICH;
+	// banner patterns because fuck you
+	public static Item PYRO_BANNER_PATTERN;
+	public static Item HYDRO_BANNER_PATTERN;
+	public static Item ANEMO_BANNER_PATTERN;
+	public static Item ELECTRO_BANNER_PATTERN;
+	public static Item DENDRO_BANNER_PATTERN;
+	public static Item CRYO_BANNER_PATTERN;
+	public static Item GEO_BANNER_PATTERN;
+	public static Item MIYASHITA_BANNER_PATTERN;
 	// fuyuki
 	public static Item FUYUKI_WOOD;
 	public static Item FUYUKI_LOG;
@@ -202,6 +211,16 @@ public class WelcomekitajimaModItems {
 		// specialty foods
 		SECRET_ART = register("secret_art", new CitlaliTataco());
 		KNUCKLE_SANDWICH = register("knuckle_sandwich", new KnucklesToast());
+
+		// AAAAAAAAAAAAA
+		PYRO_BANNER_PATTERN = register("pyro_banner_pattern", new PyroPatternItem());
+		HYDRO_BANNER_PATTERN = register("hydro_banner_pattern", new HydroPatternItem());
+		ANEMO_BANNER_PATTERN = register("anemo_banner_pattern", new AnemoPatternItem());
+		ELECTRO_BANNER_PATTERN = register("electro_banner_pattern", new ElectroPatternItem());
+		DENDRO_BANNER_PATTERN = register("dendro_banner_pattern", new DendroPatternItem());
+		CRYO_BANNER_PATTERN = register("cryo_banner_pattern", new CryoPatternItem());
+		GEO_BANNER_PATTERN = register("geo_banner_pattern", new GeoPatternItem());
+		MIYASHITA_BANNER_PATTERN = register("miyashita_banner_pattern", new MiyashitaSakuraPatternItem());
 
 		// fuyuki
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));

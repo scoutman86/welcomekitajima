@@ -86,6 +86,9 @@ public class WelcomekitajimaModItems {
 	public static Item CRYO_BANNER_PATTERN;
 	public static Item GEO_BANNER_PATTERN;
 	public static Item MIYASHITA_BANNER_PATTERN;
+	// boss drops
+	public static Item PROJECTION_PYRO_DROP;
+	public static Item PROJECTION_ELECTRO_DROP;
 	// fuyuki
 	public static Item FUYUKI_WOOD;
 	public static Item FUYUKI_LOG;
@@ -221,6 +224,10 @@ public class WelcomekitajimaModItems {
 		CRYO_BANNER_PATTERN = register("cryo_banner_pattern", new CryoPatternItem());
 		GEO_BANNER_PATTERN = register("geo_banner_pattern", new GeoPatternItem());
 		MIYASHITA_BANNER_PATTERN = register("miyashita_banner_pattern", new MiyashitaSakuraPatternItem());
+
+		// boss drops
+		PROJECTION_PYRO_DROP = register("projection_pyro_drop", new ProjectionPyroDrop());
+		PROJECTION_ELECTRO_DROP = register("projection_electro_drop", new ProjectionElectroDrop());
 
 		// fuyuki
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_LOG, new Item.Properties()));

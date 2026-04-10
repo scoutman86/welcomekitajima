@@ -39,9 +39,6 @@ public class WelcomekitajimaModItems {
 	public static Item METAL_MIPS_DOOR;
 	public static Item FRAMEWORK_BLOCK;
 	// disc
-	public static Item BLANK_COMPACT_DISC;
-	public static Item BLANK_DVD;
-	public static Item BLANK_BD;
 	public static Item STUDIOPOLIS_ZONE_ACT_1;
 	public static Item HAGU;
 	public static Item TOADS_TURNPIKE;
@@ -163,9 +160,6 @@ public class WelcomekitajimaModItems {
 		FRAMEWORK_BLOCK = register("framework_block", new BlockItem(WelcomekitajimaModBlocks.FRAMEWORK_BLOCK, new Item.Properties()));
 
 		// discs
-		BLANK_COMPACT_DISC = register("blank_compact_disc", new BlankCompactDiscItem());
-		BLANK_DVD = register("blank_dvd", new BlankDVDItem());
-		BLANK_BD = register("blank_bd", new BlankBDItem());
 		STUDIOPOLIS_ZONE_ACT_1 = register("studiopolis_zone_act_1", new StudiopolisZoneAct1Item());
 		HAGU = register("hagu", new HaguItem());
 		TOADS_TURNPIKE = register("toads_turnpike", new ToadsTurnpikeItem());

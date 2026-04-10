@@ -28,6 +28,6 @@ public class WelcomekitajimaModTabs {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_SPECIALTIES,
 				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.specialties")).icon(() -> new ItemStack(WelcomekitajimaModItems.KNUCKLE_SANDWICH)).build());
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_BOSS_DROPS,
-				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.specialties")).icon(() -> new ItemStack(WelcomekitajimaModItems.PROJECTION_PYRO_DROP)).build());
+				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.boss_drops")).icon(() -> new ItemStack(WelcomekitajimaModItems.PROJECTION_PYRO_DROP)).build());
 	}
 }

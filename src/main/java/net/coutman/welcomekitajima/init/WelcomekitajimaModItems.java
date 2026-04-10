@@ -59,21 +59,12 @@ public class WelcomekitajimaModItems {
 	public static Item DAYTIME_WANDERING;
 	public static Item ZUNDAMON_FIGHT;
 	public static Item MESMERIZER_NERU_FIGHT;
-	// untitled
-	public static Item NEEDLE;
-	public static Item NEWLY_EDGY_IDOLS;
-	public static Item READY_STEADY;
-	public static Item WORLDNOSTART;
-	public static Item KUYAMU;
 	// movie songs
 	public static Item STORY;
 	public static Item FUN;
 	public static Item FIRE_DANCE;
 	public static Item SMILE_SYMPHONY;
 	public static Item LIGHT_DWELL;
-	// real items
-	public static Item CRYSTAL;
-	public static Item WISH_PIECE;
 	// specialties
 	public static Item SECRET_ART;
 	public static Item KNUCKLE_SANDWICH;
@@ -193,23 +184,12 @@ public class WelcomekitajimaModItems {
 		ZUNDAMON_FIGHT = register("zundamon_fight", new ZundamonFightItem());
 		MESMERIZER_NERU_FIGHT = register("mesmerizer_neru_fight", new MesmerizerNeruFightItem());
 
-		// untitled
-		NEEDLE = register("needle", new NeedleItem());
-		NEWLY_EDGY_IDOLS = register("newly_edgy_idols", new NewlyEdgyIdolsItem());
-		READY_STEADY = register("ready_steady", new ReadySteadyItem());
-		WORLDNOSTART = register("the_world_hasnt_started_yet", new WorldNoStartItem());
-		KUYAMU = register("kuyamu", new KuyamuItem());
-
 		// movie songs
 		STORY = register("story", new SToRYItem());
 		FUN = register("fun", new FunItem());
 		FIRE_DANCE = register("fire_dance", new FireDanceItem());
 		SMILE_SYMPHONY = register("smile_symphony", new SmileSymphonyItem());
 		LIGHT_DWELL = register("the_light_that_dwells_here", new LightDwellItem());
-
-		// okay real items
-		CRYSTAL = register("crystal", new SEKAICrystalItem());
-		WISH_PIECE = register("wish_piece", new WishPieceItem());
 
 		// specialty foods
 		SECRET_ART = register("secret_art", new CitlaliTataco());

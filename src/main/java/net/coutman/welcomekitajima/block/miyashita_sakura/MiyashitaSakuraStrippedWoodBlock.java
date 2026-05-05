@@ -1,41 +1,37 @@
 
-package net.coutman.welcomekitajima.block;
+package net.coutman.welcomekitajima.block.miyashita_sakura;
 
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.StateDefinition;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.Rotation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.item.context.BlockPlaceContext;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.renderer.RenderType;
-
-import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.fabricmc.api.Environment;
-import net.fabricmc.api.EnvType;
-
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.storage.loot.LootParams;
 
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 
-public class FuyukiWoodBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f);
+public class MiyashitaSakuraStrippedWoodBlock extends Block {
+	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f);
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
-	public FuyukiWoodBlock() {
+	public MiyashitaSakuraStrippedWoodBlock() {
 		super(PROPERTIES);
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
@@ -79,6 +75,6 @@ public class FuyukiWoodBlock extends Block {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_WOOD, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.STRIPPED_MIYASHITA_SAKURA_WOOD, RenderType.solid());
 	}
 }

@@ -1,5 +1,5 @@
 
-package net.coutman.welcomekitajima.block;
+package net.coutman.welcomekitajima.block.fuyuki;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
@@ -7,31 +7,28 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
 
-import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
 
 import java.util.List;
 import java.util.Collections;
 
-public class FuyukiPressurePlateBlock extends PressurePlateBlock {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
+public class FuyukiTrapdoorBlock extends TrapDoorBlock {
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false);
 
-	public FuyukiPressurePlateBlock() {
-		super(Sensitivity.EVERYTHING, PROPERTIES, BlockSetType.OAK);
-		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
+	public FuyukiTrapdoorBlock() {
+		super(PROPERTIES, BlockSetType.OAK);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
 
@@ -50,6 +47,6 @@ public class FuyukiPressurePlateBlock extends PressurePlateBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_PRESSURE_PLATE, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_TRAPDOOR, RenderType.cutoutMipped());
 	}
 }

@@ -10,7 +10,10 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
 import net.coutman.welcomekitajima.block.*;
+import net.coutman.welcomekitajima.block.fuyuki.*;
+import net.coutman.welcomekitajima.block.miyashita_sakura.*;
 import net.coutman.welcomekitajima.block.labyrinth.*;
+
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
 
 public class WelcomekitajimaModBlocks {
@@ -48,6 +51,21 @@ public class WelcomekitajimaModBlocks {
 	public static Block FUYUKI_TRAPDOOR;
 	public static Block STRIPPED_FUYUKI_LOG;
 	public static Block STRIPPED_FUYUKI_WOOD;
+	// miyashita sakura
+	public static Block MIYASHITA_SAKURA_WOOD;
+	public static Block MIYASHITA_SAKURA_LOG;
+	public static Block MIYASHITA_SAKURA_PLANKS;
+	public static Block MIYASHITA_SAKURA_LEAVES;
+	public static Block MIYASHITA_SAKURA_STAIRS;
+	public static Block MIYASHITA_SAKURA_SLAB;
+	public static Block MIYASHITA_SAKURA_FENCE;
+	public static Block MIYASHITA_SAKURA_FENCE_GATE;
+	public static Block MIYASHITA_SAKURA_PRESSURE_PLATE;
+	public static Block MIYASHITA_SAKURA_BUTTON;
+	public static Block MIYASHITA_SAKURA_DOOR;
+	public static Block MIYASHITA_SAKURA_TRAPDOOR;
+	public static Block STRIPPED_MIYASHITA_SAKURA_LOG;
+	public static Block STRIPPED_MIYASHITA_SAKURA_WOOD;
 	// labyrinth
 	public static Block LABYRINTH_STONE;
 	public static Block LABYRINTH_COAL_ORE;
@@ -126,6 +144,21 @@ public class WelcomekitajimaModBlocks {
 		FUYUKI_TRAPDOOR = register("fuyuki_trapdoor", new FuyukiTrapdoorBlock());
 		STRIPPED_FUYUKI_LOG = register("stripped_fuyuki_log", new FuyukiStrippedLogBlock());
 		STRIPPED_FUYUKI_WOOD = register("stripped_fuyuki_wood", new FuyukiStrippedWoodBlock());
+		// Miyashita Sakura Blocks
+		MIYASHITA_SAKURA_WOOD = register("miyashita_sakura_wood", new MiyashitaSakuraWoodBlock());
+		MIYASHITA_SAKURA_LOG = register("miyashita_sakura_log", new MiyashitaSakuraLogBlock());
+		MIYASHITA_SAKURA_PLANKS = register("miyashita_sakura_planks", new MiyashitaSakuraPlanksBlock());
+		MIYASHITA_SAKURA_LEAVES = register("miyashita_sakura_leaves", new MiyashitaSakuraLeavesBlock());
+		MIYASHITA_SAKURA_STAIRS = register("miyashita_sakura_stairs", new MiyashitaSakuraStairsBlock());
+		MIYASHITA_SAKURA_SLAB = register("miyashita_sakura_slab", new MiyashitaSakuraSlabBlock());
+		MIYASHITA_SAKURA_FENCE = register("miyashita_sakura_fence", new MiyashitaSakuraFenceBlock());
+		MIYASHITA_SAKURA_FENCE_GATE = register("miyashita_sakura_fence_gate", new MiyashitaSakuraFenceGateBlock());
+		MIYASHITA_SAKURA_PRESSURE_PLATE = register("miyashita_sakura_pressure_plate", new MiyashitaSakuraPressurePlateBlock());
+		MIYASHITA_SAKURA_BUTTON = register("miyashita_sakura_button", new MiyashitaSakuraButtonBlock());
+		MIYASHITA_SAKURA_DOOR = register("miyashita_sakura_door", new MiyashitaSakuraDoorBlock());
+		MIYASHITA_SAKURA_TRAPDOOR = register("miyashita_sakura_trapdoor", new MiyashitaSakuraTrapdoorBlock());
+		STRIPPED_MIYASHITA_SAKURA_LOG = register("stripped_miyashita_sakura_log", new MiyashitaSakuraStrippedLogBlock());
+		STRIPPED_MIYASHITA_SAKURA_WOOD = register("stripped_miyashita_sakura_wood", new MiyashitaSakuraStrippedWoodBlock());
 		// fuck you
 		LABYRINTH_STONE = register("labyrinth_stone", new LabyrinthStoneBlock());
 		// ore
@@ -175,6 +208,7 @@ public class WelcomekitajimaModBlocks {
 	}
 
 	public static void clientLoad() {
+		// hateful
 		EmptySEKAIStoneBlock.clientInit();
 		EmptySEKAITilesBlock.clientInit();
 		EmptySEKAITrussBlock.clientInit();
@@ -192,6 +226,7 @@ public class WelcomekitajimaModBlocks {
 		SingleStarWoodenMIPSDoorBlock.clientInit();
 		MetalMIPSDoorBlock.clientInit();
 		FrameworkBlockBlock.clientInit();
+
 		FuyukiWoodBlock.clientInit();
 		FuyukiLogBlock.clientInit();
 		FuyukiPlanksBlock.clientInit();
@@ -204,7 +239,22 @@ public class WelcomekitajimaModBlocks {
 		FuyukiButtonBlock.clientInit();
 		FuyukiDoorBlock.clientInit();
 		FuyukiTrapdoorBlock.clientInit();
+
+		MiyashitaSakuraWoodBlock.clientInit();
+		MiyashitaSakuraLogBlock.clientInit();
+		MiyashitaSakuraPlanksBlock.clientInit();
+		MiyashitaSakuraLeavesBlock.clientInit();
+		MiyashitaSakuraStairsBlock.clientInit();
+		MiyashitaSakuraSlabBlock.clientInit();
+		MiyashitaSakuraFenceBlock.clientInit();
+		MiyashitaSakuraFenceGateBlock.clientInit();
+		MiyashitaSakuraPressurePlateBlock.clientInit();
+		MiyashitaSakuraButtonBlock.clientInit();
+		MiyashitaSakuraDoorBlock.clientInit();
+		MiyashitaSakuraTrapdoorBlock.clientInit();
+
 		LabyrinthStoneBlock.clientInit();
+
 		LabyrinthCoalOreBlock.clientInit();
 		LabyrinthCopperOreBlock.clientInit();
 		LabyrinthDiamondOreBlock.clientInit();
@@ -213,9 +263,11 @@ public class WelcomekitajimaModBlocks {
 		LabyrinthIronOreBlock.clientInit();
 		LabyrinthLapisOreBlock.clientInit();
 		LabyrinthRedstoneOreBlock.clientInit();
+
 		CobbledLabyrinthStoneBlock.clientInit();
 		CobbledLabyrinthStoneStairsBlock.clientInit();
 		CobbledLabyrinthStoneSlabBlock.clientInit();
+
 		PolishedLabyrinthStoneBlock.clientInit();
 		PolishedLabyrinthStoneStairsBlock.clientInit();
 		PolishedLabyrinthStoneSlabBlock.clientInit();
@@ -225,9 +277,11 @@ public class WelcomekitajimaModBlocks {
 		PolishedLabyrinthStoneTilesBlock.clientInit();
 		PolishedLabyrinthStoneTileStairsBlock.clientInit();
 		PolishedLabyrinthStoneTileSlabBlock.clientInit();
+
 		ChiseledLabyrinthStoneBlock.clientInit();
 		ChiseledLabyrinthStoneStairsBlock.clientInit();
 		ChiseledLabyrinthStoneSlabBlock.clientInit();
+
 		MossyLabyrinthStoneBlock.clientInit();
 		MossyCobbledLabyrinthStoneBlock.clientInit();
 		MossyCobbledLabyrinthStoneStairsBlock.clientInit();

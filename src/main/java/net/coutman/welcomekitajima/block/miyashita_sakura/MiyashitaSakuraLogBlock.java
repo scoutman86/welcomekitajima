@@ -1,5 +1,5 @@
 
-package net.coutman.welcomekitajima.block;
+package net.coutman.welcomekitajima.block.miyashita_sakura;
 
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
 import net.fabricmc.api.EnvType;
@@ -27,14 +27,11 @@ import net.minecraft.world.level.storage.loot.LootParams;
 import java.util.Collections;
 import java.util.List;
 
-/* I have no way of verifying that this block code is actually functional as that broken fuckass plugin in mcreator made it
-thanks broken thing */
-
-public class FuyukiStrippedLogBlock extends Block {
+public class MiyashitaSakuraLogBlock extends Block {
 	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f);
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
-	public FuyukiStrippedLogBlock() {
+	public MiyashitaSakuraLogBlock() {
 		super(PROPERTIES);
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
@@ -78,6 +75,6 @@ public class FuyukiStrippedLogBlock extends Block {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.STRIPPED_FUYUKI_LOG, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_LOG, RenderType.solid());
 	}
 }

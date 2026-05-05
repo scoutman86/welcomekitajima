@@ -1,12 +1,14 @@
 
-package net.coutman.welcomekitajima.block;
+package net.coutman.welcomekitajima.block.fuyuki;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.block.state.properties.WoodType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.LeavesBlock;
+import net.minecraft.world.level.block.FenceGateBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
@@ -18,24 +20,23 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
 
 import java.util.List;
 import java.util.Collections;
 
-public class FuyukiLeavesBlock extends LeavesBlock {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().sound(SoundType.GRASS).strength(0.2f).noOcclusion();
+public class FuyukiFenceGateBlock extends FenceGateBlock {
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
 
-	public FuyukiLeavesBlock() {
-		super(PROPERTIES);
-		FlammableBlockRegistry.getDefaultInstance().add(this, 30, 0);
-		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(content -> content.accept(this));
+	public FuyukiFenceGateBlock() {
+		super(PROPERTIES, WoodType.OAK);
+		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
+		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
-		return 1;
+		return 0;
 	}
 
 	@Override
@@ -48,6 +49,6 @@ public class FuyukiLeavesBlock extends LeavesBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_LEAVES, RenderType.cutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_FENCE_GATE, RenderType.solid());
 	}
 }

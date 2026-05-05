@@ -1,21 +1,13 @@
 package net.coutman.welcomekitajima.init;
 
-
-import net.coutman.welcomekitajima.item.specialty.CitlaliTataco;
-import net.coutman.welcomekitajima.item.specialty.KnucklesToast;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
-// these imports were only required for the legacy mcreator functions, no idea if they still are needed
-
-// import net.minecraft.world.item.Items;
-// import net.minecraft.client.renderer.item.ItemProperties;
-// import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
-
 import net.coutman.welcomekitajima.item.*;
+import net.coutman.welcomekitajima.item.specialty.*;
 import net.coutman.welcomekitajima.WelcomekitajimaMod;
 
 public class WelcomekitajimaModItems {
@@ -92,6 +84,21 @@ public class WelcomekitajimaModItems {
 	public static Item FUYUKI_TRAPDOOR;
 	public static Item STRIPPED_FUYUKI_LOG;
 	public static Item STRIPPED_FUYUKI_WOOD;
+	// miyashita sakura
+	public static Item MIYASHITA_SAKURA_WOOD;
+	public static Item MIYASHITA_SAKURA_LOG;
+	public static Item MIYASHITA_SAKURA_PLANKS;
+	public static Item MIYASHITA_SAKURA_LEAVES;
+	public static Item MIYASHITA_SAKURA_STAIRS;
+	public static Item MIYASHITA_SAKURA_SLAB;
+	public static Item MIYASHITA_SAKURA_FENCE;
+	public static Item MIYASHITA_SAKURA_FENCE_GATE;
+	public static Item MIYASHITA_SAKURA_PRESSURE_PLATE;
+	public static Item MIYASHITA_SAKURA_BUTTON;
+	public static Item MIYASHITA_SAKURA_DOOR;
+	public static Item MIYASHITA_SAKURA_TRAPDOOR;
+	public static Item STRIPPED_MIYASHITA_SAKURA_LOG;
+	public static Item STRIPPED_MIYASHITA_SAKURA_WOOD;
 	// fuck off
 	public static Item LABYRINTH_STONE;
 	public static Item LABYRINTH_COAL_ORE;
@@ -219,6 +226,22 @@ public class WelcomekitajimaModItems {
 		FUYUKI_PRESSURE_PLATE = register("fuyuki_pressure_plate", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_PRESSURE_PLATE, new Item.Properties()));
 		FUYUKI_BUTTON = register("fuyuki_button", new BlockItem(WelcomekitajimaModBlocks.FUYUKI_BUTTON, new Item.Properties()));
 
+		// miyashita_sakura
+		MIYASHITA_SAKURA_LOG = register("miyashita_sakura_log", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_LOG, new Item.Properties()));
+		MIYASHITA_SAKURA_WOOD = register("miyashita_sakura_wood", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_WOOD, new Item.Properties()));
+		STRIPPED_MIYASHITA_SAKURA_LOG = register("stripped_miyashita_sakura_log", new BlockItem(WelcomekitajimaModBlocks.STRIPPED_MIYASHITA_SAKURA_LOG, new Item.Properties()));
+		STRIPPED_MIYASHITA_SAKURA_WOOD = register("stripped_miyashita_sakura_wood", new BlockItem(WelcomekitajimaModBlocks.STRIPPED_MIYASHITA_SAKURA_WOOD, new Item.Properties()));
+		MIYASHITA_SAKURA_LEAVES = register("miyashita_sakura_leaves", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_LEAVES, new Item.Properties()));
+		MIYASHITA_SAKURA_PLANKS = register("miyashita_sakura_planks", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_PLANKS, new Item.Properties()));
+		MIYASHITA_SAKURA_STAIRS = register("miyashita_sakura_stairs", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_STAIRS, new Item.Properties()));
+		MIYASHITA_SAKURA_SLAB = register("miyashita_sakura_slab", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_SLAB, new Item.Properties()));
+		MIYASHITA_SAKURA_FENCE = register("miyashita_sakura_fence", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_FENCE, new Item.Properties()));
+		MIYASHITA_SAKURA_FENCE_GATE = register("miyashita_sakura_fence_gate", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_FENCE_GATE, new Item.Properties()));
+		MIYASHITA_SAKURA_DOOR = register("miyashita_sakura_door", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_DOOR, new Item.Properties()));
+		MIYASHITA_SAKURA_TRAPDOOR = register("miyashita_sakura_trapdoor", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_TRAPDOOR, new Item.Properties()));
+		MIYASHITA_SAKURA_PRESSURE_PLATE = register("miyashita_sakura_pressure_plate", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_PRESSURE_PLATE, new Item.Properties()));
+		MIYASHITA_SAKURA_BUTTON = register("miyashita_sakura_button", new BlockItem(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_BUTTON, new Item.Properties()));
+
 		// fucking piece of shit I hate you
 		LABYRINTH_STONE = register("labyrinth_stone", new BlockItem(WelcomekitajimaModBlocks.LABYRINTH_STONE, new Item.Properties()));
 		LABYRINTH_COAL_ORE = register("labyrinth_coal_ore", new BlockItem(WelcomekitajimaModBlocks.LABYRINTH_COAL_ORE, new Item.Properties()));
@@ -261,15 +284,8 @@ public class WelcomekitajimaModItems {
 		MOSSY_CHISELED_LABYRINTH_STONE_STAIRS = register("mossy_chiseled_labyrinth_stone_stairs", new BlockItem(WelcomekitajimaModBlocks.MOSSY_CHISELED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
 		MOSSY_CHISELED_LABYRINTH_STONE_SLAB = register("mossy_chiseled_labyrinth_stone_slab", new BlockItem(WelcomekitajimaModBlocks.MOSSY_CHISELED_LABYRINTH_STONE_SLAB, new Item.Properties()));
 	}
-	// legacy method leftover from mcreator
-	// public static void clientLoad() {
-	// }
 
 	private static Item register(String registryName, Item item) {
 		return Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomekitajimaMod.MODID, registryName), item);
 	}
-	// another legacy method leftover from mcreator
-	// private static void registerBlockingProperty(Item item) {
-		// ItemProperties.register(item, new ResourceLocation("blocking"), (ClampedItemPropertyFunction) ItemProperties.getProperty(Items.SHIELD, new ResourceLocation("blocking")));
-	// }
 }

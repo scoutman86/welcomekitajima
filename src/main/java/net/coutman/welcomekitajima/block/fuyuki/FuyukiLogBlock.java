@@ -1,5 +1,5 @@
 
-package net.coutman.welcomekitajima.block;
+package net.coutman.welcomekitajima.block.fuyuki;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
@@ -25,7 +25,6 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
 
 import java.util.List;

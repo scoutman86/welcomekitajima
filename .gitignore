@@ -25,4 +25,4 @@ replay_pid*
 /.gradle
 /run
 /build
-.idea/runConfigurations/Minecraft_Server.xml
+/.idea

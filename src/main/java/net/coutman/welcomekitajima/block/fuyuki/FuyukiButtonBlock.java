@@ -1,14 +1,14 @@
 
-package net.coutman.welcomekitajima.block;
+package net.coutman.welcomekitajima.block.fuyuki;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.FenceGateBlock;
+import net.minecraft.world.level.block.ButtonBlock;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
@@ -20,17 +20,16 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
 import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
 
 import java.util.List;
 import java.util.Collections;
 
-public class FuyukiFenceGateBlock extends FenceGateBlock {
+public class FuyukiButtonBlock extends ButtonBlock {
 	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
 
-	public FuyukiFenceGateBlock() {
-		super(PROPERTIES, WoodType.OAK);
+	public FuyukiButtonBlock() {
+		super(PROPERTIES, BlockSetType.OAK, 30, true);
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}
@@ -50,6 +49,6 @@ public class FuyukiFenceGateBlock extends FenceGateBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_FENCE_GATE, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_BUTTON, RenderType.solid());
 	}
 }

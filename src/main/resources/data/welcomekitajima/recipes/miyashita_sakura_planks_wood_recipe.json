@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:miyashita_sakura_wood"
+    }
+  ],
+  "result": {
+    "item": "welcomekitajima:miyashita_sakura_planks",
+    "count": 4
+  }
+}

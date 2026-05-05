@@ -9,6 +9,17 @@
     "welcomekitajima:fuyuki_door",
     "welcomekitajima:fuyuki_trapdoor",
 	"welcomekitajima:fuyuki_fence",
-	"welcomekitajima:fuyuki_fence_gate"
+	"welcomekitajima:fuyuki_fence_gate",
+	"welcomekitajima:stripped_fuyuki_wood",
+    "welcomekitajima:stripped_fuyuki_log",
+	"welcomekitajima:miyashita_sakura_wood",
+    "welcomekitajima:miyashita_sakura_log",
+    "welcomekitajima:miyashita_sakura_planks",
+    "welcomekitajima:miyashita_sakura_door",
+    "welcomekitajima:miyashita_sakura_trapdoor",
+	"welcomekitajima:miyashita_sakura_fence",
+	"welcomekitajima:miyashita_sakura_fence_gate",
+	"welcomekitajima:stripped_miyashita_sakura_wood",
+    "welcomekitajima:stripped_miyashita_sakura_log"
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:miyashita_sakura_planks"
+    }
+  ],
+  "result": {
+    "item": "welcomekitajima:miyashita_sakura_button",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "welcomekitajima:block/miyashita_sakura_trapdoor",
+    "particle": "welcomekitajima:block/miyashita_sakura_trapdoor"
+  },
+  "render_type": "cutout_mipped"
+}

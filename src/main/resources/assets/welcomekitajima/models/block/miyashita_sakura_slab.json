@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "welcomekitajima:block/miyashita_sakura_planks",
+    "bottom": "welcomekitajima:block/miyashita_sakura_planks",
+    "top": "welcomekitajima:block/miyashita_sakura_planks",
+    "side": "welcomekitajima:block/miyashita_sakura_planks"
+  },
+  "render_type": "solid"
+}

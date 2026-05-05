@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "welcomekitajima:block/miyashita_sakura_slab"
+    },
+    "type=top": {
+      "model": "welcomekitajima:block/miyashita_sakura_slab_top"
+    },
+    "type=double": {
+      "model": "welcomekitajima:block/miyashita_sakura_slab_full"
+    }
+  }
+}

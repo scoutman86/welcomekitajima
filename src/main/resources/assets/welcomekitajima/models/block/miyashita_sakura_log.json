@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "welcomekitajima:block/miyashita_sakura_log_top",
+    "up": "welcomekitajima:block/miyashita_sakura_log_top",
+    "north": "welcomekitajima:block/miyashita_sakura_log_side",
+    "east": "welcomekitajima:block/miyashita_sakura_log_side",
+    "south": "welcomekitajima:block/miyashita_sakura_log_side",
+    "west": "welcomekitajima:block/miyashita_sakura_log_side",
+    "particle": "welcomekitajima:block/miyashita_sakura_log_top"
+  },
+  "render_type": "solid"
+}

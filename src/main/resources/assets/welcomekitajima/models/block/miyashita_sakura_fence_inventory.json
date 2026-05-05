@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_inventory",
+  "textures": {
+    "texture": "welcomekitajima:block/miyashita_sakura_planks",
+    "particle": "welcomekitajima:block/miyashita_sakura_planks"
+  },
+  "render_type": "solid"
+}

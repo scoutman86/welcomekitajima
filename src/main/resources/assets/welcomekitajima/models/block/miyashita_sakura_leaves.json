@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "welcomekitajima:block/miyashita_sakura_leaves"
+  }
+}

@@ -14,7 +14,7 @@ package net.coutman.welcomekitajima.init;
 
 import net.minecraft.world.level.levelgen.SurfaceRules;
 
-public class WelcomekitajimaModSurfaceRules {
+public class SurfaceRuleRegistry {
 	public static SurfaceRules.RuleSource makeOverworldRules() {
 		return SurfaceRules.sequence();
 	}

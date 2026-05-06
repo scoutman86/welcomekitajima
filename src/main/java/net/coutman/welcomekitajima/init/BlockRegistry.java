@@ -4,6 +4,7 @@
  */
 package net.coutman.welcomekitajima.init;
 
+import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,9 +15,7 @@ import net.coutman.welcomekitajima.block.fuyuki.*;
 import net.coutman.welcomekitajima.block.miyashita_sakura.*;
 import net.coutman.welcomekitajima.block.labyrinth.*;
 
-import net.coutman.welcomekitajima.WelcomekitajimaMod;
-
-public class WelcomekitajimaModBlocks {
+public class BlockRegistry {
 	public static Block EMPTY_SEKAI_STONE;
 	public static Block EMPTY_SEKAI_TILES;
 	public static Block EMPTY_SEKAI_TRUSS;
@@ -301,6 +300,6 @@ public class WelcomekitajimaModBlocks {
 	}
 
 	private static Block register(String registryName, Block block) {
-		return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomekitajimaMod.MODID, registryName), block);
+		return Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, registryName), block);
 	}
 }

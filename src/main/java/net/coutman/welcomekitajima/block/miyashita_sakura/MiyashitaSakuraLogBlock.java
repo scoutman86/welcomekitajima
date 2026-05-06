@@ -1,7 +1,7 @@
 
 package net.coutman.welcomekitajima.block.miyashita_sakura;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -75,6 +75,6 @@ public class MiyashitaSakuraLogBlock extends Block {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.MIYASHITA_SAKURA_LOG, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.MIYASHITA_SAKURA_LOG, RenderType.solid());
 	}
 }

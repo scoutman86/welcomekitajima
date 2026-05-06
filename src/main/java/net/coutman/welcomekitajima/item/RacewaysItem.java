@@ -1,8 +1,8 @@
 
 package net.coutman.welcomekitajima.item;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.coutman.welcomekitajima.init.SoundRegistry;
+import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.network.chat.Component;
@@ -18,14 +18,14 @@ public class RacewaysItem extends RecordItem {
 	public RacewaysItem() {
 		super(
 				0, // comparator output
-				WelcomekitajimaModSounds.RECORD_RACEWAY,
+				SoundRegistry.RECORD_RACEWAY,
 				new FabricItemSettings()
 						.maxCount(1)
 						.rarity(Rarity.RARE),
 				2022 // track length in ticks
 		);
 		ItemGroupEvents.modifyEntriesEvent(
-				WelcomekitajimaModTabs.TAB_CDS
+				CreativeTabRegistry.TAB_CDS
 		).register(content -> content.accept(this));
 	}
 

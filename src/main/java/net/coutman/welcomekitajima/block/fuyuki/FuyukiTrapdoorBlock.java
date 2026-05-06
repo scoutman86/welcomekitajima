@@ -19,7 +19,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import java.util.List;
 import java.util.Collections;
@@ -47,6 +47,6 @@ public class FuyukiTrapdoorBlock extends TrapDoorBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.FUYUKI_TRAPDOOR, RenderType.cutoutMipped());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.FUYUKI_TRAPDOOR, RenderType.cutoutMipped());
 	}
 }

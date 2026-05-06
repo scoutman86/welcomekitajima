@@ -1,6 +1,6 @@
 package net.coutman.welcomekitajima.item.specialty;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.ChatFormatting;
@@ -27,7 +27,7 @@ public class CitlaliTataco extends Item {
                     .rarity(Rarity.UNCOMMON)
         );
         ItemGroupEvents.modifyEntriesEvent(
-                WelcomekitajimaModTabs.TAB_SPECIALTIES
+                CreativeTabRegistry.TAB_SPECIALTIES
         ).register(content -> content.accept(this));
     }
 

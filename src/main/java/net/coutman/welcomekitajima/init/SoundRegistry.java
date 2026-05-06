@@ -5,7 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
-public class WelcomekitajimaModSounds {
+public class SoundRegistry {
 	// Records
 	public static SoundEvent RECORD_STUDIOPOLISZONE_ACT1 = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.studiopoliszone.act1"));
 	public static SoundEvent RECORD_HAGU = SoundEvent.createVariableRangeEvent(new ResourceLocation("welcomekitajima", "record.hagu"));

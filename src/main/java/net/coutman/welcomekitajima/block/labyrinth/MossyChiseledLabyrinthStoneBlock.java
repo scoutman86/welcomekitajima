@@ -1,7 +1,7 @@
 
 package net.coutman.welcomekitajima.block.labyrinth;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -49,6 +49,6 @@ public class MossyChiseledLabyrinthStoneBlock extends Block {
 
     @Environment(EnvType.CLIENT)
     public static void clientInit() {
-        BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.MOSSY_CHISELED_LABYRINTH_STONE, RenderType.solid());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.MOSSY_CHISELED_LABYRINTH_STONE, RenderType.solid());
     }
 }

@@ -2,8 +2,8 @@ package net.coutman.welcomekitajima.item;
 
 // Imports
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.coutman.welcomekitajima.init.SoundRegistry;
+import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.network.chat.Component;
@@ -19,13 +19,13 @@ public class JokerItem extends RecordItem {
     public JokerItem() {
         super(
                 0, // Comparator output
-                WelcomekitajimaModSounds.RECORD_JOKER, // Sound event
+                SoundRegistry.RECORD_JOKER, // Sound event
                 new FabricItemSettings()
                         .maxCount(1) // Max amount of an item stack
                         .rarity(Rarity.RARE), // Item rarity
                 2842 // Length in ticks
         );
-        ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+        ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.TAB_CDS).register(content -> content.accept(this));
     }
 
     @Override

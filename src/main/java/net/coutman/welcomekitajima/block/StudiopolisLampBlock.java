@@ -25,8 +25,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import java.util.List;
 import java.util.Collections;
@@ -79,6 +78,6 @@ public class StudiopolisLampBlock extends Block {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.STUDIOPOLIS_LAMP, RenderType.cutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.STUDIOPOLIS_LAMP, RenderType.cutout());
 	}
 }

@@ -20,8 +20,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import java.util.List;
 import java.util.Collections;
@@ -51,6 +50,6 @@ public class MetalMIPSDoorBlock extends DoorBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.METAL_MIPS_DOOR, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.METAL_MIPS_DOOR, RenderType.solid());
 	}
 }

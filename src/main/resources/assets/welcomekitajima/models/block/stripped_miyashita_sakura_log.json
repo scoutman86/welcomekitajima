@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "welcomekitajima:block/stripped_miyashita_sakura_log_top",
+    "side": "welcomekitajima:block/stripped_miyashita_sakura_log"
+  }
+}

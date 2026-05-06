@@ -1,7 +1,7 @@
 
 package net.coutman.welcomekitajima.block.fuyuki;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -75,6 +75,6 @@ public class FuyukiStrippedWoodBlock extends Block {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.STRIPPED_FUYUKI_WOOD, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.STRIPPED_FUYUKI_WOOD, RenderType.solid());
 	}
 }

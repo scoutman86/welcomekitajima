@@ -17,8 +17,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import java.util.List;
 import java.util.Collections;
@@ -41,6 +40,6 @@ public class SmoothStudiopolisConcreteSlabBlock extends SlabBlock {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.SMOOTH_STUDIOPOLIS_CONCRETE_SLAB, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.SMOOTH_STUDIOPOLIS_CONCRETE_SLAB, RenderType.solid());
 	}
 }

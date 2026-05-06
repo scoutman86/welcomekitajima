@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "welcomekitajima:projection_pyro",
-	"welcomekitajima:projection_electro"
+    "welcomekitajima:projection_pyro_drop",
+	"welcomekitajima:projection_electro_drop"
   ]
 }

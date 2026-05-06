@@ -18,7 +18,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import java.util.List;
 import java.util.Collections;
@@ -47,11 +47,11 @@ public class LabyrinthStoneBlock extends Block {
             return dropsOriginal;
 
         return Collections.singletonList(
-                new ItemStack(WelcomekitajimaModBlocks.COBBLED_LABYRINTH_STONE));
+                new ItemStack(BlockRegistry.COBBLED_LABYRINTH_STONE));
     }
 
     @Environment(EnvType.CLIENT)
     public static void clientInit() {
-        BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.LABYRINTH_STONE, RenderType.solid());
+        BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.LABYRINTH_STONE, RenderType.solid());
     }
 }

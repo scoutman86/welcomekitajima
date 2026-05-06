@@ -1,8 +1,8 @@
 
 package net.coutman.welcomekitajima.item;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModSounds;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.coutman.welcomekitajima.init.SoundRegistry;
+import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.RecordItem;
@@ -19,13 +19,13 @@ public class SToRYItem extends RecordItem {
 	public SToRYItem() {
 		super(
 				0, // comparator output
-				WelcomekitajimaModSounds.RECORD_STORY,
+				SoundRegistry.RECORD_STORY,
 				new FabricItemSettings()
 						.maxCount(1)
 						.rarity(Rarity.EPIC),
 				5059 // track length in ticks
 		);
-		ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_CDS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.TAB_CDS).register(content -> content.accept(this));
 	}
 
 	@Override

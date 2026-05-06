@@ -1,6 +1,6 @@
 package net.coutman.welcomekitajima.item;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
+import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.ChatFormatting;
@@ -21,7 +21,7 @@ public class ProjectionElectroDrop extends Item {
                         .rarity(Rarity.EPIC)
                         .maxCount(1)
         );
-        ItemGroupEvents.modifyEntriesEvent(WelcomekitajimaModTabs.TAB_BOSS_DROPS).register(content -> content.accept(this));
+        ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.TAB_BOSS_DROPS).register(content -> content.accept(this));
     }
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {

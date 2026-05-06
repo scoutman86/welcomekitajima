@@ -1,10 +1,6 @@
 
 package net.coutman.welcomekitajima.block;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.impl.itemgroup.FabricItemGroup;
-import net.fabricmc.fabric.mixin.itemgroup.ItemGroupAccessor;
-import net.fabricmc.fabric.mixin.itemgroup.ItemGroupsMixin;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -22,8 +18,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.WelcomekitajimaModTabs;
-import net.coutman.welcomekitajima.init.WelcomekitajimaModBlocks;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import java.util.List;
 import java.util.Collections;
@@ -51,6 +46,6 @@ public class EmptySEKAIStoneBlock extends Block {
 
 	@Environment(EnvType.CLIENT)
 	public static void clientInit() {
-		BlockRenderLayerMap.INSTANCE.putBlock(WelcomekitajimaModBlocks.EMPTY_SEKAI_STONE, RenderType.solid());
+		BlockRenderLayerMap.INSTANCE.putBlock(BlockRegistry.EMPTY_SEKAI_STONE, RenderType.solid());
 	}
 }

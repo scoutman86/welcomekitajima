@@ -3,7 +3,7 @@ package net.coutman.welcomekitajima.init;
 import net.coutman.welcomekitajima.procedures.*;
 
 @SuppressWarnings("InstantiationOfUtilityClass")
-public class WelcomekitajimaModProcedures {
+public class ProcedureRegistry {
 	public static void load() {
 		new DiscEjectNoiseProcedure();
 		new DiscEnterNoiseProcedure();

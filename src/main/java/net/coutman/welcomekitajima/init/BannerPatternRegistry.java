@@ -5,9 +5,9 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BannerPattern;
 
-import static net.coutman.welcomekitajima.WelcomekitajimaMod.LOGGER;
+import static net.coutman.welcomekitajima.WelcomeKitajima.LOGGER;
 
-public class RegisterBannerPatterns {
+public class BannerPatternRegistry {
         public static final BannerPattern PYRO_PATTERN = Registry.register(
                 BuiltInRegistries.BANNER_PATTERN,
                 new ResourceLocation("welcomekitajima", "pyro"),

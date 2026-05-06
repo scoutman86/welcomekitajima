@@ -5,7 +5,10 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -13,208 +16,61 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class TrafficLampBlockCollectionThingHelp {
     // this probably doesn't work
-    public static Block TRAFFIC_LAMP_RED = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "red_traffic_lamp"),
-            new TrafficLampRed()
-    );
-    public static Block TRAFFIC_LAMP_ORANGE = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "orange_traffic_lamp"),
-            new TrafficLampOrange()
-    );
-    public static Block TRAFFIC_LAMP_YELLOW = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "yellow_traffic_lamp"),
-            new TrafficLampYellow()
-    );
-    public static Block TRAFFIC_LAMP_LIME = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "lime_traffic_lamp"),
-            new TrafficLampLime()
-    );
-    public static Block TRAFFIC_LAMP_GREEN = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "green_traffic_lamp"),
-            new TrafficLampGreen()
-    );
-    public static Block TRAFFIC_LAMP_BLUE = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "blue_traffic_lamp"),
-            new TrafficLampBlue()
-    );
-    public static Block TRAFFIC_LAMP_CYAN = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "cyan_traffic_lamp"),
-            new TrafficLampCyan()
-    );
-    public static Block TRAFFIC_LAMP_LIGHT_BLUE = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "light_blue_traffic_lamp"),
-            new TrafficLampLightBlue()
-    );
-    public static Block TRAFFIC_LAMP_PURPLE = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "purple_traffic_lamp"),
-            new TrafficLampPurple()
-    );
-    public static Block TRAFFIC_LAMP_MAGENTA = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "magenta_traffic_lamp"),
-            new TrafficLampMagenta()
-    );
-    public static Block TRAFFIC_LAMP_PINK = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "pink_traffic_lamp"),
-            new TrafficLampPink()
-    );
-    public static Block TRAFFIC_LAMP_BROWN = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "brown_traffic_lamp"),
-            new TrafficLampBrown()
-    );
-    public static Block TRAFFIC_LAMP_WHITE = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "white_traffic_lamp"),
-            new TrafficLampWhite()
-    );
-    public static Block TRAFFIC_LAMP_LIGHT_GRAY = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "light_gray_traffic_lamp"),
-            new TrafficLampLightGray()
-    );
-    public static Block TRAFFIC_LAMP_GRAY = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "gray_traffic_lamp"),
-            new TrafficLampGray()
-    );
-    public static Block TRAFFIC_LAMP_BLACK = Registry.register(
-            BuiltInRegistries.BLOCK,
-            new ResourceLocation(WelcomeKitajima.MODID, "black_traffic_lamp"),
-            new TrafficLampBlack()
-    );
+    public static final Map<DyeColor, Block> TRAFFIC_LAMPS = new HashMap<>();
 
     public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
+            .lightLevel((state) -> 15)
             .instrument(NoteBlockInstrument.PLING)
             .sound(SoundType.GLASS)
             .strength(1.8f, 10f);
 
-    public static class TrafficLampRed extends Block {
-        public TrafficLampRed() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampOrange extends Block {
-        public TrafficLampOrange() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampYellow extends Block {
-        public TrafficLampYellow() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampLime extends Block {
-        public TrafficLampLime() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampGreen extends Block {
-        public TrafficLampGreen() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampBlue extends Block {
-        public TrafficLampBlue() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampCyan extends Block {
-        public TrafficLampCyan() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampLightBlue extends Block {
-        public TrafficLampLightBlue() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampPurple extends Block {
-        public TrafficLampPurple() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampMagenta extends Block {
-        public TrafficLampMagenta() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampPink extends Block {
-        public TrafficLampPink() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampBrown extends Block {
-        public TrafficLampBrown() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampWhite extends Block {
-        public TrafficLampWhite() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampLightGray extends Block {
-        public TrafficLampLightGray() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampGray extends Block {
-        public TrafficLampGray() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
-        }
-    }
-    public static class TrafficLampBlack extends Block {
-        public TrafficLampBlack() {
-            super(PROPERTIES);
-            ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(this));
+    // block (note: I hate you so much. look at what COULD have been)
+
+    /* public static Block TRAFFIC_LAMP_RED = register("red_traffic_lamp", new TrafficLampRed());
+    public static Block TRAFFIC_LAMP_ORANGE = register("orange_traffic_lamp", new TrafficLampOrange());
+    public static Block TRAFFIC_LAMP_YELLOW = register("yellow_traffic_lamp", new TrafficLampYellow());
+    public static Block TRAFFIC_LAMP_LIME = register("lime_traffic_lamp", new TrafficLampLime());
+    public static Block TRAFFIC_LAMP_GREEN = register("green_traffic_lamp", new TrafficLampGreen());
+    public static Block TRAFFIC_LAMP_BLUE = register("blue_traffic_lamp", new TrafficLampBlue());
+    public static Block TRAFFIC_LAMP_CYAN = register("cyan_traffic_lamp", new TrafficLampCyan());
+    public static Block TRAFFIC_LAMP_LIGHT_BLUE = register("light_blue_traffic_lamp", new TrafficLampLightBlue());
+    public static Block TRAFFIC_LAMP_PURPLE = register("purple_traffic_lamp", new TrafficLampPurple());
+    public static Block TRAFFIC_LAMP_MAGENTA = register("magenta_traffic_lamp", new TrafficLampMagenta());
+    public static Block TRAFFIC_LAMP_PINK = register("pink_traffic_lamp", new TrafficLampPink());
+    public static Block TRAFFIC_LAMP_BROWN = register("brown_traffic_lamp", new TrafficLampBrown());
+    public static Block TRAFFIC_LAMP_WHITE = register("white_traffic_lamp", new TrafficLampWhite());
+    public static Block TRAFFIC_LAMP_LIGHT_GRAY = register("light_gray_traffic_lamp", new TrafficLampLightGray());
+    public static Block TRAFFIC_LAMP_GRAY = register("gray_traffic_lamp", new TrafficLampGray());
+    public static Block TRAFFIC_LAMP_BLACK = register("black_traffic_lamp", new TrafficLampBlack());
+    */
+
+    // weep
+
+    public static void registerBlocks() {
+        for (DyeColor color : DyeColor.values()) {
+            String name = color.getName() + "_traffic_lamp";
+            Block block = new Block(PROPERTIES);
+
+            register(name, block);
+            TRAFFIC_LAMPS.put(color, block);
         }
     }
 
+    private static void register(String registryName, Block call) {
+        Block block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, registryName), call);
+        Item item = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, registryName), new BlockItem(block, new Item.Properties()));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(item));
+    }
+
     public static void clientInit() {
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_RED, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_ORANGE, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_YELLOW, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_LIME, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_GREEN, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_BLUE, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_CYAN, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_LIGHT_BLUE, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_PURPLE, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_MAGENTA, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_PINK, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_BROWN, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_WHITE, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_LIGHT_GRAY, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_GRAY, RenderType.solid());
-        BlockRenderLayerMap.INSTANCE.putBlock(TRAFFIC_LAMP_BLACK, RenderType.solid());
+        TRAFFIC_LAMPS.values().forEach(block ->
+                BlockRenderLayerMap.INSTANCE.putBlock(block, RenderType.solid())
+        );
     }
 }
 

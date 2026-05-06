@@ -1,5 +1,6 @@
 package net.coutman.welcomekitajima.init;
 
+import net.coutman.welcomekitajima.block.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;

@@ -187,6 +187,8 @@ public class BlockRegistry {
 		CHISELED_LABYRINTH_STONE_STAIRS = register("chiseled_labyrinth_stone_stairs", new ChiseledLabyrinthStoneStairsBlock());
 		CHISELED_LABYRINTH_STONE_SLAB = register("chiseled_labyrinth_stone_slab", new ChiseledLabyrinthStoneSlabBlock());
 
+		TrafficLampBlockCollectionThingHelp.registerBlocks();
+
 		// AAAAAAAAAAAAAAAAAAA
 		MOSSY_LABYRINTH_STONE = register("mossy_labyrinth_stone", new MossyLabyrinthStoneBlock());
 		MOSSY_COBBLED_LABYRINTH_STONE = register("mossy_cobbled_labyrinth_stone", new MossyCobbledLabyrinthStoneBlock());

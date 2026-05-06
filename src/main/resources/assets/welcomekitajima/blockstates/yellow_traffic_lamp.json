@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "welcomekitajima:block/yellow_traffic_lamp"
+    },
+    "lit=true": {
+      "model": "welcomekitajima:block/yellow_traffic_lamp_on"
+    }
+  }
+}

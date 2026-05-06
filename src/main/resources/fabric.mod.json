@@ -17,7 +17,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.coutman.welcomekitajima.WelcomekitajimaMod"
+      "net.coutman.welcomekitajima.WelcomeKitajima"
     ],
     "client": [
       "net.coutman.welcomekitajima.ClientInit"

@@ -252,6 +252,8 @@ public class BlockRegistry {
 		MiyashitaSakuraDoorBlock.clientInit();
 		MiyashitaSakuraTrapdoorBlock.clientInit();
 
+		TrafficLampBlockCollectionThingHelp.clientInit();
+
 		LabyrinthStoneBlock.clientInit();
 
 		LabyrinthCoalOreBlock.clientInit();

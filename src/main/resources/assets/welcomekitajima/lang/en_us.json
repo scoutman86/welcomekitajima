@@ -154,6 +154,11 @@
   "itemTooltip.welcomekitajima.projection_pyro_drop": "A trophy obtained from defeating Sol Badguy, the Pyro Officer of the Anti-Creation Cult.",
   "item.welcomekitajima.projection_electro_drop": "Electro Projection",
   "itemTooltip.welcomekitajima.projection_electro_drop": "A trophy obtained from defeating Dr. Eggman, the Electro Officer of the Anti-Creation Cult.",
+  "biome.welcomekitajima.kitajima_prefecture": "Kitajima Prefecture",
+  "biome.welcomekitajima.kazaguruma_archipelago": "Kazaguruma Archipelago",
+  "biome.welcomekitajima.yukimiya": "Yukimiya",
+  "biome.welcomekitajima.miyashita_prefecture": "Miyashita Prefecture",
+  "biome.welcomekitajima.hanasato_prefecture": "Hanasato Prefecture",
   "block.welcomekitajima.fuyuki_fence": "Fuyuki Fence",
   "block.welcomekitajima.fuyuki_leaves": "Fuyuki Leaves",
   "block.welcomekitajima.fuyuki_slab": "Fuyuki Slab",
@@ -181,5 +186,6 @@
   "block.welcomekitajima.miyashita_sakura_button": "Miyashita Sakura Button",
   "block.welcomekitajima.miyashita_sakura_log": "Miyashita Sakura Log",
   "block.welcomekitajima.stripped_miyashita_sakura_log": "Stripped Miyashita Sakura Log",
-  "block.welcomekitajima.stripped_miyashita_sakura_wood": "Stripped Miyashita Sakura Wood"
+  "block.welcomekitajima.stripped_miyashita_sakura_wood": "Stripped Miyashita Sakura Wood",
+  "item.welcomekitajima.classic_poetry": "Classic Poetry"
 }

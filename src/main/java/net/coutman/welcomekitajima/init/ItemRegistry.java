@@ -1,6 +1,5 @@
 package net.coutman.welcomekitajima.init;
 
-import net.coutman.welcomekitajima.block.*;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.resources.ResourceLocation;
@@ -185,6 +184,9 @@ public class ItemRegistry {
 		DAYTIME_WANDERING = register("daytime_wandering", new DaytimeWanderingItem());
 		ZUNDAMON_FIGHT = register("zundamon_fight", new ZundamonFightItem());
 		MESMERIZER_NERU_FIGHT = register("mesmerizer_neru_fight", new MesmerizerNeruFightItem());
+
+		Vision.register();
+		CatalystWeapon.register();
 
 		// movie songs
 		STORY = register("story", new SToRYItem());

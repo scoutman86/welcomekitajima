@@ -30,15 +30,6 @@
     "minecraft": "~1.20",
     "java": ">=17"
   },
-  "custom": {
-    "fabric-resources": {
-      "pack": {
-        "namespace": "welcomekitajima",
-        "description": "Dazzle Texture Overrides",
-        "after": ["dazzle"]
-	  }
-    }
-  },
   "mixins": [
     "welcomekitajima.mixins.json"
   ]

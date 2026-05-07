@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:island_polearm_billet"
+	},
+	{
+	  "item": "minecraft:raw_iron"
+	},
+	{
+	  "item": "minecraft:amethyst_shard"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:pearlescent_staff",
+    "count": 1
+  }
+}

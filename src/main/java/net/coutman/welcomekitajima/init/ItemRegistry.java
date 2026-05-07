@@ -185,8 +185,15 @@ public class ItemRegistry {
 		ZUNDAMON_FIGHT = register("zundamon_fight", new ZundamonFightItem());
 		MESMERIZER_NERU_FIGHT = register("mesmerizer_neru_fight", new MesmerizerNeruFightItem());
 
+		// remember to comment out before releasing 2.7.0
+
 		Vision.register();
+		WeaponBillet.registerBilletFamilies();
+		SwordWeapon.register();
+		// BowWeapon.register();
+		ClaymoreWeapon.register();
 		CatalystWeapon.register();
+		PolearmWeapon.register();
 
 		// movie songs
 		STORY = register("story", new SToRYItem());

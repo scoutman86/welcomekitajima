@@ -159,6 +159,11 @@
   "biome.welcomekitajima.yukimiya": "Yukimiya",
   "biome.welcomekitajima.miyashita_prefecture": "Miyashita Prefecture",
   "biome.welcomekitajima.hanasato_prefecture": "Hanasato Prefecture",
+  "item.welcomekitajima.island_sword_billet": "Island Sword Billet",
+  "item.welcomekitajima.island_bow_billet": "Island Bow Billet",
+  "item.welcomekitajima.island_claymore_billet": "Island Claymore Billet",
+  "item.welcomekitajima.island_catalyst_billet": "Island Catalyst Billet",
+  "item.welcomekitajima.island_polearm_billet": "Island Polearm Billet",
   "block.welcomekitajima.fuyuki_fence": "Fuyuki Fence",
   "block.welcomekitajima.fuyuki_leaves": "Fuyuki Leaves",
   "block.welcomekitajima.fuyuki_slab": "Fuyuki Slab",
@@ -187,5 +192,9 @@
   "block.welcomekitajima.miyashita_sakura_log": "Miyashita Sakura Log",
   "block.welcomekitajima.stripped_miyashita_sakura_log": "Stripped Miyashita Sakura Log",
   "block.welcomekitajima.stripped_miyashita_sakura_wood": "Stripped Miyashita Sakura Wood",
-  "item.welcomekitajima.classic_poetry": "Classic Poetry"
+  "item.welcomekitajima.silver_blade": "Classic Poetry",
+  "item.welcomekitajima.silver_series_bow_name": "input",
+  "item.welcomekitajima.shining_greatsword": "Shining Greatsword",
+  "item.welcomekitajima.classic_poetry": "Classic Poetry",
+  "item.welcomekitajima.pearlescent_staff": "Pearlescent Staff"
 }

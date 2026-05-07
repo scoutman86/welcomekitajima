@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:island_claymore_billet"
+	},
+	{
+	  "item": "minecraft:raw_iron"
+	},
+	{
+	  "item": "minecraft:amethyst_shard"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:shining_greatsword",
+    "count": 1
+  }
+}

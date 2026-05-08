@@ -20,7 +20,8 @@ public class ClaymoreWeapon extends SwordItem {
     }
 
     public static final List<ClaymoreList> CLAYMORE_LISTS = List.of(
-        new ClaymoreList("shining_greatsword", Tiers.IRON, 5, -3.1f, Rarity.UNCOMMON)
+        new ClaymoreList("shining_greatsword", Tiers.IRON, 5, -3.1f, Rarity.UNCOMMON),
+        new ClaymoreList("frostbearer_strength", Tiers.DIAMOND, 7, -3.6f, Rarity.RARE)
     );
 
     public static void register() {

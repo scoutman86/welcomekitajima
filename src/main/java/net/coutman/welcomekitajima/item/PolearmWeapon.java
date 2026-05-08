@@ -20,7 +20,8 @@ public class PolearmWeapon extends SwordItem {
     }
 
     public static final List<PolearmList> POLEARM_LISTS = List.of(
-        new PolearmList("pearlescent_staff", Tiers.IRON, 1, -1.6f, Rarity.UNCOMMON)
+        new PolearmList("pearlescent_staff", Tiers.IRON, 1, -1.6f, Rarity.UNCOMMON),
+        new PolearmList("frostbearer_staff", Tiers.DIAMOND, 2, -1.9f, Rarity.RARE)
     );
 
     public static void register() {

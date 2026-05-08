@@ -13,18 +13,19 @@ public class BowWeapon extends BowItem {
         super(properties);
     }
 
-    public record ClaymoreList(String registryName, Rarity rarity) {
+    public record BowList(String registryName, Rarity rarity) {
         public Properties getProperties() {
             return new Properties().rarity(this.rarity).stacksTo(1);
         }
     }
 
-    public static final List<ClaymoreList> CLAYMORE_LISTS = List.of(
-        new ClaymoreList("shimmering_bow", Rarity.UNCOMMON)
+    public static final List<BowList> BOW_LISTS = List.of(
+        new BowList("shimmering_bow", Rarity.UNCOMMON),
+        new BowList("frigid_will", Rarity.RARE)
     );
 
     public static void register() {
-        for (ClaymoreList entry : CLAYMORE_LISTS) {
+        for (BowList entry : BOW_LISTS) {
             BowItem item = new BowWeapon(entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
         }

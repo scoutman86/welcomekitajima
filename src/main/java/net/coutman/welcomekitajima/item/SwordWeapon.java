@@ -20,7 +20,8 @@ public class SwordWeapon extends SwordItem {
     }
 
     public static final List<SwordList> SWORD_LISTS = List.of(
-        new SwordList("silver_blade", Tiers.IRON, 3, -2.2f, Rarity.UNCOMMON)
+        new SwordList("silver_blade", Tiers.IRON, 3, -2.2f, Rarity.UNCOMMON),
+            new SwordList("frostbearer_might", Tiers.DIAMOND, 2, -1.6f, Rarity.RARE)
     );
 
     public static void register() {

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "welcomekitajima:is_island_billet"
+  },
+  "base": {
+    "item": "welcomekitajima:transform_essence"
+  },
+  "result": {
+    "item": "welcomekitajima:island_catalyst_billet"
+  },
+  "template": {
+    "item": "welcomekitajima:highlander_catalyst_billet",
+	"item": "welcomekitajima:basin_catalyst_billet"
+  }
+}

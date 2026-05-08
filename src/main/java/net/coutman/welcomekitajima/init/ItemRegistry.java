@@ -189,6 +189,7 @@ public class ItemRegistry {
 
 		Vision.register();
 		MiyashitaLocalSpecialty.register();
+		TransformEssence.register();
 		WeaponBillet.registerBilletFamilies();
 		SwordWeapon.register();
 		BowWeapon.register();

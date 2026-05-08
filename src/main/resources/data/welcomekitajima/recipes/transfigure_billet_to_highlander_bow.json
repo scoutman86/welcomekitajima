@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "tag": "welcomekitajima:is_highlander_billet"
+  },
+  "base": {
+    "item": "welcomekitajima:transform_essence"
+  },
+  "result": {
+    "item": "welcomekitajima:highlander_bow_billet"
+  },
+  "template": {
+    "item": "welcomekitajima:island_bow_billet",
+	"item": "welcomekitajima:basin_bow_billet"
+  }
+}

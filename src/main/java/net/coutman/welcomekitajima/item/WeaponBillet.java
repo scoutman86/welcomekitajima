@@ -25,7 +25,9 @@ public class WeaponBillet extends Item {
     }
 
     public static final List<BilletFamily> BILLET_FAMILIES = List.of(
-        new BilletFamily("island")
+        new BilletFamily("island"),
+        new BilletFamily("highlander"),
+        new BilletFamily("basin")
     );
 
     public static void registerBilletFamilies() {

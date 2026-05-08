@@ -32,7 +32,7 @@ public class CatalystWeapon extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
-            player.getCooldowns().addCooldown(this, 20);
+            player.getCooldowns().addCooldown(this, 10);
         }
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }

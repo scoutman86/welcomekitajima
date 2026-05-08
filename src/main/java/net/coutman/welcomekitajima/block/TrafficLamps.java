@@ -28,12 +28,12 @@ import net.minecraft.core.Registry;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TrafficLampBlockCollectionThingHelp extends Block {
+public class TrafficLamps extends Block {
     // this probably doesn't work
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
     public static final Map<DyeColor, Block> TRAFFIC_LAMPS = new HashMap<>();
 
-    public TrafficLampBlockCollectionThingHelp(Properties properties) {
+    public TrafficLamps(Properties properties) {
         super(properties);
         this.registerDefaultState(this.defaultBlockState().setValue(LIT, false));
     }
@@ -70,7 +70,7 @@ public class TrafficLampBlockCollectionThingHelp extends Block {
     }
 
     public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
-            .lightLevel((state) -> state.getValue(TrafficLampBlockCollectionThingHelp.LIT) ? 15 : 0)
+            .lightLevel((state) -> state.getValue(TrafficLamps.LIT) ? 15 : 0)
             .instrument(NoteBlockInstrument.PLING)
             .sound(SoundType.GLASS)
             .strength(1.8f, 10f);
@@ -101,7 +101,7 @@ public class TrafficLampBlockCollectionThingHelp extends Block {
     public static void registerBlocks() {
         for (DyeColor color : DyeColor.values()) {
             String name = color.getName() + "_traffic_lamp";
-            Block block = new TrafficLampBlockCollectionThingHelp(PROPERTIES);
+            Block block = new TrafficLamps(PROPERTIES);
 
             register(name, block);
             TRAFFIC_LAMPS.put(color, block);

@@ -8,7 +8,7 @@ import net.minecraft.world.item.*;
 
 import java.util.List;
 
-public class PolearmWeapon extends SwordItem {
+public class PolearmWeapon extends AxeItem {
     public PolearmWeapon(Tier tier, int damage, float attackSpeed, Properties properties) {
         super(tier, damage, attackSpeed, properties);
     }
@@ -26,7 +26,7 @@ public class PolearmWeapon extends SwordItem {
 
     public static void register() {
         for (PolearmList entry : POLEARM_LISTS) {
-            SwordItem item = new PolearmWeapon(entry.tier, entry.damage, entry.attackSpeed, entry.getProperties());
+            AxeItem item = new PolearmWeapon(entry.tier, entry.damage, entry.attackSpeed, entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
         }
     }

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "minecraft:amethyst_shard"
+  },
+  "base": {
+    "item": "minecraft:ice"
+  },
+  "result": {
+    "item": "welcomekitajima:frostbearer_staff"
+  },
+  "template": {
+    "item": "welcomekitajima:island_polearm_billet"
+  }
+}

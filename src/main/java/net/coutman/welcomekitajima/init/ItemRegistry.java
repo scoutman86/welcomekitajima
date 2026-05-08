@@ -188,9 +188,10 @@ public class ItemRegistry {
 		// remember to comment out before releasing 2.7.0
 
 		Vision.register();
+		MiyashitaLocalSpecialty.register();
 		WeaponBillet.registerBilletFamilies();
 		SwordWeapon.register();
-		// BowWeapon.register();
+		BowWeapon.register();
 		ClaymoreWeapon.register();
 		CatalystWeapon.register();
 		PolearmWeapon.register();

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "welcomekitajima:starbit"
+  },
+  "base": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "item": "welcomekitajima:celestial_spear"
+  },
+  "template": {
+    "item": "welcomekitajima:island_polearm_billet"
+  }
+}

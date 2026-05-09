@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "welcomekitajima:starbit"
+  },
+  "base": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "item": "welcomekitajima:starseeker_blade"
+  },
+  "template": {
+    "item": "welcomekitajima:island_sword_billet"
+  }
+}

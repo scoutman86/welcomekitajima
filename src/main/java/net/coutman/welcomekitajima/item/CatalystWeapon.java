@@ -27,7 +27,8 @@ public class CatalystWeapon extends Item {
 
     public static final List<CatalystList> CATALYST_LISTS = List.of(
         new CatalystList("classic_poetry", Rarity.UNCOMMON),
-        new CatalystList("frigid_core", Rarity.RARE)
+        new CatalystList("frigid_core", Rarity.RARE),
+        new CatalystList("glimmering_twilight", Rarity.RARE)
     );
 
     @Override

@@ -21,7 +21,8 @@ public class BowWeapon extends BowItem {
 
     public static final List<BowList> BOW_LISTS = List.of(
         new BowList("shimmering_bow", Rarity.UNCOMMON),
-        new BowList("frigid_will", Rarity.RARE)
+        new BowList("frigid_will", Rarity.RARE),
+            new BowList("dusk_piercer", Rarity.RARE)
     );
 
     public static void register() {

@@ -49,9 +49,6 @@ public class BannerPatternRegistry {
                 new BannerPattern("mys")
         );
 
-
-
         public static void load() {
-                LOGGER.info("If you see this, banner patterns have loaded.");
         }
 }

@@ -1,0 +1,35 @@
+{
+  "variants": {
+    "facing=up": {
+      "model": "welcomekitajima:block/miyashita_sakura"
+    },
+    "facing=east": {
+      "model": "welcomekitajima:block/miyashita_sakura",
+      "uvlock": true,
+      "x": 90,
+      "y": 90
+    },
+    "facing=west": {
+      "model": "welcomekitajima:block/miyashita_sakura",
+      "uvlock": true,
+      "x": 90,
+      "y": 270
+    },
+    "facing=south": {
+      "model": "welcomekitajima:block/miyashita_sakura",
+      "uvlock": true,
+      "x": 90,
+      "y": 180
+    },
+    "facing=north": {
+      "model": "welcomekitajima:block/miyashita_sakura",
+      "uvlock": true,
+      "x": 90
+    },
+    "facing=down": {
+      "model": "welcomekitajima:block/miyashita_sakura",
+      "x": 180,
+      "y": 180
+    }
+  }
+}

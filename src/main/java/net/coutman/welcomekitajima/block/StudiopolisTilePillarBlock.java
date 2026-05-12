@@ -1,6 +1,7 @@
 
 package net.coutman.welcomekitajima.block;
 
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -36,6 +37,7 @@ public class StudiopolisTilePillarBlock extends Block {
 
 	public StudiopolisTilePillarBlock() {
 		super(PROPERTIES);
+		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
 	}

@@ -189,6 +189,7 @@ public class ItemRegistry {
 		{
 			Vision.register();
 		}
+		KitajimaLocalSpecialty.register();
 		MiyashitaLocalSpecialty.register();
 		TransformEssence.register();
 		WeaponBillet.registerBilletFamilies();

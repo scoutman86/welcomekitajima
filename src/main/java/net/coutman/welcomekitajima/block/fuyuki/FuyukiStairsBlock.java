@@ -2,6 +2,7 @@
 package net.coutman.welcomekitajima.block.fuyuki;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
@@ -31,6 +32,7 @@ public class FuyukiStairsBlock extends StairBlock {
 			.instrument(NoteBlockInstrument.BASS)
 			.sound(SoundType.WOOD)
 			.strength(3f, 2f)
+			.mapColor(DyeColor.byId(16250349))
 			.dynamicShape();
 
 	public FuyukiStairsBlock() {

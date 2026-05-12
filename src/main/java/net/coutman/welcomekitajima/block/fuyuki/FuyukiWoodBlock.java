@@ -2,6 +2,7 @@
 package net.coutman.welcomekitajima.block.fuyuki;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
@@ -31,7 +32,12 @@ import java.util.List;
 import java.util.Collections;
 
 public class FuyukiWoodBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f);
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
+			.ignitedByLava()
+			.instrument(NoteBlockInstrument.BASS)
+			.sound(SoundType.WOOD)
+			.strength(2f)
+			.mapColor(DyeColor.byId(7034705));
 	public static final EnumProperty<Direction.Axis> AXIS = BlockStateProperties.AXIS;
 
 	public FuyukiWoodBlock() {

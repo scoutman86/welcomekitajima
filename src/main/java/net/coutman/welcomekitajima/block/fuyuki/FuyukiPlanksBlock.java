@@ -12,6 +12,8 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.world.level.material.*;
+import net.minecraft.world.item.*;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -25,7 +27,12 @@ import java.util.List;
 import java.util.Collections;
 
 public class FuyukiPlanksBlock extends Block {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
+			.ignitedByLava()
+			.instrument(NoteBlockInstrument.BASS)
+			.sound(SoundType.WOOD)
+			.strength(2f, 3f)
+			.mapColor(DyeColor.byId(16250349));
 
 	public FuyukiPlanksBlock() {
 		super(PROPERTIES);

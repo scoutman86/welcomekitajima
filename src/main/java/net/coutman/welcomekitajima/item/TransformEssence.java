@@ -14,8 +14,10 @@ public class TransformEssence extends Item {
         super(new FabricItemSettings().rarity(Rarity.EPIC));
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
     }
+
+    public static Item TRANSFORM_ESSENCE;
+
     public static void register() {
-        Item item = new TransformEssence();
-        Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, "transform_essence"), item);
+        TRANSFORM_ESSENCE = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, "transform_essence"), new TransformEssence());
     }
 }

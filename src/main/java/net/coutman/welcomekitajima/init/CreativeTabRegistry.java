@@ -33,6 +33,6 @@ public class CreativeTabRegistry {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_BOSS_DROPS,
 				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.boss_drops")).icon(() -> new ItemStack(ItemRegistry.PROJECTION_PYRO_DROP)).build());
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, SMITHING_CRAFTING_ITEMS,
-				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.crafting_materials")).icon(() -> new ItemStack(new TransformEssence())).build());
+				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.crafting_materials")).icon(() -> new ItemStack(TransformEssence.TRANSFORM_ESSENCE)).build());
 	}
 }

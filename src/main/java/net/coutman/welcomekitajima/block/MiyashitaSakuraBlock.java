@@ -1,17 +1,9 @@
 package net.coutman.welcomekitajima.block;
 
-import net.coutman.welcomekitajima.WelcomeKitajima;
-import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.coutman.welcomekitajima.init.CreativeTabRegistry;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
@@ -27,7 +19,12 @@ import java.util.List;
 
 public class MiyashitaSakuraBlock extends Block {
     public static final DirectionProperty FACING = DirectionalBlock.FACING;
-    private static final VoxelShape REAL = Block.box(4, 0,4, 12, 2, 12);
+    private static final VoxelShape SHAPE_UP = Block.box(4, 0,4, 12, 2, 12);
+    private static final VoxelShape SHAPE_DOWN = Block.box(4, 14,4, 12, 16, 12);
+    private static final VoxelShape SHAPE_WEST = Block.box(14, 4, 4, 16, 12, 12);
+    private static final VoxelShape SHAPE_EAST = Block.box(0, 4, 4, 2, 12, 12);
+    private static final VoxelShape SHAPE_NORTH = Block.box(4, 4, 14, 12, 12, 16);
+    private static final VoxelShape SHAPE_SOUTH = Block.box(4, 4, 0, 12, 12, 2);
     public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
             .ignitedByLava()
             .sound(SoundType.GRASS);
@@ -39,7 +36,15 @@ public class MiyashitaSakuraBlock extends Block {
     }
     @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
-        return REAL;
+        return switch (blockState.getValue(FACING)) {
+            case UP -> SHAPE_UP;
+            case DOWN -> SHAPE_DOWN;
+            case WEST -> SHAPE_WEST;
+            case EAST -> SHAPE_EAST;
+            case NORTH -> SHAPE_NORTH;
+            case SOUTH -> SHAPE_SOUTH;
+            default -> SHAPE_UP;
+        };
     }
 
     @Override
@@ -57,10 +62,5 @@ public class MiyashitaSakuraBlock extends Block {
         if (!dropsOriginal.isEmpty())
             return dropsOriginal;
         return Collections.singletonList(new ItemStack(this, 1));
-    }
-
-    public static void register() {
-        // do nothing assuming items come first
-        // Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, "miyashita_sakura"), new MiyashitaSakuraBlock());
     }
 }

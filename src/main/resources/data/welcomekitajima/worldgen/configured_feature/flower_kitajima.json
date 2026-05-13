@@ -10,15 +10,9 @@
             "entries": [
               {
                 "data": {
-                  "Name": "minecraft:poppy"
+                  "Name": "welcomekitajima:winter_icelea"
                 },
                 "weight": 2
-              },
-              {
-                "data": {
-                  "Name": "minecraft:dandelion"
-                },
-                "weight": 1
               }
             ]
           }

@@ -15,6 +15,16 @@ loom {
         defaultRefmapName = actualmodid + ".refmap.json"
     }
 }
+repositories {
+    maven {
+        name = "TerraformersMC"
+        url = "https://maven.terraformersmc.com/"
+    }
+    maven {
+        name = "Ladysnake Libs"
+        url = 'https://maven.ladysnake.org/releases'
+    }
+}
 
 dependencies {
     minecraft "com.mojang:minecraft:1.20.1"
@@ -22,6 +32,8 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:0.16.14"
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.92.6+1.20.1"
     modImplementation "dev.emi:trinkets:3.7.2"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.0"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.0"
 }
 
 processResources {

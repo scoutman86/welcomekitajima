@@ -4,14 +4,6 @@ pluginManagement {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
-        maven {
-            name = "TerraformersMC"
-            url = "https://maven.terraformersmc.com/"
-        }
-        maven {
-            name = "Ladysnake Libs"
-            url = 'https://maven.ladysnake.org/releases'
-        }
         gradlePluginPortal()
     }
 }

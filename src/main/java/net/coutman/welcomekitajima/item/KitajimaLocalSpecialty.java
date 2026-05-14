@@ -32,16 +32,18 @@ public class KitajimaLocalSpecialty extends Item {
 
     public static void register() {
         for (LocalSpecialties entry : LOCAL_SPECIALTIES) {
-            Item item;
-
             if (entry.isBlock && entry.block != null) {
+                // heavy assumptions are being made here
                 Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, entry.specialtyName), entry.block);
+                BlockRenderLayerMap.INSTANCE.putBlock(entry.block, RenderType.cutout());
+            }
+
+            Item item;
+            if (entry.isBlock) {
                 item = new BlockItem(entry.block, entry.getProperties());
-                BlockRenderLayerMap.INSTANCE.putBlock(entry.block, RenderType.cutoutMipped());
             } else {
                 item = new MiyashitaLocalSpecialty(entry.getProperties());
             }
-
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.specialtyName), item);
         }
     }

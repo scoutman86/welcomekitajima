@@ -35,7 +35,6 @@ public class KitajimaLocalSpecialty extends Item {
             if (entry.isBlock && entry.block != null) {
                 // heavy assumptions are being made here
                 Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, entry.specialtyName), entry.block);
-                BlockRenderLayerMap.INSTANCE.putBlock(entry.block, RenderType.cutout());
             }
 
             Item item;

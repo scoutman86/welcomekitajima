@@ -30,30 +30,6 @@ public class ItemRegistry {
 	public static Item SINGLE_STAR_WOODEN_MIPS_DOOR;
 	public static Item METAL_MIPS_DOOR;
 	public static Item FRAMEWORK_BLOCK;
-	// disc
-	public static Item STUDIOPOLIS_ZONE_ACT_1;
-	public static Item HAGU;
-	public static Item TOADS_TURNPIKE;
-	public static Item RACEWAYS;
-	public static Item SMB_2_OVERWORLD_SMAS;
-	public static Item SMB_3_OVERWORLD_SMAS;
-	public static Item SMW_SPECIAL;
-	public static Item STUDIOPOLIS_COMPLEX_CALM;
-	public static Item RUDE_BUSTER;
-	public static Item JOKER;
-	public static Item BIG_SHOT;
-	public static Item TV_TIME;
-	public static Item THE_FIRST_DROP;
-	public static Item EVER_DRIER;
-	public static Item DAYTIME_WANDERING;
-	public static Item ZUNDAMON_FIGHT;
-	public static Item MESMERIZER_NERU_FIGHT;
-	// movie songs
-	public static Item STORY;
-	public static Item FUN;
-	public static Item FIRE_DANCE;
-	public static Item SMILE_SYMPHONY;
-	public static Item LIGHT_DWELL;
 	// specialties
 	public static Item SECRET_ART;
 	public static Item KNUCKLE_SANDWICH;
@@ -166,24 +142,6 @@ public class ItemRegistry {
 		METAL_MIPS_DOOR = register("metal_mips_door", new BlockItem(BlockRegistry.METAL_MIPS_DOOR, new Item.Properties()));
 		FRAMEWORK_BLOCK = register("framework_block", new BlockItem(BlockRegistry.FRAMEWORK_BLOCK, new Item.Properties()));
 
-		// discs
-		STUDIOPOLIS_ZONE_ACT_1 = register("studiopolis_zone_act_1", new StudiopolisZoneAct1Item());
-		HAGU = register("hagu", new HaguItem());
-		TOADS_TURNPIKE = register("toads_turnpike", new ToadsTurnpikeItem());
-		RACEWAYS = register("raceways", new RacewaysItem());
-		SMB_2_OVERWORLD_SMAS = register("smb_2_overworld_smas", new SMB2OverworldSMASItem());
-		SMB_3_OVERWORLD_SMAS = register("smb_3_overworld_smas", new SMB3OverworldSMASItem());
-		SMW_SPECIAL = register("smw_special", new SMWSpecialItem());
-		STUDIOPOLIS_COMPLEX_CALM = register("studiopolis_complex_calm", new StudiopolisComplexCalmItem());
-		RUDE_BUSTER = register("rude_buster", new RudeBusterItem());
-		JOKER = register("joker", new JokerItem());
-		BIG_SHOT = register("big_shot", new BigShotItem());
-		TV_TIME = register("its_tv_time", new TVTimeItem());
-		THE_FIRST_DROP = register("the_first_drop", new FirstDropItem());
-		EVER_DRIER = register("ever_drier", new EverDrierItem());
-		DAYTIME_WANDERING = register("daytime_wandering", new DaytimeWanderingItem());
-		ZUNDAMON_FIGHT = register("zundamon_fight", new ZundamonFightItem());
-		MESMERIZER_NERU_FIGHT = register("mesmerizer_neru_fight", new MesmerizerNeruFightItem());
 
 		if (WelcomeKitajima.IncludeExperimentalElementalFeatures)
 		{
@@ -195,19 +153,12 @@ public class ItemRegistry {
 		WeaponBillet.registerBilletFamilies();
 		SwordWeapon.register();
 		BowWeapon.register();
+		ClaymoreWeapon.register();
 		if (WelcomeKitajima.IncludeExperimentalElementalFeatures)
 		{
-			ClaymoreWeapon.register();
+			CatalystWeapon.register();
 		}
-		CatalystWeapon.register();
 		PolearmWeapon.register();
-
-		// movie songs
-		STORY = register("story", new SToRYItem());
-		FUN = register("fun", new FunItem());
-		FIRE_DANCE = register("fire_dance", new FireDanceItem());
-		SMILE_SYMPHONY = register("smile_symphony", new SmileSymphonyItem());
-		LIGHT_DWELL = register("the_light_that_dwells_here", new LightDwellItem());
 
 		// specialty foods
 		SECRET_ART = register("secret_art", new CitlaliTataco());

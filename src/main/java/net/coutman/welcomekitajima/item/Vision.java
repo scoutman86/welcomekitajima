@@ -10,7 +10,15 @@ import net.minecraft.world.item.*;
 import java.util.List;
 
 public class Vision extends Item {
-    public record VisionTypes(String visionType, Item item) {
+    public static class VisionTypes {
+        public String visionType;
+        public Item item;
+
+        public VisionTypes(String visionType, Item item) {
+            this.visionType = visionType;
+            this.item = item;
+        }
+
         public Item.Properties getProperties() {
             return new FabricItemSettings().maxCount(1).rarity(Rarity.EPIC);
         }

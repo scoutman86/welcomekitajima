@@ -33,16 +33,40 @@ public class CatalystWeapon extends Item {
         new CatalystList("glimmering_twilight", Rarity.RARE)
     );
 
+    private String getVisionElement(Player player) {
+        var component = TrinketsApi.getTrinketComponent(player);
+        if (component.isPresent()) {
+            var vision = component.get().getAllEquipped();
+
+            for (var tuple : vision) {
+                ItemStack itemStack = tuple.getB();
+                Item item = itemStack.getItem();
+
+                WelcomeKitajima.LOGGER.info(itemStack.getItem().toString());
+
+                if (item == Vision.PYRO_VISION) return "pyro";
+                if (item == Vision.HYDRO_VISION) return "hydro";
+                if (item == Vision.ANEMO_VISION) return "anemo";
+                if (item == Vision.ELECTRO_VISION) return "electro";
+                if (item == Vision.DENDRO_VISION) return "dendro";
+                if (item == Vision.CRYO_VISION) return "cryo";
+                if (item == Vision.GEO_VISION) return "geo";
+            }
+        } else {
+            WelcomeKitajima.LOGGER.info("FUCK.");
+        }
+        return "default";
+    }
+
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
-            var component = TrinketsApi.getTrinketComponent(player);
-            if (component.isPresent()) {
-                var vision = component.get().getEquipped(itemStack -> itemStack.is());
-            }
-
+            String element = getVisionElement(player);
+            WelcomeKitajima.LOGGER.info(("Returned element: " + element));
+            // projectile here
             player.getCooldowns().addCooldown(this, 10);
         }
+
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }
 

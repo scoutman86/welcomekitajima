@@ -19,7 +19,6 @@ public class WelcomeKitajima implements ModInitializer {
 		BlockRegistry.load();
 		ItemRegistry.load();
 		PaintingRegistry.load();
-		ProcedureRegistry.load();
 		SoundRegistry.load();
 		BannerPatternRegistry.load();
 		BiomeRegistry.loadEndBiomes();

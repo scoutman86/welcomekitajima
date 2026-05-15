@@ -10,6 +10,8 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
 
+import dev.emi.trinkets.api.TrinketsApi;
+
 import java.util.List;
 
 // note: this is absolutely fucked.
@@ -34,6 +36,11 @@ public class CatalystWeapon extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
+            var component = TrinketsApi.getTrinketComponent(player);
+            if (component.isPresent()) {
+                var vision = component.get().getEquipped(itemStack -> itemStack.is());
+            }
+
             player.getCooldowns().addCooldown(this, 10);
         }
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());

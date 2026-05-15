@@ -46,6 +46,17 @@ public class Vision extends Item {
         new VisionTypes("geo_vision", GEO_VISION)
     );
 
+    public static String getVisionElement(Item item) {
+        if (item == Vision.PYRO_VISION) return "pyro";
+        if (item == Vision.HYDRO_VISION) return "hydro";
+        if (item == Vision.ANEMO_VISION) return "anemo";
+        if (item == Vision.ELECTRO_VISION) return "electro";
+        if (item == Vision.DENDRO_VISION) return "dendro";
+        if (item == Vision.CRYO_VISION) return "cryo";
+        if (item == Vision.GEO_VISION) return "geo";
+        else return "default";
+    }
+
     public static void register() {
         for (VisionTypes entry : VISION_TYPES) {
             entry.item = new Vision(entry.getProperties());

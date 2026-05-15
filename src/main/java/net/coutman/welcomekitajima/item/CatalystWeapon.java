@@ -41,16 +41,11 @@ public class CatalystWeapon extends Item {
             for (var tuple : vision) {
                 ItemStack itemStack = tuple.getB();
                 Item item = itemStack.getItem();
-
-                WelcomeKitajima.LOGGER.info(itemStack.getItem().toString());
-
-                if (item == Vision.PYRO_VISION) return "pyro";
-                if (item == Vision.HYDRO_VISION) return "hydro";
-                if (item == Vision.ANEMO_VISION) return "anemo";
-                if (item == Vision.ELECTRO_VISION) return "electro";
-                if (item == Vision.DENDRO_VISION) return "dendro";
-                if (item == Vision.CRYO_VISION) return "cryo";
-                if (item == Vision.GEO_VISION) return "geo";
+                String element = Vision.getVisionElement(item);
+                WelcomeKitajima.LOGGER.info(element);
+                if (!element.equals("default")) {
+                    return element;
+                }
             }
         } else {
             WelcomeKitajima.LOGGER.info("FUCK.");

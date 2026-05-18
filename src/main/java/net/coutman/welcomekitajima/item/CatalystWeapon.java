@@ -35,6 +35,8 @@ public class CatalystWeapon extends Item {
         new CatalystList("glimmering_twilight", Rarity.RARE)
     );
 
+
+
     private String getVisionElement(Player player) {
         var component = TrinketsApi.getTrinketComponent(player);
         if (component.isPresent()) {
@@ -43,16 +45,31 @@ public class CatalystWeapon extends Item {
             for (var tuple : vision) {
                 ItemStack itemStack = tuple.getB();
                 Item item = itemStack.getItem();
-                String element = Vision.getVisionElement(item);
+                String element;
+                if (item == Vision.PYRO_VISION) {
+                    element = "pyro";
+                } else if (item == Vision.HYDRO_VISION) {
+                    element = "hydro";
+                } else if (item == Vision.ANEMO_VISION) {
+                    element = "anemo";
+                } else if (item == Vision.ELECTRO_VISION) {
+                    element = "electro";
+                } else if (item == Vision.DENDRO_VISION) {
+                    element =  "dendro";
+                } else if (item == Vision.CRYO_VISION) {
+                    element =  "cryo";
+                } else if (item == Vision.GEO_VISION) {
+                    element =  "geo";
+                } else element = "none";
                 WelcomeKitajima.LOGGER.info(element);
-                if (!element.equals("default")) {
+                if (!element.equals("none")) {
                     return element;
                 }
             }
         } else {
             WelcomeKitajima.LOGGER.info("FUCK.");
         }
-        return "default";
+        return "just to check because it shouldn't be returning this";
     }
 
     @Override

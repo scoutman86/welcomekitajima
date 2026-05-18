@@ -1,6 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -11,6 +12,7 @@ import java.util.List;
 public class ClaymoreWeapon extends SwordItem {
     public ClaymoreWeapon(Tier tier, int damage, float attackSpeed, Properties properties) {
         super(tier, damage, attackSpeed, properties);
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
     }
 
     public record ClaymoreList(String registryName, Tier tier, int damage, float attackSpeed, Rarity rarity) {

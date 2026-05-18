@@ -2,6 +2,7 @@ package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -26,6 +27,7 @@ public class Vision extends Item {
 
     public Vision(Properties properties) {
         super(properties);
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
     }
 
     public static Item PYRO_VISION;

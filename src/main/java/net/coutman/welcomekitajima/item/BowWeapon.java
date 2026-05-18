@@ -1,6 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -11,6 +12,7 @@ import java.util.List;
 public class BowWeapon extends BowItem {
     public BowWeapon(Properties properties) {
         super(properties);
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
     }
 
     public record BowList(String registryName, Rarity rarity) {

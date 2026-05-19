@@ -1,12 +1,14 @@
 package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.entity.*;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.animal.Cat;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
@@ -61,24 +63,27 @@ public class CatalystWeapon extends Item {
                 } else if (item == Vision.GEO_VISION) {
                     element =  "geo";
                 } else element = "none";
-                WelcomeKitajima.LOGGER.info(element);
                 if (!element.equals("none")) {
                     return element;
                 }
             }
-        } else {
-            WelcomeKitajima.LOGGER.info("FUCK.");
         }
-        return "just to check because it shouldn't be returning this";
+        return "none";
     }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
             String element = getVisionElement(player);
-            WelcomeKitajima.LOGGER.info(("Returned element: " + element));
-            // projectile here
-            player.getCooldowns().addCooldown(this, 10);
+            if (!element.equals("none")) {
+                CatalystProjectileEntity projectile = new CatalystProjectileEntity(level, player, element);
+
+                // Set heading: shooter, pitch, yaw, roll, speed, divergence
+                projectile.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+                level.addFreshEntity(projectile);
+
+                player.getCooldowns().addCooldown(this, 10);
+            }
         }
 
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());

@@ -2,6 +2,5 @@
   "amount": 1,
   "order": 1,
   "icon": "welcomekitajima:gui/slots/vision",
-  "drop_rule": "keep",
-  "validator_predicates": ["welcomekitajima:vision"]
+  "drop_rule": "keep"
 }

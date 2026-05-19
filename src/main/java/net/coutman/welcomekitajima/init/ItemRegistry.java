@@ -147,10 +147,14 @@ public class ItemRegistry {
 		{
 			Vision.register();
 		}
+
 		KitajimaLocalSpecialty.register();
 		MiyashitaLocalSpecialty.register();
+
 		TransformEssence.register();
+
 		WeaponBillet.registerBilletFamilies();
+
 		SwordWeapon.register();
 		BowWeapon.register();
 		ClaymoreWeapon.register();
@@ -159,6 +163,12 @@ public class ItemRegistry {
 			CatalystWeapon.register();
 		}
 		PolearmWeapon.register();
+
+		SoulFragmentDrop.register();
+
+		// boss drops
+		PROJECTION_PYRO_DROP = register("projection_pyro_drop", new ProjectionPyroDrop());
+		PROJECTION_ELECTRO_DROP = register("projection_electro_drop", new ProjectionElectroDrop());
 
 		// specialty foods
 		SECRET_ART = register("secret_art", new CitlaliTataco());
@@ -173,10 +183,6 @@ public class ItemRegistry {
 		CRYO_BANNER_PATTERN = register("cryo_banner_pattern", new CryoPatternItem());
 		GEO_BANNER_PATTERN = register("geo_banner_pattern", new GeoPatternItem());
 		MIYASHITA_BANNER_PATTERN = register("miyashita_banner_pattern", new MiyashitaSakuraPatternItem());
-
-		// boss drops
-		PROJECTION_PYRO_DROP = register("projection_pyro_drop", new ProjectionPyroDrop());
-		PROJECTION_ELECTRO_DROP = register("projection_electro_drop", new ProjectionElectroDrop());
 
 		// fuyuki
 		FUYUKI_LOG = register("fuyuki_log", new BlockItem(BlockRegistry.FUYUKI_LOG, new Item.Properties()));

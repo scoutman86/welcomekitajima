@@ -18,6 +18,7 @@ public class WelcomeKitajima implements ModInitializer {
 		CreativeTabRegistry.load();
 		BlockRegistry.load();
 		ItemRegistry.load();
+		// entity registry WAS supposed to be here but I'm over my head
 		PaintingRegistry.load();
 		SoundRegistry.load();
 		BannerPatternRegistry.load();

@@ -3,8 +3,10 @@ package net.coutman.welcomekitajima.item;
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.block.MiyashitaSakuraBlock;
 import net.coutman.welcomekitajima.init.CreativeTabRegistry;
+import net.fabricmc.api.EnvType;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -42,6 +44,9 @@ public class MiyashitaLocalSpecialty extends Item {
             Item item;
             if (entry.isBlock) {
                 item = new BlockItem(entry.block, entry.getProperties());
+                if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+                    BlockRenderLayerMap.INSTANCE.putBlock(entry.block, RenderType.cutoutMipped());
+                }
             } else {
                 item = new MiyashitaLocalSpecialty(entry.getProperties());
             }

@@ -7,6 +7,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.*;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
@@ -51,9 +52,27 @@ public class MiyashitaSakuraBlock extends Block {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
+
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
         return this.defaultBlockState().setValue(FACING, context.getClickedFace());
+    }
+
+    @Override
+    public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+        BlockPos belowPos;
+        switch (this.getStateDefinition()) {
+            case Direction.UP -> belowPos = pos.above();
+            case Direction.DOWN -> belowPos = pos.below();
+            case Direction.NORTH -> belowPos = pos.north();
+            case Direction.SOUTH -> belowPos = pos.south();
+            case Direction.EAST -> belowPos = pos.east();
+            case Direction.WEST -> belowPos = pos.west();
+            default -> belowPos = pos.below();
+        }
+
+        BlockState theState = level.getBlockState(belowPos);
+        return !theState.isAir() && !theState.is(this);
     }
 
     @Override

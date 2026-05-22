@@ -67,14 +67,6 @@ public class BlockRegistry {
 	public static Block STRIPPED_MIYASHITA_SAKURA_WOOD;
 	// labyrinth
 	public static Block LABYRINTH_STONE;
-	public static Block LABYRINTH_COAL_ORE;
-	public static Block LABYRINTH_COPPER_ORE;
-	public static Block LABYRINTH_DIAMOND_ORE;
-	public static Block LABYRINTH_EMERALD_ORE;
-	public static Block LABYRINTH_GOLD_ORE;
-	public static Block LABYRINTH_IRON_ORE;
-	public static Block LABYRINTH_LAPIS_ORE;
-	public static Block LABYRINTH_REDSTONE_ORE;
 	public static Block COBBLED_LABYRINTH_STONE;
 	public static Block COBBLED_LABYRINTH_STONE_STAIRS;
 	public static Block COBBLED_LABYRINTH_STONE_SLAB;
@@ -160,15 +152,6 @@ public class BlockRegistry {
 		STRIPPED_MIYASHITA_SAKURA_WOOD = register("stripped_miyashita_sakura_wood", new MiyashitaSakuraStrippedWoodBlock());
 		// fuck you
 		LABYRINTH_STONE = register("labyrinth_stone", new LabyrinthStoneBlock());
-		// ore
-		LABYRINTH_COAL_ORE = register("labyrinth_coal_ore", new LabyrinthCoalOreBlock());
-		LABYRINTH_COPPER_ORE = register("labyrinth_copper_ore", new LabyrinthCopperOreBlock());
-		LABYRINTH_DIAMOND_ORE = register("labyrinth_diamond_ore", new LabyrinthDiamondOreBlock());
-		LABYRINTH_EMERALD_ORE = register("labyrinth_emerald_ore", new LabyrinthEmeraldOreBlock());
-		LABYRINTH_GOLD_ORE = register("labyrinth_gold_ore", new LabyrinthGoldOreBlock());
-		LABYRINTH_IRON_ORE = register("labyrinth_iron_ore", new LabyrinthIronOreBlock());
-		LABYRINTH_LAPIS_ORE = register("labyrinth_lapis_ore", new LabyrinthLapisOreBlock());
-		LABYRINTH_REDSTONE_ORE = register("labyrinth_redstone_ore", new LabyrinthRedstoneOreBlock());
 		// cobbled
 		COBBLED_LABYRINTH_STONE = register("cobbled_labyrinth_stone", new CobbledLabyrinthStoneBlock());
 		COBBLED_LABYRINTH_STONE_STAIRS = register("cobbled_labyrinth_stone_stairs", new CobbledLabyrinthStoneStairsBlock());
@@ -257,15 +240,6 @@ public class BlockRegistry {
 		TrafficLamps.clientInit();
 
 		LabyrinthStoneBlock.clientInit();
-
-		LabyrinthCoalOreBlock.clientInit();
-		LabyrinthCopperOreBlock.clientInit();
-		LabyrinthDiamondOreBlock.clientInit();
-		LabyrinthEmeraldOreBlock.clientInit();
-		LabyrinthGoldOreBlock.clientInit();
-		LabyrinthIronOreBlock.clientInit();
-		LabyrinthLapisOreBlock.clientInit();
-		LabyrinthRedstoneOreBlock.clientInit();
 
 		CobbledLabyrinthStoneBlock.clientInit();
 		CobbledLabyrinthStoneStairsBlock.clientInit();

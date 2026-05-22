@@ -10,6 +10,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.*;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
@@ -59,20 +60,16 @@ public class MiyashitaSakuraBlock extends Block {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-        BlockPos belowPos;
-        switch (this.getStateDefinition()) {
-            case Direction.UP -> belowPos = pos.above();
-            case Direction.DOWN -> belowPos = pos.below();
-            case Direction.NORTH -> belowPos = pos.north();
-            case Direction.SOUTH -> belowPos = pos.south();
-            case Direction.EAST -> belowPos = pos.east();
-            case Direction.WEST -> belowPos = pos.west();
-            default -> belowPos = pos.below();
-        }
+        Direction facing = state.hasProperty(BlockStateProperties.FACING)
+                ? state.getValue(BlockStateProperties.FACING)
+                : Direction.DOWN;
 
-        BlockState theState = level.getBlockState(belowPos);
-        return !theState.isAir() && !theState.is(this);
+        BlockPos supportPos = pos.relative(facing.getOpposite());
+
+        BlockState supportState = level.getBlockState(supportPos);
+        return !supportState.isAir() && !supportState.is(this);
     }
 
     @Override

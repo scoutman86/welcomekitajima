@@ -15,11 +15,15 @@ import net.minecraft.world.level.*;
 
 import dev.emi.trinkets.api.TrinketsApi;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 // note: this is absolutely fucked.
 
 public class CatalystWeapon extends Item {
+    public static final Map<String, Item> CATALYST_REGISTRY = new HashMap<>();
+
     public CatalystWeapon(Properties properties) {
         super(properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
@@ -99,6 +103,8 @@ public class CatalystWeapon extends Item {
         for (CatalystList entry : CATALYST_LISTS) {
             Item item = new CatalystWeapon(entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
+
+            CATALYST_REGISTRY.put(entry.registryName, item);
         }
     }
 }

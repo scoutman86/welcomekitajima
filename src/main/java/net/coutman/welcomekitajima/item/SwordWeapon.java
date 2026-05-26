@@ -7,9 +7,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 
-import java.util.List;
+import java.util.*;
 
 public class SwordWeapon extends SwordItem {
+    public static final Map<String, SwordItem> SWORD_REGISTRY = new HashMap<>();
+
     public SwordWeapon(Tier tier, int damage, float attackSpeed, Properties properties) {
         super(tier, damage, attackSpeed, properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
@@ -31,6 +33,8 @@ public class SwordWeapon extends SwordItem {
         for (SwordList entry : SWORD_LISTS) {
             SwordItem item = new SwordWeapon(entry.tier, entry.damage, entry.attackSpeed, entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
+
+            SWORD_REGISTRY.put(entry.registryName, item);
         }
     }
 }

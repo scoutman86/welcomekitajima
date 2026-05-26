@@ -7,9 +7,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 
-import java.util.List;
+import java.util.*;
 
 public class PolearmWeapon extends AxeItem {
+    public static final Map<String, AxeItem> POLEARM_REGISTRY = new HashMap<>();
+
     public PolearmWeapon(Tier tier, int damage, float attackSpeed, Properties properties) {
         super(tier, damage, attackSpeed, properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
@@ -31,6 +33,8 @@ public class PolearmWeapon extends AxeItem {
         for (PolearmList entry : POLEARM_LISTS) {
             AxeItem item = new PolearmWeapon(entry.tier, entry.damage, entry.attackSpeed, entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
+
+            POLEARM_REGISTRY.put(entry.registryName, item);
         }
     }
 }

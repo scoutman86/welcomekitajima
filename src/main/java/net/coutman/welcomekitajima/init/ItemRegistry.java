@@ -218,14 +218,6 @@ public class ItemRegistry {
 
 		// fucking piece of shit I hate you
 		LABYRINTH_STONE = register("labyrinth_stone", new BlockItem(BlockRegistry.LABYRINTH_STONE, new Item.Properties()));
-		LABYRINTH_COAL_ORE = register("labyrinth_coal_ore", new BlockItem(BlockRegistry.LABYRINTH_COAL_ORE, new Item.Properties()));
-		LABYRINTH_COPPER_ORE = register("labyrinth_copper_ore", new BlockItem(BlockRegistry.LABYRINTH_COPPER_ORE, new Item.Properties()));
-		LABYRINTH_DIAMOND_ORE = register("labyrinth_diamond_ore", new BlockItem(BlockRegistry.LABYRINTH_DIAMOND_ORE, new Item.Properties()));
-		LABYRINTH_EMERALD_ORE = register("labyrinth_emerald_ore", new BlockItem(BlockRegistry.LABYRINTH_EMERALD_ORE, new Item.Properties()));
-		LABYRINTH_GOLD_ORE = register("labyrinth_gold_ore", new BlockItem(BlockRegistry.LABYRINTH_GOLD_ORE, new Item.Properties()));
-		LABYRINTH_IRON_ORE = register("labyrinth_iron_ore", new BlockItem(BlockRegistry.LABYRINTH_IRON_ORE, new Item.Properties()));
-		LABYRINTH_LAPIS_ORE = register("labyrinth_lapis_ore", new BlockItem(BlockRegistry.LABYRINTH_LAPIS_ORE, new Item.Properties()));
-		LABYRINTH_REDSTONE_ORE = register("labyrinth_redstone_ore", new BlockItem(BlockRegistry.LABYRINTH_REDSTONE_ORE, new Item.Properties()));
 		COBBLED_LABYRINTH_STONE = register("cobbled_labyrinth_stone", new BlockItem(BlockRegistry.COBBLED_LABYRINTH_STONE, new Item.Properties()));
 		COBBLED_LABYRINTH_STONE_STAIRS = register("cobbled_labyrinth_stone_stairs", new BlockItem(BlockRegistry.COBBLED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
 		COBBLED_LABYRINTH_STONE_SLAB = register("cobbled_labyrinth_stone_slab", new BlockItem(BlockRegistry.COBBLED_LABYRINTH_STONE_SLAB, new Item.Properties()));

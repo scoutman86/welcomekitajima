@@ -12,12 +12,15 @@
 */
 package net.coutman.welcomekitajima;
 
+import net.coutman.welcomekitajima.init.EntityRegistry;
+import net.coutman.welcomekitajima.init.ACCGruntRenderer;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.FoliageColor;
 
@@ -27,6 +30,7 @@ public class ClientInit implements ClientModInitializer {
 	public void onInitializeClient() {
 		// I have no idea what I'm doing so hopefully this works and I don't explode
 		BlockRegistry.clientLoad();
+		EntityRendererRegistry.register(EntityRegistry.ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
 		ColorProviderRegistry.BLOCK.register(
 				(state, world, pos, tintIndex) -> {
 					if (world != null && pos != null) {

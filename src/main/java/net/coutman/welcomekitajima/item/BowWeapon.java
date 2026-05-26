@@ -7,9 +7,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 
-import java.util.List;
+import java.util.*;
 
 public class BowWeapon extends BowItem {
+    public static final Map<String, BowItem> BOW_REGISTRY = new HashMap<>();
+
     public BowWeapon(Properties properties) {
         super(properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
@@ -31,6 +33,8 @@ public class BowWeapon extends BowItem {
         for (BowList entry : BOW_LISTS) {
             BowItem item = new BowWeapon(entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
+
+            BOW_REGISTRY.put(entry.registryName, item);
         }
     }
 }

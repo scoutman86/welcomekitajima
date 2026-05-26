@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:acc_badge_bronze"
+	},
+	{
+	  "item": "welcomekitajima:acc_badge_bronze"
+	},
+	{
+	  "item": "welcomekitajima:acc_badge_bronze"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:acc_badge_silver",
+    "count": 1
+  }
+}

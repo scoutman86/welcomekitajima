@@ -1,9 +1,11 @@
 package net.coutman.welcomekitajima.entity;
 
+import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.entity.ai.evil;
 import net.coutman.welcomekitajima.item.*;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.*;
@@ -109,6 +111,10 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
 
     public void setVariant(ElementalVariance variant) {
         this.entityData.set(DATA_ID_TYPE_VARIANT, variant.getId());
+    }
+
+    protected ResourceLocation getDefaultLootTableResourceLocation() {
+        return new ResourceLocation(WelcomeKitajima.MODID, "entities/acc_grunt");
     }
 
     @Nullable

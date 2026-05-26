@@ -1,14 +1,14 @@
 {
   "has_precipitation": true,
-  "temperature": 0.8,
-  "downfall": 0.4,
+  "temperature": 0.4,
+  "downfall": 0.5,
   "effects": {
     "foliage_color": -11297692,
-    "grass_color": -9978245,
-    "sky_color": -12221194,
+    "grass_color": -8542073,
+    "sky_color": -9334326,
     "fog_color": -9191681,
-    "water_color": -13135674,
-    "water_fog_color": -15954226
+    "water_color": -10122642,
+    "water_fog_color": -12812899
   },
   "spawners": {
     "monster": [],

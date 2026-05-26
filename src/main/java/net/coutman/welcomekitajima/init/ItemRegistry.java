@@ -147,6 +147,8 @@ public class ItemRegistry {
 			Vision.register();
 		}
 
+		ACCBadges.register();
+
 		KitajimaLocalSpecialty.register();
 		MiyashitaLocalSpecialty.register();
 

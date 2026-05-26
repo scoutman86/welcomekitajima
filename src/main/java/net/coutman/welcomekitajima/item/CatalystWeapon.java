@@ -8,12 +8,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.entity.animal.Cat;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
 
-import dev.emi.trinkets.api.TrinketsApi;
+//import dev.emi.trinkets.api.TrinketsApi;
 
 import java.util.HashMap;
 import java.util.List;
@@ -40,9 +39,7 @@ public class CatalystWeapon extends Item {
         new CatalystList("frigid_core", Rarity.RARE),
         new CatalystList("glimmering_twilight", Rarity.RARE)
     );
-
-
-
+    /*
     private String getVisionElement(Player player) {
         var component = TrinketsApi.getTrinketComponent(player);
         if (component.isPresent()) {
@@ -92,7 +89,7 @@ public class CatalystWeapon extends Item {
 
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }
-
+/*
     /*
     public static void createItemModelData() {
 

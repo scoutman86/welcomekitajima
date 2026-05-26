@@ -34,7 +34,6 @@ public class BlockRegistry {
 	public static Block WOODEN_MIPS_DOOR;
 	public static Block SINGLE_STAR_WOODEN_MIPS_DOOR;
 	public static Block METAL_MIPS_DOOR;
-	public static Block FRAMEWORK_BLOCK;
 	// fuyuki
 	public static Block FUYUKI_WOOD;
 	public static Block FUYUKI_LOG;
@@ -119,7 +118,6 @@ public class BlockRegistry {
 		WOODEN_MIPS_DOOR = register("wooden_mips_door", new WoodenMIPSDoorBlock());
 		SINGLE_STAR_WOODEN_MIPS_DOOR = register("single_star_wooden_mips_door", new SingleStarWoodenMIPSDoorBlock());
 		METAL_MIPS_DOOR = register("metal_mips_door", new MetalMIPSDoorBlock());
-		FRAMEWORK_BLOCK = register("framework_block", new FrameworkBlockBlock());
 		// Fuyuki Blocks
 		FUYUKI_WOOD = register("fuyuki_wood", new FuyukiWoodBlock());
 		FUYUKI_LOG = register("fuyuki_log", new FuyukiLogBlock());
@@ -209,7 +207,6 @@ public class BlockRegistry {
 		WoodenMIPSDoorBlock.clientInit();
 		SingleStarWoodenMIPSDoorBlock.clientInit();
 		MetalMIPSDoorBlock.clientInit();
-		FrameworkBlockBlock.clientInit();
 
 		FuyukiWoodBlock.clientInit();
 		FuyukiLogBlock.clientInit();

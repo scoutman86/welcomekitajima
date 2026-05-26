@@ -140,7 +140,6 @@ public class ItemRegistry {
 		WOODEN_MIPS_DOOR = register("wooden_mips_door", new BlockItem(BlockRegistry.WOODEN_MIPS_DOOR, new Item.Properties()));
 		SINGLE_STAR_WOODEN_MIPS_DOOR = register("single_star_wooden_mips_door", new BlockItem(BlockRegistry.SINGLE_STAR_WOODEN_MIPS_DOOR, new Item.Properties()));
 		METAL_MIPS_DOOR = register("metal_mips_door", new BlockItem(BlockRegistry.METAL_MIPS_DOOR, new Item.Properties()));
-		FRAMEWORK_BLOCK = register("framework_block", new BlockItem(BlockRegistry.FRAMEWORK_BLOCK, new Item.Properties()));
 
 
 		if (WelcomeKitajima.IncludeExperimentalElementalFeatures)

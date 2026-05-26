@@ -15,12 +15,12 @@ public class evil<T extends ACCGrunt & RangedAttackMob> extends RangedBowAttackG
 
     @Override
     public boolean canUse() {
-        return super.canUse() || (this.mob.getTarget() != null && this.isHoldingCustomBow());
+        return this.mob.getTarget() != null && this.isHoldingCustomBow();
     }
 
     @Override
     public boolean canContinueToUse() {
-        return super.canContinueToUse() || (this.mob.getTarget() != null && this.isHoldingCustomBow());
+        return super.canUse() || (this.mob.getTarget() != null && this.isHoldingCustomBow());
     }
 
     private boolean isHoldingCustomBow() {

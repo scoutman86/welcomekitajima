@@ -35,7 +35,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
 
     @Override
     public boolean isAggressive() {
-        return this.isNewBow() ? (this.getTarget() != null) : super.isAggressive();
+        return this.isNewBow() || super.isAggressive();
     }
 
     public boolean isNewBow() {

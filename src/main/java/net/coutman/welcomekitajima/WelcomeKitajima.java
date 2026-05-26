@@ -10,7 +10,7 @@ import net.fabricmc.api.ModInitializer;
 public class WelcomeKitajima implements ModInitializer {
 	public static final Logger LOGGER = LogManager.getLogger();
 	public static final String MODID = "welcomekitajima";
-	public static final Boolean IncludeExperimentalElementalFeatures = true;
+	public static final Boolean IncludeExperimentalElementalFeatures = false;
 
 	@Override
 	public void onInitialize() {

@@ -294,5 +294,13 @@
   "item.welcomekitajima.dusk_piercer": "Dusk Piercer",
   "item.welcomekitajima.stelliform_greatsword": "Stelliform Greatsword",
   "item.welcomekitajima.glimmering_twilight": "Glimmering Twilight",
-  "item.welcomekitajima.celestial_spear": "Celestial Spear"
+  "item.welcomekitajima.celestial_spear": "Celestial Spear",
+  "entity.welcomekitajima.acc_grunt": "ACC Grunt",
+  "death.attack.welcomekitajima.pyro_damage": "%1$s was burned up by Pyro energy",
+  "death.attack.welcomekitajima.hydro_damage": "%1$s was washed away by Hydro energy",
+  "death.attack.welcomekitajima.anemo_damage": "%1$s was blown away by Anemo energy",
+  "death.attack.welcomekitajima.electro_damage": "%1$s was shocked by Electro energy",
+  "death.attack.welcomekitajima.dendro_damage": "%1$s was overgrown by Dendro energy",
+  "death.attack.welcomekitajima.cryo_damage": "%1$s was frozen by Cryo energy",
+  "death.attack.welcomekitajima.geo_damage": "%1$s was crushed by Geo energy"
 }

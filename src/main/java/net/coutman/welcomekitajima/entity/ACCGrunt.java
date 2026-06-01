@@ -1,7 +1,6 @@
 package net.coutman.welcomekitajima.entity;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
-import net.coutman.welcomekitajima.entity.ai.evil;
 import net.coutman.welcomekitajima.item.*;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.*;
@@ -10,7 +9,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.*;
 import net.minecraft.world.entity.ai.goal.*;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.monster.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -21,11 +20,12 @@ import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.pathfinder.Path;
 import org.jetbrains.annotations.Nullable;
 import net.minecraft.util.RandomSource;
 
 public class ACCGrunt extends Monster implements RangedAttackMob {
-    private final evil<ACCGrunt> bowAttackGoal = new evil<>(this, 1.0D, 20, 15.0F);
+    private final RangedAttackGoal bowAttackGoal = new RangedAttackGoal(this, 1.0D, 60, 15.0F);
     private final MeleeAttackGoal meleeAttackGoal = new MeleeAttackGoal(this, 1.2D, false);
 
     private static final EntityDataAccessor<String> DATA_ID_TYPE_VARIANT =
@@ -37,11 +37,11 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
 
     @Override
     public boolean isAggressive() {
-        return this.isNewBow() || super.isAggressive();
+        return this.isBow() || super.isAggressive();
     }
 
-    public boolean isNewBow() {
-        return this.getMainHandItem().getItem() instanceof net.coutman.welcomekitajima.item.BowWeapon;
+    public boolean isBow() {
+        return this.getMainHandItem().getItem() instanceof net.minecraft.world.item.BowItem;
     }
 
     @Override
@@ -58,7 +58,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
             this.goalSelector.removeGoal(this.bowAttackGoal);
 
             ItemStack itemstack = this.getMainHandItem();
-            if (this.isNewBow()) {
+            if (this.isBow()) {
                 this.goalSelector.addGoal(1, this.bowAttackGoal);
             } else {
                 this.goalSelector.addGoal(1, this.meleeAttackGoal);
@@ -66,14 +66,36 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
         }
     }
 
+    private class ResetTargetGoal extends Goal {
+        private final ACCGrunt grunt;
+
+        public ResetTargetGoal(ACCGrunt grunt) {
+            this.grunt = grunt;
+        }
+
+        @Override
+        public boolean canUse() {
+            LivingEntity target = this.grunt.getTarget();
+            return target != null && !target.isAlive();
+        }
+
+        @Override
+        public void start() {
+            this.grunt.setTarget(null);
+            this.grunt.getNavigation().moveTo((Path) null, 0);
+        }
+    }
+
     @Override
     protected void registerGoals() {
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
-        this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(4, new OpenDoorGoal(this, true));
+        this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+        this.goalSelector.addGoal(6, new WaterAvoidingRandomStrollGoal(this, 1));
 
-        this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
-
+        this.targetSelector.addGoal(0, new ResetTargetGoal(this));
+        this.targetSelector.addGoal(1, new HurtByTargetGoal(this, ACCGrunt.class).setAlertOthers());
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -86,7 +108,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
     @Override
     protected void defineSynchedData() {
         super.defineSynchedData();
-        this.entityData.define(DATA_ID_TYPE_VARIANT, "anemo"); // Default to variant 0
+        this.entityData.define(DATA_ID_TYPE_VARIANT, "pyro");
     }
 
     @Override
@@ -128,7 +150,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
 
         Item[] randomWeapons = {
                 SwordWeapon.SWORD_REGISTRY.get("silver_blade"),
-                BowWeapon.BOW_REGISTRY.get("shimmering_bow"),
+                Items.BOW,
                 ClaymoreWeapon.CLAYMORE_REGISTRY.get("shining_greatsword"),
                 PolearmWeapon.POLEARM_REGISTRY.get("pearlescent_staff")
         };

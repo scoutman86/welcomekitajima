@@ -25,13 +25,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class TrafficLamps extends Block {
-    // this probably doesn't work
     public static final BooleanProperty LIT = BlockStateProperties.LIT;
-    public static final Map<DyeColor, Block> TRAFFIC_LAMPS = new HashMap<>();
+    public static final Map<DyeColor, Block> TRAFFIC_LAMPS = new LinkedHashMap<>();
 
     public TrafficLamps(Properties properties) {
         super(properties);
@@ -75,31 +74,27 @@ public class TrafficLamps extends Block {
             .sound(SoundType.GLASS)
             .strength(1.8f, 10f);
 
-    // block (note: I hate you so much. look at what COULD have been)
-
-    /*
-    public static Block TRAFFIC_LAMP_RED = register("red_traffic_lamp", new TrafficLampRed());
-    public static Block TRAFFIC_LAMP_ORANGE = register("orange_traffic_lamp", new TrafficLampOrange());
-    public static Block TRAFFIC_LAMP_YELLOW = register("yellow_traffic_lamp", new TrafficLampYellow());
-    public static Block TRAFFIC_LAMP_LIME = register("lime_traffic_lamp", new TrafficLampLime());
-    public static Block TRAFFIC_LAMP_GREEN = register("green_traffic_lamp", new TrafficLampGreen());
-    public static Block TRAFFIC_LAMP_BLUE = register("blue_traffic_lamp", new TrafficLampBlue());
-    public static Block TRAFFIC_LAMP_CYAN = register("cyan_traffic_lamp", new TrafficLampCyan());
-    public static Block TRAFFIC_LAMP_LIGHT_BLUE = register("light_blue_traffic_lamp", new TrafficLampLightBlue());
-    public static Block TRAFFIC_LAMP_PURPLE = register("purple_traffic_lamp", new TrafficLampPurple());
-    public static Block TRAFFIC_LAMP_MAGENTA = register("magenta_traffic_lamp", new TrafficLampMagenta());
-    public static Block TRAFFIC_LAMP_PINK = register("pink_traffic_lamp", new TrafficLampPink());
-    public static Block TRAFFIC_LAMP_BROWN = register("brown_traffic_lamp", new TrafficLampBrown());
-    public static Block TRAFFIC_LAMP_WHITE = register("white_traffic_lamp", new TrafficLampWhite());
-    public static Block TRAFFIC_LAMP_LIGHT_GRAY = register("light_gray_traffic_lamp", new TrafficLampLightGray());
-    public static Block TRAFFIC_LAMP_GRAY = register("gray_traffic_lamp", new TrafficLampGray());
-    public static Block TRAFFIC_LAMP_BLACK = register("black_traffic_lamp", new TrafficLampBlack());
-    */
-
-    // weep
+    private static final DyeColor[] MODERN_COLOR_ORDER = new DyeColor[]{
+            DyeColor.WHITE,
+            DyeColor.LIGHT_GRAY,
+            DyeColor.GRAY,
+            DyeColor.BLACK,
+            DyeColor.BROWN,
+            DyeColor.RED,
+            DyeColor.ORANGE,
+            DyeColor.YELLOW,
+            DyeColor.LIME,
+            DyeColor.GREEN,
+            DyeColor.CYAN,
+            DyeColor.LIGHT_BLUE,
+            DyeColor.BLUE,
+            DyeColor.PURPLE,
+            DyeColor.MAGENTA,
+            DyeColor.PINK
+    };
 
     public static void registerBlocks() {
-        for (DyeColor color : DyeColor.values()) {
+        for (DyeColor color : MODERN_COLOR_ORDER) {
             String name = color.getName() + "_traffic_lamp";
             Block block = new TrafficLamps(PROPERTIES);
 

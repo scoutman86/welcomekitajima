@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_bottom_left",
+  "textures": {
+    "particle": "welcomekitajima:block/ashwood_door_bottom",
+    "bottom": "welcomekitajima:block/ashwood_door_bottom",
+    "top": "welcomekitajima:block/ashwood_door_top"
+  },
+  "render_type": "cutout_mipped"
+}

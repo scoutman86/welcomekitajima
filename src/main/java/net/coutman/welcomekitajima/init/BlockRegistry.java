@@ -13,6 +13,7 @@ import net.minecraft.core.Registry;
 import net.coutman.welcomekitajima.block.*;
 import net.coutman.welcomekitajima.block.fuyuki.*;
 import net.coutman.welcomekitajima.block.miyashita_sakura.*;
+import net.coutman.welcomekitajima.block.ashwood.*;
 import net.coutman.welcomekitajima.block.labyrinth.*;
 
 public class BlockRegistry {
@@ -64,6 +65,21 @@ public class BlockRegistry {
 	public static Block MIYASHITA_SAKURA_TRAPDOOR;
 	public static Block STRIPPED_MIYASHITA_SAKURA_LOG;
 	public static Block STRIPPED_MIYASHITA_SAKURA_WOOD;
+	// ashwood
+	public static Block ASHWOOD_WOOD;
+	public static Block ASHWOOD_LOG;
+	public static Block ASHWOOD_PLANKS;
+	public static Block ASHWOOD_LEAVES;
+	public static Block ASHWOOD_STAIRS;
+	public static Block ASHWOOD_SLAB;
+	public static Block ASHWOOD_FENCE;
+	public static Block ASHWOOD_FENCE_GATE;
+	public static Block ASHWOOD_PRESSURE_PLATE;
+	public static Block ASHWOOD_BUTTON;
+	public static Block ASHWOOD_DOOR;
+	public static Block ASHWOOD_TRAPDOOR;
+	public static Block STRIPPED_ASHWOOD_LOG;
+	public static Block STRIPPED_ASHWOOD_WOOD;
 	// labyrinth
 	public static Block LABYRINTH_STONE;
 	public static Block COBBLED_LABYRINTH_STONE;
@@ -148,6 +164,21 @@ public class BlockRegistry {
 		MIYASHITA_SAKURA_TRAPDOOR = register("miyashita_sakura_trapdoor", new MiyashitaSakuraTrapdoorBlock());
 		STRIPPED_MIYASHITA_SAKURA_LOG = register("stripped_miyashita_sakura_log", new MiyashitaSakuraStrippedLogBlock());
 		STRIPPED_MIYASHITA_SAKURA_WOOD = register("stripped_miyashita_sakura_wood", new MiyashitaSakuraStrippedWoodBlock());
+		// Ashwood Blocks
+		ASHWOOD_WOOD = register("ashwood_wood", new AshwoodWoodBlock());
+		ASHWOOD_LOG = register("ashwood_log", new AshwoodLogBlock());
+		ASHWOOD_PLANKS = register("ashwood_planks", new AshwoodPlanksBlock());
+		ASHWOOD_LEAVES = register("ashwood_leaves", new AshwoodLeavesBlock());
+		ASHWOOD_STAIRS = register("ashwood_stairs", new AshwoodStairsBlock());
+		ASHWOOD_SLAB = register("ashwood_slab", new AshwoodSlabBlock());
+		ASHWOOD_FENCE = register("ashwood_fence", new AshwoodFenceBlock());
+		ASHWOOD_FENCE_GATE = register("ashwood_fence_gate", new AshwoodFenceGateBlock());
+		ASHWOOD_PRESSURE_PLATE = register("ashwood_pressure_plate", new AshwoodPressurePlateBlock());
+		ASHWOOD_BUTTON = register("ashwood_button", new AshwoodButtonBlock());
+		ASHWOOD_DOOR = register("ashwood_door", new AshwoodDoorBlock());
+		ASHWOOD_TRAPDOOR = register("ashwood_trapdoor", new AshwoodTrapdoorBlock());
+		STRIPPED_ASHWOOD_LOG = register("stripped_ashwood_log", new AshwoodStrippedLogBlock());
+		STRIPPED_ASHWOOD_WOOD = register("stripped_ashwood_wood", new AshwoodStrippedWoodBlock());
 		// fuck you
 		LABYRINTH_STONE = register("labyrinth_stone", new LabyrinthStoneBlock());
 		// cobbled
@@ -233,6 +264,19 @@ public class BlockRegistry {
 		MiyashitaSakuraButtonBlock.clientInit();
 		MiyashitaSakuraDoorBlock.clientInit();
 		MiyashitaSakuraTrapdoorBlock.clientInit();
+
+		AshwoodWoodBlock.clientInit();
+		AshwoodLogBlock.clientInit();
+		AshwoodPlanksBlock.clientInit();
+		AshwoodLeavesBlock.clientInit();
+		AshwoodStairsBlock.clientInit();
+		AshwoodSlabBlock.clientInit();
+		AshwoodFenceBlock.clientInit();
+		AshwoodFenceGateBlock.clientInit();
+		AshwoodPressurePlateBlock.clientInit();
+		AshwoodButtonBlock.clientInit();
+		AshwoodDoorBlock.clientInit();
+		AshwoodTrapdoorBlock.clientInit();
 
 		TrafficLamps.clientInit();
 

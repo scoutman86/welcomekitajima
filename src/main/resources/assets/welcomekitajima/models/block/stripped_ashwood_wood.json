@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "welcomekitajima:block/stripped_ashwood_log",
+    "side": "welcomekitajima:block/stripped_ashwood_log"
+  }
+}

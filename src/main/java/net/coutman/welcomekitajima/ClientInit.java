@@ -38,12 +38,14 @@ public class ClientInit implements ClientModInitializer {
 					}
 					return FoliageColor.getDefaultColor();
 				},
-				BlockRegistry.FUYUKI_LEAVES
+				BlockRegistry.FUYUKI_LEAVES,
+				BlockRegistry.ASHWOOD_LEAVES
 		);
 
 		ColorProviderRegistry.ITEM.register(
 				(stack, tintIndex) -> FoliageColor.getDefaultColor(),
-				BlockRegistry.FUYUKI_LEAVES
+				BlockRegistry.FUYUKI_LEAVES,
+				BlockRegistry.ASHWOOD_LEAVES
 		);
 	}
 }

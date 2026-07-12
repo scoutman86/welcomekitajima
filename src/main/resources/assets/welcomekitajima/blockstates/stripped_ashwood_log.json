@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "welcomekitajima:block/stripped_ashwood_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "welcomekitajima:block/stripped_ashwood_log"
+    },
+    "axis=z": {
+      "model": "welcomekitajima:block/stripped_ashwood_log",
+      "x": 90
+    }
+  }
+}

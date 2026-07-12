@@ -1,0 +1,10 @@
+{
+  "parent": "block/cube_bottom_top",
+  "textures": {
+    "particle": "welcomekitajima:block/ashwood_planks",
+    "bottom": "welcomekitajima:block/ashwood_planks",
+    "top": "welcomekitajima:block/ashwood_planks",
+    "side": "welcomekitajima:block/ashwood_planks"
+  },
+  "render_type": "solid"
+}

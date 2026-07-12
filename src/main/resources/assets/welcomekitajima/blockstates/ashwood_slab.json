@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "welcomekitajima:block/ashwood_slab"
+    },
+    "type=top": {
+      "model": "welcomekitajima:block/ashwood_slab_top"
+    },
+    "type=double": {
+      "model": "welcomekitajima:block/ashwood_slab_full"
+    }
+  }
+}

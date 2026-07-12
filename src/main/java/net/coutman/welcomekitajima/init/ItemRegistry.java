@@ -75,16 +75,23 @@ public class ItemRegistry {
 	public static Item MIYASHITA_SAKURA_TRAPDOOR;
 	public static Item STRIPPED_MIYASHITA_SAKURA_LOG;
 	public static Item STRIPPED_MIYASHITA_SAKURA_WOOD;
+	// ashwood
+	public static Item ASHWOOD_WOOD;
+	public static Item ASHWOOD_LOG;
+	public static Item ASHWOOD_PLANKS;
+	public static Item ASHWOOD_LEAVES;
+	public static Item ASHWOOD_STAIRS;
+	public static Item ASHWOOD_SLAB;
+	public static Item ASHWOOD_FENCE;
+	public static Item ASHWOOD_FENCE_GATE;
+	public static Item ASHWOOD_PRESSURE_PLATE;
+	public static Item ASHWOOD_BUTTON;
+	public static Item ASHWOOD_DOOR;
+	public static Item ASHWOOD_TRAPDOOR;
+	public static Item STRIPPED_ASHWOOD_LOG;
+	public static Item STRIPPED_ASHWOOD_WOOD;
 	// fuck off
 	public static Item LABYRINTH_STONE;
-	public static Item LABYRINTH_COAL_ORE;
-	public static Item LABYRINTH_COPPER_ORE;
-	public static Item LABYRINTH_DIAMOND_ORE;
-	public static Item LABYRINTH_EMERALD_ORE;
-	public static Item LABYRINTH_GOLD_ORE;
-	public static Item LABYRINTH_IRON_ORE;
-	public static Item LABYRINTH_LAPIS_ORE;
-	public static Item LABYRINTH_REDSTONE_ORE;
 	public static Item COBBLED_LABYRINTH_STONE;
 	public static Item COBBLED_LABYRINTH_STONE_STAIRS;
 	public static Item COBBLED_LABYRINTH_STONE_SLAB;
@@ -216,6 +223,22 @@ public class ItemRegistry {
 		MIYASHITA_SAKURA_TRAPDOOR = register("miyashita_sakura_trapdoor", new BlockItem(BlockRegistry.MIYASHITA_SAKURA_TRAPDOOR, new Item.Properties()));
 		MIYASHITA_SAKURA_PRESSURE_PLATE = register("miyashita_sakura_pressure_plate", new BlockItem(BlockRegistry.MIYASHITA_SAKURA_PRESSURE_PLATE, new Item.Properties()));
 		MIYASHITA_SAKURA_BUTTON = register("miyashita_sakura_button", new BlockItem(BlockRegistry.MIYASHITA_SAKURA_BUTTON, new Item.Properties()));
+
+		// ashwood
+		ASHWOOD_LOG = register("ashwood_log", new BlockItem(BlockRegistry.ASHWOOD_LOG, new Item.Properties()));
+		ASHWOOD_WOOD = register("ashwood_wood", new BlockItem(BlockRegistry.ASHWOOD_WOOD, new Item.Properties()));
+		STRIPPED_ASHWOOD_LOG = register("stripped_ashwood_log", new BlockItem(BlockRegistry.STRIPPED_ASHWOOD_LOG, new Item.Properties()));
+		STRIPPED_ASHWOOD_WOOD = register("stripped_ashwood_wood", new BlockItem(BlockRegistry.STRIPPED_ASHWOOD_WOOD, new Item.Properties()));
+		ASHWOOD_LEAVES = register("ashwood_leaves", new BlockItem(BlockRegistry.ASHWOOD_LEAVES, new Item.Properties()));
+		ASHWOOD_PLANKS = register("ashwood_planks", new BlockItem(BlockRegistry.ASHWOOD_PLANKS, new Item.Properties()));
+		ASHWOOD_STAIRS = register("ashwood_stairs", new BlockItem(BlockRegistry.ASHWOOD_STAIRS, new Item.Properties()));
+		ASHWOOD_SLAB = register("ashwood_slab", new BlockItem(BlockRegistry.ASHWOOD_SLAB, new Item.Properties()));
+		ASHWOOD_FENCE = register("ashwood_fence", new BlockItem(BlockRegistry.ASHWOOD_FENCE, new Item.Properties()));
+		ASHWOOD_FENCE_GATE = register("ashwood_fence_gate", new BlockItem(BlockRegistry.ASHWOOD_FENCE_GATE, new Item.Properties()));
+		ASHWOOD_DOOR = register("ashwood_door", new BlockItem(BlockRegistry.ASHWOOD_DOOR, new Item.Properties()));
+		ASHWOOD_TRAPDOOR = register("ashwood_trapdoor", new BlockItem(BlockRegistry.ASHWOOD_TRAPDOOR, new Item.Properties()));
+		ASHWOOD_PRESSURE_PLATE = register("ashwood_pressure_plate", new BlockItem(BlockRegistry.ASHWOOD_PRESSURE_PLATE, new Item.Properties()));
+		ASHWOOD_BUTTON = register("ashwood_button", new BlockItem(BlockRegistry.ASHWOOD_BUTTON, new Item.Properties()));
 
 		// fucking piece of shit I hate you
 		LABYRINTH_STONE = register("labyrinth_stone", new BlockItem(BlockRegistry.LABYRINTH_STONE, new Item.Properties()));

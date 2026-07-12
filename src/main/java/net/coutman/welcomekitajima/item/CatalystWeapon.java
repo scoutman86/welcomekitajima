@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
 
@@ -39,45 +40,11 @@ public class CatalystWeapon extends Item {
         new CatalystList("frigid_core", Rarity.RARE),
         new CatalystList("glimmering_twilight", Rarity.RARE)
     );
-    /*
-    private String getVisionElement(Player player) {
-        var component = TrinketsApi.getTrinketComponent(player);
-        if (component.isPresent()) {
-            var vision = component.get().getAllEquipped();
-
-            for (var tuple : vision) {
-                ItemStack itemStack = tuple.getB();
-                Item item = itemStack.getItem();
-                String element;
-                if (item == Vision.PYRO_VISION) {
-                    element = "pyro";
-                } else if (item == Vision.HYDRO_VISION) {
-                    element = "hydro";
-                } else if (item == Vision.ANEMO_VISION) {
-                    element = "anemo";
-                } else if (item == Vision.ELECTRO_VISION) {
-                    element = "electro";
-                } else if (item == Vision.DENDRO_VISION) {
-                    element =  "dendro";
-                } else if (item == Vision.CRYO_VISION) {
-                    element =  "cryo";
-                } else if (item == Vision.GEO_VISION) {
-                    element =  "geo";
-                } else element = "none";
-                if (!element.equals("none")) {
-                    return element;
-                }
-            }
-        }
-        return "none";
-    }
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
-            String element = getVisionElement(player);
-            if (!element.equals("none")) {
-                CatalystProjectileEntity projectile = new CatalystProjectileEntity(level, player, element);
+                Snowball projectile = new Snowball(level, player);
 
                 // Set heading: shooter, pitch, yaw, roll, speed, divergence
                 projectile.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
@@ -85,16 +52,9 @@ public class CatalystWeapon extends Item {
 
                 player.getCooldowns().addCooldown(this, 10);
             }
-        }
 
         return InteractionResultHolder.sidedSuccess(player.getItemInHand(hand), level.isClientSide());
     }
-/*
-    /*
-    public static void createItemModelData() {
-
-    }
-    */
 
     public static void register() {
         for (CatalystList entry : CATALYST_LISTS) {

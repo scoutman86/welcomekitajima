@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "welcomekitajima:block/ashwood_log_top",
+    "up": "welcomekitajima:block/ashwood_log_top",
+    "north": "welcomekitajima:block/ashwood_log_side",
+    "east": "welcomekitajima:block/ashwood_log_side",
+    "south": "welcomekitajima:block/ashwood_log_side",
+    "west": "welcomekitajima:block/ashwood_log_side",
+    "particle": "welcomekitajima:block/ashwood_log_top"
+  },
+  "render_type": "solid"
+}

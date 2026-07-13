@@ -6,7 +6,7 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = 'welcomekitajima'
-version = '2.7.1'
+version = '2.8.0'
 group = 'net.coutman.welcomekitajima'
 actualmodid = 'welcomekitajima'
 
@@ -16,6 +16,17 @@ loom {
     }
 }
 repositories {
+    exclusiveContent {
+        forRepository {
+            maven {
+                name = "Modrinth"
+                url = "https://api.modrinth.com/maven"
+            }
+        }
+        filter {
+            includeGroup "maven.modrinth"
+        }
+    }
     maven {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
@@ -24,14 +35,27 @@ repositories {
         name = "Ladysnake Libs"
         url = 'https://maven.ladysnake.org/releases'
     }
+    maven {
+        url = "https://maven.shedaniel.me/"
+    }
 }
+
+
 
 dependencies {
     minecraft "com.mojang:minecraft:1.20.1"
     mappings loom.officialMojangMappings()
-    modImplementation "net.fabricmc:fabric-loader:0.16.14"
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_ver}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.92.6+1.20.1"
     include modImplementation (annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.0"))
+
+    // add support for seven elements and its requirements
+    modImplementation "maven.modrinth:seven-elements:${project.seven_elements_version}"
+    modRuntimeOnly "me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_ver}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-base:${project.cca_version}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:${project.cca_version}"
+    modImplementation "dev.onyxstudios.cardinal-components-api:cardinal-components-item:${project.cca_version}"
+
 }
 
 processResources {

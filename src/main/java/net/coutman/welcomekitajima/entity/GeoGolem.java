@@ -25,20 +25,35 @@ public class GeoGolem extends IronGolem {
         super(entityType, level);
     }
 
+    private static class GeoAuraApplicationGoal extends Goal {
+        private final GeoGolem geoGolem;
 
-  /*
-    LivingEntity auraTarget = ;
-    ElementComponent component = ElementComponent.KEY.get(this);
+        public GeoAuraApplicationGoal(GeoGolem geoGolem) {
+            this.geoGolem = geoGolem;
+        }
 
-    ElementalApplication application = ElementalApplications.gaugeUnits(
-            auraTarget,
-            Element.GEO,
-            100.0,
-            true
-    );
+        @Override
+        public boolean canUse() {
+            return this.geoGolem.getTarget() != null;
+        }
 
-    List<ElementalReaction> reactions = component.addElementalApplication(application, InternalCooldownContext.ofNone());
- */
+        @Override
+        @SuppressWarnings("all")
+        public void tick() {
+            LivingEntity auraTarget = this.geoGolem.getTarget();
+            ElementComponent component = ElementComponent.KEY.get(auraTarget);
+
+            if (auraTarget != null) {
+                ElementalApplication application = ElementalApplications.gaugeUnits(
+                        auraTarget,
+                        Element.GEO,
+                        100.0,
+                        true
+                );
+                List<ElementalReaction> reactions = component.addElementalApplication(application, InternalCooldownContext.ofNone());
+            }
+        }
+    }
 
     private static class ResetTargetGoal extends Goal {
         private final GeoGolem geoGolem;

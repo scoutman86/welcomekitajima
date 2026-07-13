@@ -13,7 +13,7 @@
 package net.coutman.welcomekitajima;
 
 import net.coutman.welcomekitajima.init.EntityRegistry;
-import net.coutman.welcomekitajima.init.ACCGruntRenderer;
+import net.coutman.welcomekitajima.entity.ACCGruntRenderer;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
@@ -30,7 +30,7 @@ public class ClientInit implements ClientModInitializer {
 	public void onInitializeClient() {
 		// I have no idea what I'm doing so hopefully this works and I don't explode
 		BlockRegistry.clientLoad();
-		EntityRendererRegistry.register(EntityRegistry.ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
+		EntityRegistry.clientLoadRenderer();
 		ColorProviderRegistry.BLOCK.register(
 				(state, world, pos, tintIndex) -> {
 					if (world != null && pos != null) {

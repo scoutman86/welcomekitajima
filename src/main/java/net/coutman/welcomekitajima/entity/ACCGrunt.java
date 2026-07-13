@@ -24,6 +24,8 @@ import net.minecraft.world.level.pathfinder.Path;
 import org.jetbrains.annotations.Nullable;
 import net.minecraft.util.RandomSource;
 
+import java.util.Objects;
+
 public class ACCGrunt extends Monster implements RangedAttackMob {
     private final RangedAttackGoal bowAttackGoal = new RangedAttackGoal(this, 1.0D, 60, 15.0F);
     private final MeleeAttackGoal meleeAttackGoal = new MeleeAttackGoal(this, 1.2D, false);
@@ -53,7 +55,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
     }
 
     public void reassessWeaponGoal() {
-        if (this.level() != null && !this.level().isClientSide) {
+        if (!this.level().isClientSide) {
             this.goalSelector.removeGoal(this.meleeAttackGoal);
             this.goalSelector.removeGoal(this.bowAttackGoal);
 
@@ -66,7 +68,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
         }
     }
 
-    private class ResetTargetGoal extends Goal {
+    private static class ResetTargetGoal extends Goal {
         private final ACCGrunt grunt;
 
         public ResetTargetGoal(ACCGrunt grunt) {
@@ -157,11 +159,7 @@ public class ACCGrunt extends Monster implements RangedAttackMob {
 
         Item selectedItem = randomWeapons[this.getRandom().nextInt(randomWeapons.length)];
 
-        if (selectedItem == null) {
-            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Items.IRON_AXE));
-        } else {
-            this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(selectedItem));
-        }
+        this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(Objects.requireNonNullElse(selectedItem, Items.IRON_AXE)));
 
         this.setDropChance(EquipmentSlot.MAINHAND, 0.0F);
 

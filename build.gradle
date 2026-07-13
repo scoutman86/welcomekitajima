@@ -8,7 +8,6 @@ targetCompatibility = JavaVersion.VERSION_17
 archivesBaseName = 'welcomekitajima'
 version = '2.8.0'
 group = 'net.coutman.welcomekitajima'
-actualmodid = 'welcomekitajima'
 
 loom {
     mixin {
@@ -26,10 +25,6 @@ repositories {
         filter {
             includeGroup "maven.modrinth"
         }
-    }
-    maven {
-        name = "TerraformersMC"
-        url = "https://maven.terraformersmc.com/"
     }
     maven {
         name = "Ladysnake Libs"

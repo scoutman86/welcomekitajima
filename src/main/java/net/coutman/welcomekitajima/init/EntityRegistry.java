@@ -39,15 +39,25 @@ public class EntityRegistry {
                     .build()
     );
 
+    public static final EntityType<AnemoGolem> ANEMO_GOLEM_ENTITY_TYPE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            new ResourceLocation(WelcomeKitajima.MODID, "anemo_golem"),
+            FabricEntityTypeBuilder.create(MobCategory.MONSTER, AnemoGolem::new)
+                    .dimensions(EntityDimensions.fixed(1f, 2.5f)) // I have no fucking idea how big this is
+                    .build()
+    );
+
     public static void load() {
         FabricDefaultAttributeRegistry.register(ACC_GRUNT_ENTITY_TYPE, ACCGrunt.createAttributes());
         FabricDefaultAttributeRegistry.register(GEO_GOLEM_ENTITY_TYPE, GeoGolem.createAttributes());
         FabricDefaultAttributeRegistry.register(DENDRO_GOLEM_ENTITY_TYPE, DendroGolem.createAttributes());
+        FabricDefaultAttributeRegistry.register(ANEMO_GOLEM_ENTITY_TYPE, AnemoGolem.createAttributes());
     }
 
     public static void clientLoadRenderer(){
         EntityRendererRegistry.register(EntityRegistry.ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.GEO_GOLEM_ENTITY_TYPE, GeoGolemRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.DENDRO_GOLEM_ENTITY_TYPE, DendroGolemRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.ANEMO_GOLEM_ENTITY_TYPE, AnemoGolemRenderer::new);
     }
 }

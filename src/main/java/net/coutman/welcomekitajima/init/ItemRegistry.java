@@ -29,7 +29,6 @@ public class ItemRegistry {
 	public static Item WOODEN_MIPS_DOOR;
 	public static Item SINGLE_STAR_WOODEN_MIPS_DOOR;
 	public static Item METAL_MIPS_DOOR;
-	public static Item FRAMEWORK_BLOCK;
 	// specialties
 	public static Item SECRET_ART;
 	public static Item KNUCKLE_SANDWICH;
@@ -166,13 +165,13 @@ public class ItemRegistry {
 		SwordWeapon.register();
 		BowWeapon.register();
 		ClaymoreWeapon.register();
-		if (WelcomeKitajima.IncludeExperimentalElementalFeatures)
-		{
-			CatalystWeapon.register();
-		}
+		CatalystWeapon.register();
+
 		PolearmWeapon.register();
 
 		SoulFragmentDrop.register();
+
+		LosSpawnEggs.register();
 
 		// boss drops
 		PROJECTION_PYRO_DROP = register("projection_pyro_drop", new ProjectionPyroDrop());

@@ -9,17 +9,12 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.Snowball;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.*;
-
-//import dev.emi.trinkets.api.TrinketsApi;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-// note: this is absolutely fucked.
 
 public class CatalystWeapon extends Item {
     public static final Map<String, Item> CATALYST_REGISTRY = new HashMap<>();
@@ -44,9 +39,8 @@ public class CatalystWeapon extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
-                Snowball projectile = new Snowball(level, player);
+                CatalystProjectile projectile = new CatalystProjectile(level, player);
 
-                // Set heading: shooter, pitch, yaw, roll, speed, divergence
                 projectile.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
                 level.addFreshEntity(projectile);
 

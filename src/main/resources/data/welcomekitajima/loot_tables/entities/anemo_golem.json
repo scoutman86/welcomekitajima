@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "welcomekitajima:acc_badge_bronze",
+          "name": "welcomekitajima:golem_bolt_bronze",
           "weight": 50,
           "functions": [
             {
@@ -21,7 +21,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "welcomekitajima:acc_badge_silver",
+          "name": "welcomekitajima:golem_bolt_silver",
           "weight": 20,
           "functions": [
             {
@@ -32,7 +32,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "welcomekitajima:acc_badge_gold",
+          "name": "welcomekitajima:golem_bolt_gold",
           "weight": 5,
           "functions": [
             {

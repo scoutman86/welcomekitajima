@@ -13,14 +13,12 @@
 package net.coutman.welcomekitajima;
 
 import net.coutman.welcomekitajima.init.EntityRegistry;
-import net.coutman.welcomekitajima.entity.ACCGruntRenderer;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
-import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.FoliageColor;
 

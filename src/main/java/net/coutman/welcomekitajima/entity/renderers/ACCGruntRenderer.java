@@ -1,7 +1,9 @@
-package net.coutman.welcomekitajima.entity;
+package net.coutman.welcomekitajima.entity.renderers;
 
 import com.google.common.collect.Maps;
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.entity.ACCGrunt;
+import net.coutman.welcomekitajima.entity.ElementalVariance;
 import net.minecraft.client.model.PlayerModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

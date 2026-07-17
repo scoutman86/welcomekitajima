@@ -1,6 +1,7 @@
-package net.coutman.welcomekitajima.entity;
+package net.coutman.welcomekitajima.entity.renderers;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.entity.DendroGolem;
 import net.minecraft.client.model.IronGolemModel;
 import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

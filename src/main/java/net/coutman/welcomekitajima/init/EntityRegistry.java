@@ -2,11 +2,13 @@ package net.coutman.welcomekitajima.init;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.entity.*;
-import net.fabricmc.api.EnvType;
+import net.coutman.welcomekitajima.entity.renderers.ACCGruntRenderer;
+import net.coutman.welcomekitajima.entity.renderers.AnemoGolemRenderer;
+import net.coutman.welcomekitajima.entity.renderers.DendroGolemRenderer;
+import net.coutman.welcomekitajima.entity.renderers.GeoGolemRenderer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;

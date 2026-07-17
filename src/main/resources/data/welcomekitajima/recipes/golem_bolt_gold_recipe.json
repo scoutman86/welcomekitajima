@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:golem_bolt_silver"
+	},
+	{
+	  "item": "welcomekitajima:golem_bolt_silver"
+	},
+	{
+	  "item": "welcomekitajima:golem_bolt_silver"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:golem_bolt_gold",
+    "count": 1
+  }
+}

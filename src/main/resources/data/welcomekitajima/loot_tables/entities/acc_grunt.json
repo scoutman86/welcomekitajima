@@ -7,7 +7,7 @@
         {
           "type": "minecraft:item",
           "name": "welcomekitajima:acc_badge_bronze",
-          "weight": 50,
+          "weight": 65,
           "functions": [
             {
               "function": "minecraft:set_count",
@@ -22,7 +22,7 @@
         {
           "type": "minecraft:item",
           "name": "welcomekitajima:acc_badge_silver",
-          "weight": 20,
+          "weight": 15,
           "functions": [
             {
               "function": "minecraft:set_count",

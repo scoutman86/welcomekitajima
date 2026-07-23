@@ -2,10 +2,7 @@ package net.coutman.welcomekitajima.init;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.entity.*;
-import net.coutman.welcomekitajima.entity.renderers.ACCGruntRenderer;
-import net.coutman.welcomekitajima.entity.renderers.AnemoGolemRenderer;
-import net.coutman.welcomekitajima.entity.renderers.DendroGolemRenderer;
-import net.coutman.welcomekitajima.entity.renderers.GeoGolemRenderer;
+import net.coutman.welcomekitajima.entity.renderers.*;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
@@ -49,11 +46,29 @@ public class EntityRegistry {
                     .build()
     );
 
+    public static final EntityType<PyroSpirit> PYRO_SPIRIT_ENTITY_TYPE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            new ResourceLocation(WelcomeKitajima.MODID, "pyro_spirit"),
+            FabricEntityTypeBuilder.create(MobCategory.MONSTER, PyroSpirit::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)) // I have no fucking idea how big this is
+                    .build()
+    );
+
+    public static final EntityType<ElectroSpirit> ELECTRO_SPIRIT_ENTITY_TYPE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            new ResourceLocation(WelcomeKitajima.MODID, "electro_spirit"),
+            FabricEntityTypeBuilder.create(MobCategory.MONSTER, ElectroSpirit::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.5f)) // I have no fucking idea how big this is
+                    .build()
+    );
+
     public static void load() {
         FabricDefaultAttributeRegistry.register(ACC_GRUNT_ENTITY_TYPE, ACCGrunt.createAttributes());
         FabricDefaultAttributeRegistry.register(GEO_GOLEM_ENTITY_TYPE, GeoGolem.createAttributes());
         FabricDefaultAttributeRegistry.register(DENDRO_GOLEM_ENTITY_TYPE, DendroGolem.createAttributes());
         FabricDefaultAttributeRegistry.register(ANEMO_GOLEM_ENTITY_TYPE, AnemoGolem.createAttributes());
+        FabricDefaultAttributeRegistry.register(PYRO_SPIRIT_ENTITY_TYPE, PyroSpirit.createAttributes());
+        FabricDefaultAttributeRegistry.register(ELECTRO_SPIRIT_ENTITY_TYPE, ElectroSpirit.createAttributes());
     }
 
     public static void clientLoadRenderer(){
@@ -61,5 +76,7 @@ public class EntityRegistry {
         EntityRendererRegistry.register(EntityRegistry.GEO_GOLEM_ENTITY_TYPE, GeoGolemRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.DENDRO_GOLEM_ENTITY_TYPE, DendroGolemRenderer::new);
         EntityRendererRegistry.register(EntityRegistry.ANEMO_GOLEM_ENTITY_TYPE, AnemoGolemRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.PYRO_SPIRIT_ENTITY_TYPE, PyroSpiritRenderer::new);
+        EntityRendererRegistry.register(EntityRegistry.ELECTRO_SPIRIT_ENTITY_TYPE, ElectroSpiritRenderer::new);
     }
 }

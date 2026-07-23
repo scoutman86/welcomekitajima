@@ -5,7 +5,6 @@ import io.github.xrickastley.sevenelements.element.Element;
 import io.github.xrickastley.sevenelements.element.ElementalApplication;
 import io.github.xrickastley.sevenelements.element.ElementalApplications;
 import io.github.xrickastley.sevenelements.element.InternalCooldownContext;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -16,37 +15,40 @@ import net.minecraft.world.entity.animal.allay.Allay;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.Path;
-import net.minecraft.world.phys.Vec3;
 
-import java.util.EnumSet;
+public class ElementalSpirit extends Allay {
+    private final Element element;
 
-public class PyroSpirit extends Allay {
-    public PyroSpirit(EntityType<? extends Allay> entityType, Level level) {
+    public ElementalSpirit(EntityType<? extends Allay> entityType, Level level, Element element) {
         super(entityType, level);
+        this.element = element;
     }
 
-    private static class PyroAuraApplicationGoal extends Goal {
-        private final PyroSpirit pyroSpirit;
+    public Element getElement() {
+        return this.element;
+    }
 
-        public PyroAuraApplicationGoal(PyroSpirit pyroSpirit) {
-            this.pyroSpirit = pyroSpirit;
+    private static class ElementalAuraApplicationGoal extends Goal {
+        private final ElementalSpirit elementalSpirit;
+
+        public ElementalAuraApplicationGoal(ElementalSpirit elementalSpirit) {
+            this.elementalSpirit = elementalSpirit;
         }
 
         @Override
         public boolean canUse() {
-            return this.pyroSpirit != null;
+            return this.elementalSpirit != null;
         }
 
         @Override
         @SuppressWarnings("all")
         public void tick() {
-            LivingEntity auraTarget = this.pyroSpirit;
-            ElementComponent component = ElementComponent.KEY.get(auraTarget);
-
+            LivingEntity auraTarget = this.elementalSpirit;
             if (auraTarget != null) {
+                ElementComponent component = ElementComponent.KEY.get(auraTarget);
                 ElementalApplication application = ElementalApplications.gaugeUnits(
                         auraTarget,
-                        Element.PYRO,
+                        this.elementalSpirit.getElement(),
                         50.0,
                         true
                 );
@@ -57,16 +59,16 @@ public class PyroSpirit extends Allay {
 
     // imported from Java 1.20.1's codebase
     /*
-    class PyroSpiritChargeAttackGoal extends Goal {
-        public PyroSpiritChargeAttackGoal() {
+    class ElementalSpiritChargeAttackGoal extends Goal {
+        public ElementalSpiritChargeAttackGoal() {
             this.setFlags(EnumSet.of(Goal.Flag.MOVE));
         }
 
         @Override
         public boolean canUse() {
-            LivingEntity $$0 = PyroSpirit.this.getTarget();
-            if ($$0 != null && $$0.isAlive() && !PyroSpirit.this.getMoveControl().hasWanted() && PyroSpirit.this.random.nextInt(reducedTickDelay(7)) == 0) {
-                return PyroSpirit.this.distanceToSqr($$0) > 4.0;
+            LivingEntity $$0 = ElementalSpirit.this.getTarget();
+            if ($$0 != null && $$0.isAlive() && !ElementalSpirit.this.getMoveControl().hasWanted() && ElementalSpirit.this.random.nextInt(reducedTickDelay(7)) == 0) {
+                return ElementalSpirit.this.distanceToSqr($$0) > 4.0;
             } else {
                 return false;
             }
@@ -74,24 +76,24 @@ public class PyroSpirit extends Allay {
 
         @Override
         public boolean canContinueToUse() {
-            return PyroSpirit.this.getMoveControl().hasWanted() && PyroSpirit.this.isCharging() && PyroSpirit.this.getTarget() != null && PyroSpirit.this.getTarget().isAlive();
+            return ElementalSpirit.this.getMoveControl().hasWanted() && ElementalSpirit.this.isCharging() && ElementalSpirit.this.getTarget() != null && ElementalSpirit.this.getTarget().isAlive();
         }
 
         @Override
         public void start() {
-            LivingEntity $$0 = PyroSpirit.this.getTarget();
+            LivingEntity $$0 = ElementalSpirit.this.getTarget();
             if ($$0 != null) {
                 Vec3 $$1 = $$0.getEyePosition();
-                PyroSpirit.this.moveControl.setWantedPosition($$1.x, $$1.y, $$1.z, 1.0);
+                ElementalSpirit.this.moveControl.setWantedPosition($$1.x, $$1.y, $$1.z, 1.0);
             }
 
-            PyroSpirit.this.setIsCharging(true);
-            PyroSpirit.this.playSound(SoundEvents.VEX_CHARGE, 1.0F, 1.0F);
+            ElementalSpirit.this.setIsCharging(true);
+            ElementalSpirit.this.playSound(SoundEvents.VEX_CHARGE, 1.0F, 1.0F);
         }
 
         @Override
         public void stop() {
-            PyroSpirit.this.setIsCharging(false);
+            ElementalSpirit.this.setIsCharging(false);
         }
 
         @Override
@@ -101,16 +103,16 @@ public class PyroSpirit extends Allay {
 
         @Override
         public void tick() {
-            LivingEntity $$0 = PyroSpirit.this.getTarget();
+            LivingEntity $$0 = ElementalSpirit.this.getTarget();
             if ($$0 != null) {
-                if (PyroSpirit.this.getBoundingBox().intersects($$0.getBoundingBox())) {
-                    PyroSpirit.this.doHurtTarget($$0);
-                    PyroSpirit.this.setIsCharging(false);
+                if (ElementalSpirit.this.getBoundingBox().intersects($$0.getBoundingBox())) {
+                    ElementalSpirit.this.doHurtTarget($$0);
+                    ElementalSpirit.this.setIsCharging(false);
                 } else {
-                    double $$1 = PyroSpirit.this.distanceToSqr($$0);
+                    double $$1 = ElementalSpirit.this.distanceToSqr($$0);
                     if ($$1 < 9.0) {
                         Vec3 $$2 = $$0.getEyePosition();
-                        PyroSpirit.this.moveControl.setWantedPosition($$2.x, $$2.y, $$2.z, 1.0);
+                        ElementalSpirit.this.moveControl.setWantedPosition($$2.x, $$2.y, $$2.z, 1.0);
                     }
                 }
             }
@@ -119,43 +121,43 @@ public class PyroSpirit extends Allay {
      */
 
     private static class ResetTargetGoal extends Goal {
-        private final PyroSpirit pyroSpirit;
+        private final ElementalSpirit elementalSpirit;
 
-        public ResetTargetGoal(PyroSpirit pyroSpirit) {
-            this.pyroSpirit = pyroSpirit;
+        public ResetTargetGoal(ElementalSpirit elementalSpirit) {
+            this.elementalSpirit = elementalSpirit;
         }
 
         @Override
         public boolean canUse() {
-            LivingEntity target = this.pyroSpirit.getTarget();
+            LivingEntity target = this.elementalSpirit.getTarget();
             return target != null && !target.isAlive();
         }
 
         @Override
         public void start() {
-            this.pyroSpirit.setTarget(null);
-            this.pyroSpirit.getNavigation().moveTo((Path) null, 0);
+            this.elementalSpirit.setTarget(null);
+            this.elementalSpirit.getNavigation().moveTo((Path) null, 0);
         }
     }
 
     @Override
     protected void registerGoals() {
-        // this.goalSelector.addGoal(0, new PyroAuraApplicationGoal(this));
+        // this.goalSelector.addGoal(0, new ElementalAuraApplicationGoal(this));
         this.goalSelector.addGoal(1, new FloatGoal(this));
-        // this.goalSelector.addGoal(2, new PyroSpiritChargeAttackGoal());
+        // this.goalSelector.addGoal(2, new ElementalSpiritChargeAttackGoal());
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));
         this.goalSelector.addGoal(3, new WaterAvoidingRandomFlyingGoal(this, 1.0D));
         this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 
-        this.targetSelector.addGoal(0, new PyroSpirit.ResetTargetGoal(this));
+        this.targetSelector.addGoal(0, new ElementalSpirit.ResetTargetGoal(this));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
     public static AttributeSupplier.Builder createAttributes() {
         return Allay.createAttributes()
                 .add(Attributes.MAX_HEALTH, 10.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.5D)
+                .add(Attributes.MOVEMENT_SPEED, 0.2D)
                 .add(Attributes.ATTACK_DAMAGE, 2.0D);
     }
 }

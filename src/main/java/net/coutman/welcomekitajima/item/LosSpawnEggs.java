@@ -37,7 +37,10 @@ public class LosSpawnEggs extends SpawnEggItem {
             new Egg("dendro_golem_spawn_egg", () -> EntityRegistry.DENDRO_GOLEM_ENTITY_TYPE, 0xC1CB68, 0x81964F, Rarity.COMMON),
             new Egg("geo_golem_spawn_egg", () -> EntityRegistry.GEO_GOLEM_ENTITY_TYPE, 0xD5B77D, 0xB48955, Rarity.COMMON),
             new Egg("acc_grunt_spawn_egg", () -> EntityRegistry.ACC_GRUNT_ENTITY_TYPE, 0x63656B, 0x373736, Rarity.COMMON),
-            new Egg("pyro_spirit_spawn_egg", () -> EntityRegistry.PYRO_SPIRIT_ENTITY_TYPE, 0x63656B, 0x373736, Rarity.COMMON)
+            new Egg("pyro_spirit_spawn_egg", () -> EntityRegistry.PYRO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON),
+            new Egg("hydro_spirit_spawn_egg", () -> EntityRegistry.HYDRO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON),
+            new Egg("electro_spirit_spawn_egg", () -> EntityRegistry.ELECTRO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON),
+            new Egg("cryo_spirit_spawn_egg", () -> EntityRegistry.CRYO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON)
     );
 
     public static void register() {

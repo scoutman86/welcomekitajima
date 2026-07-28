@@ -4,11 +4,12 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "welcomekitajima:miyashita_sakura_log"
+      "tag": "welcomekitajima:miyashita_sakura_logs"
     }
   ],
   "result": {
     "item": "welcomekitajima:miyashita_sakura_planks",
     "count": 4
-  }
+  },
+  "show_notification": true
 }

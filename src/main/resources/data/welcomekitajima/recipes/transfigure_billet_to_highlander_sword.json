@@ -9,8 +9,9 @@
   "result": {
     "item": "welcomekitajima:highlander_sword_billet"
   },
-  "template": {
-    "item": "welcomekitajima:island_sword_billet",
-	"item": "welcomekitajima:basin_sword_billet"
-  }
+  "template": [
+    { "item": "welcomekitajima:island_sword_billet" },
+	{ "item": "welcomekitajima:basin_sword_billet" }
+  ],
+  "show_notification": true
 }

@@ -10,5 +10,6 @@
   "result": {
     "item": "welcomekitajima:miyashita_sakura_button",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

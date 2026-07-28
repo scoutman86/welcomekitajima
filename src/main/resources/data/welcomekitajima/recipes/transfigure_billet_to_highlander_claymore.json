@@ -9,8 +9,9 @@
   "result": {
     "item": "welcomekitajima:highlander_claymore_billet"
   },
-  "template": {
-    "item": "welcomekitajima:island_claymore_billet",
-	"item": "welcomekitajima:basin_claymore_billet"
-  }
+  "template": [
+    { "item": "welcomekitajima:island_claymore_billet" },
+	{ "item": "welcomekitajima:basin_claymore_billet" }
+  ],
+  "show_notification": true
 }

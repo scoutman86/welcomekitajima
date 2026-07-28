@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:ashwood_planks"
+    }
+  ],
+  "result": {
+    "item": "welcomekitajima:ashwood_button",
+    "count": 1
+  },
+  "show_notification": true
+}

@@ -9,8 +9,9 @@
   "result": {
     "item": "welcomekitajima:island_bow_billet"
   },
-  "template": {
-    "item": "welcomekitajima:highlander_bow_billet",
-	"item": "welcomekitajima:basin_bow_billet"
-  }
+  "template": [
+    { "item": "welcomekitajima:highlander_bow_billet" },
+	{ "item": "welcomekitajima:basin_bow_billet" }
+  ],
+  "show_notification": true
 }

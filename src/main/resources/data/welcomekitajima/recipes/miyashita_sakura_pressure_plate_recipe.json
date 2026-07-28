@@ -13,5 +13,6 @@
   "result": {
     "item": "welcomekitajima:miyashita_sakura_pressure_plate",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

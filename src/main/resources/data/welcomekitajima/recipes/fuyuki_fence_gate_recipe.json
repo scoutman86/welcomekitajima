@@ -17,5 +17,6 @@
   "result": {
     "item": "welcomekitajima:fuyuki_fence_gate",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

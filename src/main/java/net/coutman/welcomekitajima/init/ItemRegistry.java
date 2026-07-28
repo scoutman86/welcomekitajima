@@ -155,6 +155,7 @@ public class ItemRegistry {
 
 		ACCBadges.register();
 		GolemBolts.register();
+		RadiantDroplets.register();
 
 		KitajimaLocalSpecialty.register();
 		MiyashitaLocalSpecialty.register();

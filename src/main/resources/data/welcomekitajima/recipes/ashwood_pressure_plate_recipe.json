@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_pressure_plate",
+  "category": "redstone",
+  "pattern": [
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "welcomekitajima:ashwood_planks"
+    }
+  },
+  "result": {
+    "item": "welcomekitajima:ashwood_pressure_plate",
+    "count": 1
+  },
+  "show_notification": true
+}

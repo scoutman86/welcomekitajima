@@ -4,11 +4,12 @@
   "category": "building",
   "ingredients": [
     {
-      "item": "welcomekitajima:fuyuki_wood"
+      "tag": "welcomekitajima:fuyuki_logs"
     }
   ],
   "result": {
     "item": "welcomekitajima:fuyuki_planks",
     "count": 4
-  }
+  },
+  "show_notification": true
 }

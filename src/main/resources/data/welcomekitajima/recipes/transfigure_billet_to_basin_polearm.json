@@ -9,8 +9,9 @@
   "result": {
     "item": "welcomekitajima:basin_polearm_billet"
   },
-  "template": {
-    "item": "welcomekitajima:highlander_polearm_billet",
-	"item": "welcomekitajima:island_polearm_billet"
-  }
+  "template": [
+    { "item": "welcomekitajima:highlander_polearm_billet" },
+	{ "item": "welcomekitajima:island_polearm_billet" }
+  ],
+  "show_notification": true
 }

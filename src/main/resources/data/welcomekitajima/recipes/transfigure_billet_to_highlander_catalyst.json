@@ -9,8 +9,9 @@
   "result": {
     "item": "welcomekitajima:highlander_catalyst_billet"
   },
-  "template": {
-    "item": "welcomekitajima:island_catalyst_billet",
-	"item": "welcomekitajima:basin_catalyst_billet"
-  }
+  "template": [
+    { "item": "welcomekitajima:island_catalyst_billet" },
+	{ "item": "welcomekitajima:basin_catalyst_billet" }
+  ],
+  "show_notification": true
 }

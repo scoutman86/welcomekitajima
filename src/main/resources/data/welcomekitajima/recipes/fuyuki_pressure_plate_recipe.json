@@ -13,5 +13,6 @@
   "result": {
     "item": "welcomekitajima:fuyuki_pressure_plate",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

@@ -10,5 +10,6 @@
   "result": {
     "item": "welcomekitajima:fuyuki_button",
     "count": 1
-  }
+  },
+  "show_notification": true
 }

@@ -13,5 +13,6 @@
   "result": {
     "item": "welcomekitajima:fuyuki_slab",
     "count": 6
-  }
+  },
+  "show_notification": true
 }

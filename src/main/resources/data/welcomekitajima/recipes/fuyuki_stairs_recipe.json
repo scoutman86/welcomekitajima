@@ -15,5 +15,6 @@
   "result": {
     "item": "welcomekitajima:fuyuki_stairs",
     "count": 4
-  }
+  },
+  "show_notification": true
 }

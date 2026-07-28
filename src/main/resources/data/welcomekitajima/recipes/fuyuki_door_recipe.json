@@ -14,5 +14,6 @@
   "result": {
     "item": "welcomekitajima:fuyuki_door",
     "count": 3
-  }
+  },
+  "show_notification": true
 }

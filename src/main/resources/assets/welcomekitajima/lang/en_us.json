@@ -316,6 +316,9 @@
   "item.welcomekitajima.golem_bolt_bronze": "Stripped Bronze Bolt",
   "item.welcomekitajima.golem_bolt_silver": "Refurbished Silver Bolt",
   "item.welcomekitajima.golem_bolt_gold": "Pristine Gold-Plated Bolt",
+  "item.welcomekitajima.radiant_shards": "Radiant Shards",
+  "item.welcomekitajima.radiant_fragment": "Radiant Fragment",
+  "item.welcomekitajima.radiant_droplet": "Radiant Droplet",
   "item.welcomekitajima.silver_blade": "Silver Blade",
   "item.welcomekitajima.shimmering_bow": "Shimmering Bow",
   "item.welcomekitajima.shining_greatsword": "Shining Greatsword",
@@ -334,5 +337,9 @@
   "entity.welcomekitajima.acc_grunt": "ACC Grunt",
   "entity.welcomekitajima.anemo_golem": "Anemo Golem",
   "entity.welcomekitajima.dendro_golem": "Dendro Golem",
-  "entity.welcomekitajima.geo_golem": "Geo Golem"
+  "entity.welcomekitajima.geo_golem": "Geo Golem",
+  "entity.welcomekitajima.pyro_spirit": "Pyro Spirit",
+  "entity.welcomekitajima.hydro_spirit": "Hydro Spirit",
+  "entity.welcomekitajima.electro_spirit": "Electro Spirit",
+  "entity.welcomekitajima.cryo_spirit": "Cryo Spirit"
 }

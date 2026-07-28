@@ -142,7 +142,7 @@ public class ElementalSpirit extends Allay {
 
     @Override
     protected void registerGoals() {
-        // this.goalSelector.addGoal(0, new ElementalAuraApplicationGoal(this));
+        this.goalSelector.addGoal(0, new ElementalAuraApplicationGoal(this));
         this.goalSelector.addGoal(1, new FloatGoal(this));
         // this.goalSelector.addGoal(2, new ElementalSpiritChargeAttackGoal());
         this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2D, false));

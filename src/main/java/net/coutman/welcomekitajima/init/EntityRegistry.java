@@ -23,29 +23,19 @@ public class EntityRegistry {
                     .build()
     );
 
-    public static final EntityType<GeoGolem> GEO_GOLEM_ENTITY_TYPE = Registry.register(
-            BuiltInRegistries.ENTITY_TYPE,
-            new ResourceLocation(WelcomeKitajima.MODID, "geo_golem"),
-            FabricEntityTypeBuilder.create(MobCategory.MONSTER, GeoGolem::new)
-                    .dimensions(EntityDimensions.fixed(1f, 2.5f)) // I have no fucking idea how big this is
-                    .build()
-    );
+    public static EntityType<ElementalGolem> registerGolem(String name, Element element) {
+        EntityType<ElementalGolem> type = Registry.register(
+                BuiltInRegistries.ENTITY_TYPE,
+                new ResourceLocation(WelcomeKitajima.MODID, name),
+                FabricEntityTypeBuilder.<ElementalGolem>create(MobCategory.MONSTER,
+                                (entityType, level) -> new ElementalGolem(entityType, level, element))
+                        .dimensions(EntityDimensions.fixed(1f, 2.5f)) // I have no fucking idea how big this is
+                        .build()
+        );
 
-    public static final EntityType<DendroGolem> DENDRO_GOLEM_ENTITY_TYPE = Registry.register(
-            BuiltInRegistries.ENTITY_TYPE,
-            new ResourceLocation(WelcomeKitajima.MODID, "dendro_golem"),
-            FabricEntityTypeBuilder.create(MobCategory.MONSTER, DendroGolem::new)
-                    .dimensions(EntityDimensions.fixed(1f, 2.5f)) // I have no fucking idea how big this is
-                    .build()
-    );
-
-    public static final EntityType<AnemoGolem> ANEMO_GOLEM_ENTITY_TYPE = Registry.register(
-            BuiltInRegistries.ENTITY_TYPE,
-            new ResourceLocation(WelcomeKitajima.MODID, "anemo_golem"),
-            FabricEntityTypeBuilder.create(MobCategory.MONSTER, AnemoGolem::new)
-                    .dimensions(EntityDimensions.fixed(1f, 2.5f)) // I have no fucking idea how big this is
-                    .build()
-    );
+        FabricDefaultAttributeRegistry.register(type, ElementalGolem.createAttributes());
+        return type;
+    }
 
     private static EntityType<ElementalSpirit> registerSpirit(String name, Element element) {
         EntityType<ElementalSpirit> type = Registry.register(
@@ -57,10 +47,13 @@ public class EntityRegistry {
                         .build()
         );
 
-        // Auto-register attributes & renderer to keep things clean
         FabricDefaultAttributeRegistry.register(type, ElementalSpirit.createAttributes());
         return type;
     }
+
+    public static final EntityType<ElementalGolem> GEO_GOLEM_ENTITY_TYPE = registerGolem("geo_golem", Element.GEO);
+    public static final EntityType<ElementalGolem> DENDRO_GOLEM_ENTITY_TYPE = registerGolem("dendro_golem", Element.DENDRO);
+    public static final EntityType<ElementalGolem> ANEMO_GOLEM_ENTITY_TYPE = registerGolem("anemo_golem", Element.ANEMO);
 
     public static final EntityType<ElementalSpirit> PYRO_SPIRIT = registerSpirit("pyro_spirit", Element.PYRO);
     public static final EntityType<ElementalSpirit> HYDRO_SPIRIT = registerSpirit("hydro_spirit", Element.HYDRO);
@@ -69,16 +62,13 @@ public class EntityRegistry {
 
     public static void load() {
         FabricDefaultAttributeRegistry.register(ACC_GRUNT_ENTITY_TYPE, ACCGrunt.createAttributes());
-        FabricDefaultAttributeRegistry.register(GEO_GOLEM_ENTITY_TYPE, GeoGolem.createAttributes());
-        FabricDefaultAttributeRegistry.register(DENDRO_GOLEM_ENTITY_TYPE, DendroGolem.createAttributes());
-        FabricDefaultAttributeRegistry.register(ANEMO_GOLEM_ENTITY_TYPE, AnemoGolem.createAttributes());
     }
 
     public static void clientLoadRenderer(){
         EntityRendererRegistry.register(EntityRegistry.ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
-        EntityRendererRegistry.register(EntityRegistry.GEO_GOLEM_ENTITY_TYPE, GeoGolemRenderer::new);
-        EntityRendererRegistry.register(EntityRegistry.DENDRO_GOLEM_ENTITY_TYPE, DendroGolemRenderer::new);
-        EntityRendererRegistry.register(EntityRegistry.ANEMO_GOLEM_ENTITY_TYPE, AnemoGolemRenderer::new);
+        EntityRendererRegistry.register(GEO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);
+        EntityRendererRegistry.register(DENDRO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);
+        EntityRendererRegistry.register(ANEMO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);
         EntityRendererRegistry.register(PYRO_SPIRIT, ElementalSpiritRenderer::new);
         EntityRendererRegistry.register(HYDRO_SPIRIT, ElementalSpiritRenderer::new);
         EntityRendererRegistry.register(ELECTRO_SPIRIT, ElementalSpiritRenderer::new);

@@ -1,1 +1,47 @@
-anemo_golem.json
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "welcomekitajima:golem_bolt_bronze",
+          "weight": 65,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+			  "count": {
+				"type": "minecraft:uniform",
+				"min": 1,
+				"max": 3
+			  }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "welcomekitajima:golem_bolt_silver",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "welcomekitajima:golem_bolt_gold",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

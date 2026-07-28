@@ -5,6 +5,7 @@ import io.github.xrickastley.sevenelements.element.Element;
 import io.github.xrickastley.sevenelements.element.ElementalApplication;
 import io.github.xrickastley.sevenelements.element.ElementalApplications;
 import io.github.xrickastley.sevenelements.element.InternalCooldownContext;
+
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
@@ -16,33 +17,39 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.Path;
 
-public class DendroGolem extends IronGolem {
-    public DendroGolem(EntityType<? extends IronGolem> entityType, Level level) {
+public class ElementalGolem extends IronGolem {
+    private final Element element;
+
+    public ElementalGolem(EntityType<? extends IronGolem> entityType, Level level, Element element) {
         super(entityType, level);
+        this.element = element;
     }
 
-    private static class DendroAuraApplicationGoal extends Goal {
-        private final DendroGolem dendroGolem;
+    public Element getElement() {
+        return this.element;
+    }
 
-        public DendroAuraApplicationGoal(DendroGolem dendroGolem) {
-            this.dendroGolem = dendroGolem;
+    private static class ElementalAuraApplicationGoal extends Goal {
+        private final ElementalGolem elementalGolem;
+
+        public ElementalAuraApplicationGoal(ElementalGolem elementalGolem) {
+            this.elementalGolem = elementalGolem;
         }
 
         @Override
         public boolean canUse() {
-            return this.dendroGolem != null;
+            return this.elementalGolem != null;
         }
 
         @Override
         @SuppressWarnings("all")
         public void tick() {
-            LivingEntity auraTarget = this.dendroGolem;
-            ElementComponent component = ElementComponent.KEY.get(auraTarget);
-
+            LivingEntity auraTarget = this.elementalGolem;
             if (auraTarget != null) {
+                ElementComponent component = ElementComponent.KEY.get(auraTarget);
                 ElementalApplication application = ElementalApplications.gaugeUnits(
                         auraTarget,
-                        Element.DENDRO,
+                        this.elementalGolem.getElement(),
                         50.0,
                         true
                 );
@@ -52,35 +59,35 @@ public class DendroGolem extends IronGolem {
     }
 
     private static class ResetTargetGoal extends Goal {
-        private final DendroGolem dendroGolem;
+        private final ElementalGolem elementalGolem;
 
-        public ResetTargetGoal(DendroGolem dendroGolem) {
-            this.dendroGolem = dendroGolem;
+        public ResetTargetGoal(ElementalGolem elementalGolem) {
+            this.elementalGolem = elementalGolem;
         }
 
         @Override
         public boolean canUse() {
-            LivingEntity target = this.dendroGolem.getTarget();
+            LivingEntity target = this.elementalGolem.getTarget();
             return target != null && !target.isAlive();
         }
 
         @Override
         public void start() {
-            this.dendroGolem.setTarget(null);
-            this.dendroGolem.getNavigation().moveTo((Path) null, 0);
+            this.elementalGolem.setTarget(null);
+            this.elementalGolem.getNavigation().moveTo((Path) null, 0);
         }
     }
 
     @Override
     protected void registerGoals() {
-        this.goalSelector.addGoal(0, new DendroAuraApplicationGoal(this));
+        this.goalSelector.addGoal(0, new ElementalAuraApplicationGoal(this));
         this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2D, false));
         this.goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1.0D));
         this.goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
         this.goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1));
 
-        this.targetSelector.addGoal(0, new DendroGolem.ResetTargetGoal(this));
+        this.targetSelector.addGoal(0, new ElementalGolem.ResetTargetGoal(this));
         this.targetSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 

@@ -9,8 +9,8 @@ import net.minecraft.world.item.*;
 
 import java.util.*;
 
-public class ClaymoreWeapon extends SwordItem {
-    public static final Map<String, SwordItem> CLAYMORE_REGISTRY = new HashMap<>();
+public class ClaymoreWeapon extends AxeItem {
+    public static final Map<String, AxeItem> CLAYMORE_REGISTRY = new HashMap<>();
 
     public ClaymoreWeapon(Tier tier, int damage, float attackSpeed, Properties properties) {
         super(tier, damage, attackSpeed, properties);
@@ -19,19 +19,20 @@ public class ClaymoreWeapon extends SwordItem {
 
     public record ClaymoreList(String registryName, Tier tier, int damage, float attackSpeed, Rarity rarity) {
         public Properties getProperties() {
-            return new Properties().rarity(this.rarity).stacksTo(1);
+            return new Properties().rarity(this.rarity).stacksTo(1).durability(0);
         }
     }
 
     public static final List<ClaymoreList> CLAYMORE_LISTS = List.of(
         new ClaymoreList("shining_greatsword", Tiers.IRON, 5, -3.1f, Rarity.UNCOMMON),
         new ClaymoreList("frostbearer_strength", Tiers.DIAMOND, 7, -3.6f, Rarity.RARE),
-            new ClaymoreList("stelliform_greatsword", Tiers.DIAMOND, 6, -3.2f, Rarity.RARE)
+        new ClaymoreList("stelliform_greatsword", Tiers.DIAMOND, 6, -3.2f, Rarity.RARE),
+        new ClaymoreList("page_slasher", Tiers.DIAMOND, 7, -3.4f, Rarity.RARE)
     );
 
     public static void register() {
         for (ClaymoreList entry : CLAYMORE_LISTS) {
-            SwordItem item = new ClaymoreWeapon(entry.tier, entry.damage, entry.attackSpeed, entry.getProperties());
+            AxeItem item = new ClaymoreWeapon(entry.tier, entry.damage, entry.attackSpeed, entry.getProperties());
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
 
             CLAYMORE_REGISTRY.put(entry.registryName, item);

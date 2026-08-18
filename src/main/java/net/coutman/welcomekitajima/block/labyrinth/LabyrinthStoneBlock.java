@@ -2,11 +2,14 @@
 package net.coutman.welcomekitajima.block.labyrinth;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.ItemStack;
@@ -27,6 +30,7 @@ public class LabyrinthStoneBlock extends Block {
     public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of()
             .instrument(NoteBlockInstrument.BASEDRUM)
             .sound(SoundType.STONE)
+			.mapColor(MapColor.TERRACOTTA_YELLOW)
             .strength(1.8f, 10f)
             .requiresCorrectToolForDrops();
 

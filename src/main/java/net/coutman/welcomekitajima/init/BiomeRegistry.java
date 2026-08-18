@@ -23,12 +23,18 @@ public class BiomeRegistry {
 	public static ResourceKey<Biome> KAZAGURUMA_ARCHIPELAGO = ResourceKey.create(
 			Registries.BIOME, new ResourceLocation(WelcomeKitajima.MODID, "kazaguruma_archipelago")
 	);
+	public static ResourceKey<Biome> CHEMICAL_PLANT = ResourceKey.create(
+			Registries.BIOME, new ResourceLocation(WelcomeKitajima.MODID, "chemical_plant")
+	);
 	public static ResourceKey<Biome> YUKIMIYA = ResourceKey.create(
 			Registries.BIOME, new ResourceLocation(WelcomeKitajima.MODID, "yukimiya")
 	);
 	// Miyashita Prefecture
 	public static ResourceKey<Biome> MIYASHITA_PREFECTURE = ResourceKey.create(
 			Registries.BIOME, new ResourceLocation(WelcomeKitajima.MODID, "miyashita_prefecture")
+	);
+	public static ResourceKey<Biome> STARDUST_VALLEY = ResourceKey.create(
+			Registries.BIOME, new ResourceLocation(WelcomeKitajima.MODID, "stardust_valley")
 	);
 	// Hanasato Prefecture
 	public static ResourceKey<Biome> HANASATO_PREFECTURE = ResourceKey.create(

@@ -19,14 +19,15 @@ public class SwordWeapon extends SwordItem {
 
     public record SwordList(String registryName, Tier tier, int damage, float attackSpeed, Rarity rarity) {
         public Properties getProperties() {
-            return new Properties().rarity(this.rarity).stacksTo(1);
+            return new Properties().rarity(this.rarity).stacksTo(1).durability(0);
         }
     }
 
     public static final List<SwordList> SWORD_LISTS = List.of(
         new SwordList("silver_blade", Tiers.IRON, 3, -2.2f, Rarity.UNCOMMON),
-            new SwordList("frostbearer_might", Tiers.DIAMOND, 2, -1.6f, Rarity.RARE),
-            new SwordList("starseeker_blade", Tiers.DIAMOND, 3, -1.8f, Rarity.RARE)
+        new SwordList("frostbearer_might", Tiers.DIAMOND, 2, -1.6f, Rarity.RARE),
+        new SwordList("starseeker_blade", Tiers.DIAMOND, 3, -1.8f, Rarity.RARE),
+        new SwordList("valiant_journey", Tiers.DIAMOND, 3, -1.7f, Rarity.RARE)
     );
 
     public static void register() {

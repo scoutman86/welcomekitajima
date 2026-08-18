@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.PressurePlateBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -23,7 +24,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class AshwoodPressurePlateBlock extends PressurePlateBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
+	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).mapColor(MapColor.METAL).strength(2f, 3f);
 
 	public AshwoodPressurePlateBlock() {
 		super(Sensitivity.EVERYTHING, PROPERTIES, BlockSetType.OAK);

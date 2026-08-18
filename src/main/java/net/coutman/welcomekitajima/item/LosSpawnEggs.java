@@ -33,14 +33,14 @@ public class LosSpawnEggs extends SpawnEggItem {
     }
 
     public static final List<Egg> LOS_EGGS = List.of(
-            new Egg("anemo_golem_spawn_egg", () -> EntityRegistry.ANEMO_GOLEM_ENTITY_TYPE, 0xAFCCC3, 0x69A896, Rarity.COMMON),
-            new Egg("dendro_golem_spawn_egg", () -> EntityRegistry.DENDRO_GOLEM_ENTITY_TYPE, 0xC1CB68, 0x81964F, Rarity.COMMON),
-            new Egg("geo_golem_spawn_egg", () -> EntityRegistry.GEO_GOLEM_ENTITY_TYPE, 0xD5B77D, 0xB48955, Rarity.COMMON),
+            new Egg("anemo_golem_spawn_egg", () -> EntityRegistry.ANEMO_GOLEM_ENTITY_TYPE, 0x3E3E3E, 0x79DDAF, Rarity.COMMON),
+            new Egg("dendro_golem_spawn_egg", () -> EntityRegistry.DENDRO_GOLEM_ENTITY_TYPE, 0x3E3E3E, 0xA7E11D, Rarity.COMMON),
+            new Egg("geo_golem_spawn_egg", () -> EntityRegistry.GEO_GOLEM_ENTITY_TYPE, 0x3E3E3E, 0xEDBB2D, Rarity.COMMON),
             new Egg("acc_grunt_spawn_egg", () -> EntityRegistry.ACC_GRUNT_ENTITY_TYPE, 0x63656B, 0x373736, Rarity.COMMON),
-            new Egg("pyro_spirit_spawn_egg", () -> EntityRegistry.PYRO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON),
-            new Egg("hydro_spirit_spawn_egg", () -> EntityRegistry.HYDRO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON),
-            new Egg("electro_spirit_spawn_egg", () -> EntityRegistry.ELECTRO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON),
-            new Egg("cryo_spirit_spawn_egg", () -> EntityRegistry.CRYO_SPIRIT, 0x63656B, 0x373736, Rarity.COMMON)
+            new Egg("pyro_spirit_spawn_egg", () -> EntityRegistry.PYRO_SPIRIT, 0xFF702B, 0xFFE298, Rarity.COMMON),
+            new Egg("hydro_spirit_spawn_egg", () -> EntityRegistry.HYDRO_SPIRIT, 0x039CFB, 0x4CE5FE, Rarity.COMMON),
+            new Egg("electro_spirit_spawn_egg", () -> EntityRegistry.ELECTRO_SPIRIT, 0x8700FF, 0xD628FF, Rarity.COMMON),
+            new Egg("cryo_spirit_spawn_egg", () -> EntityRegistry.CRYO_SPIRIT, 0x70DFF4, 0xADF7FE, Rarity.COMMON)
     );
 
     public static void register() {

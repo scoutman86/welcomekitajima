@@ -9,10 +9,12 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.storage.loot.LootParams;
@@ -24,6 +26,7 @@ public class PolishedLabyrinthStoneTilesBlock extends Block {
     public static Properties PROPERTIES = Properties.of()
             .instrument(NoteBlockInstrument.BASEDRUM)
             .sound(SoundType.STONE)
+			.mapColor(MapColor.TERRACOTTA_YELLOW)
             .strength(1.8f, 10f)
             .requiresCorrectToolForDrops();
 

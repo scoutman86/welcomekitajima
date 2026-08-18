@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Collections;
 
 public class FuyukiButtonBlock extends ButtonBlock {
-	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
+	public static BlockBehaviour.Properties PROPERTIES = BlockBehaviour.Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f).mapColor(MapColor.QUARTZ);
 
 	public FuyukiButtonBlock() {
 		super(PROPERTIES, BlockSetType.OAK, 30, true);

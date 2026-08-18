@@ -2,6 +2,7 @@ package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.block.MiyashitaSakuraBlock;
+import net.coutman.welcomekitajima.block.StardustDust;
 import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -29,7 +30,7 @@ public class MiyashitaLocalSpecialty extends Item {
     }
 
     public static final List<LocalSpecialties> LOCAL_SPECIALTIES = List.of(
-            new LocalSpecialties("stardust", Rarity.UNCOMMON, false, null),
+            new LocalSpecialties("stardust", Rarity.UNCOMMON, true, new StardustDust()),
             new LocalSpecialties("starbit", Rarity.RARE, false, null),
             new LocalSpecialties("miyashita_sakura", Rarity.UNCOMMON, true, new MiyashitaSakuraBlock())
     );

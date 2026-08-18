@@ -19,14 +19,15 @@ public class BowWeapon extends BowItem {
 
     public record BowList(String registryName, Rarity rarity) {
         public Properties getProperties() {
-            return new Properties().rarity(this.rarity).stacksTo(1);
+            return new Properties().rarity(this.rarity).stacksTo(1).durability(0);
         }
     }
 
     public static final List<BowList> BOW_LISTS = List.of(
         new BowList("shimmering_bow", Rarity.UNCOMMON),
         new BowList("frigid_will", Rarity.RARE),
-            new BowList("dusk_piercer", Rarity.RARE)
+        new BowList("dusk_piercer", Rarity.RARE),
+        new BowList("nocturne_reverie", Rarity.RARE)
     );
 
     public static void register() {

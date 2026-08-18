@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:radiant_fragment"
+	},
+	{
+	  "item": "welcomekitajima:radiant_fragment"
+	},
+	{
+	  "item": "welcomekitajima:radiant_fragment"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:radiant_droplet",
+    "count": 1
+  }
+}

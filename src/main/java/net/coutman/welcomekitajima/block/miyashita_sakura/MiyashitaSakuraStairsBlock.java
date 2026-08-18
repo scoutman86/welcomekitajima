@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
@@ -27,7 +28,8 @@ public class MiyashitaSakuraStairsBlock extends StairBlock {
 			.ignitedByLava()
 			.instrument(NoteBlockInstrument.BASS)
 			.sound(SoundType.WOOD)
-			.strength(3f, 2f)
+			.strength(2f, 3f)
+			.mapColor(MapColor.COLOR_PINK)
 			.dynamicShape();
 
 	public MiyashitaSakuraStairsBlock() {

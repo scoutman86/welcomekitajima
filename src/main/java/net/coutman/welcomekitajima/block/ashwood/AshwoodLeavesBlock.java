@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.storage.loot.LootParams;
 
@@ -21,7 +22,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class AshwoodLeavesBlock extends LeavesBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().sound(SoundType.GRASS).strength(0.2f).noOcclusion();
+	public static Properties PROPERTIES = Properties.of().ignitedByLava().sound(SoundType.GRASS).mapColor(MapColor.PLANT).strength(0.2f).noOcclusion();
 
 	public AshwoodLeavesBlock() {
 		super(PROPERTIES);

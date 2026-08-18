@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.DoorBlock;
@@ -24,7 +25,14 @@ import java.util.Collections;
 import java.util.List;
 
 public class MiyashitaSakuraDoorBlock extends DoorBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false);
+	public static Properties PROPERTIES = Properties.of()
+			.ignitedByLava()
+			.instrument(NoteBlockInstrument.BASS)
+			.sound(SoundType.WOOD)
+			.strength(2f, 3f)
+			.mapColor(MapColor.COLOR_PINK)
+			.noOcclusion()
+			.isRedstoneConductor((bs, br, bp) -> false);
 
 	public MiyashitaSakuraDoorBlock() {
 		super(PROPERTIES, BlockSetType.OAK);

@@ -12,6 +12,7 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.TrapDoorBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -22,7 +23,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class AshwoodTrapdoorBlock extends TrapDoorBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false);
+	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).mapColor(MapColor.METAL).strength(2f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false);
 
 	public AshwoodTrapdoorBlock() {
 		super(PROPERTIES, BlockSetType.OAK);

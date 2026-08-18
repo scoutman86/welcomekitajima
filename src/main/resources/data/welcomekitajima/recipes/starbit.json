@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:stardust"
+	},
+	{
+	  "item": "welcomekitajima:stardust"
+	},
+	{
+	  "item": "welcomekitajima:stardust"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:starbit",
+    "count": 1
+  }
+}

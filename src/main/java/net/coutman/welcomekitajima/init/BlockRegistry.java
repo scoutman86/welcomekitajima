@@ -200,6 +200,7 @@ public class BlockRegistry {
 		CHISELED_LABYRINTH_STONE_SLAB = register("chiseled_labyrinth_stone_slab", new ChiseledLabyrinthStoneSlabBlock());
 
 		TrafficLamps.registerBlocks();
+		BlackVolcanicSand.register();
 
 		// AAAAAAAAAAAAAAAAAAA
 		MOSSY_LABYRINTH_STONE = register("mossy_labyrinth_stone", new MossyLabyrinthStoneBlock());
@@ -279,6 +280,7 @@ public class BlockRegistry {
 		AshwoodTrapdoorBlock.clientInit();
 
 		TrafficLamps.clientInit();
+		BlackVolcanicSand.clientInit();
 
 		LabyrinthStoneBlock.clientInit();
 

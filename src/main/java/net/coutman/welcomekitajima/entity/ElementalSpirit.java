@@ -15,6 +15,9 @@ import net.minecraft.world.entity.animal.allay.Allay;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.pathfinder.Path;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.ItemStack;
 
 public class ElementalSpirit extends Allay {
     private final Element element;
@@ -42,14 +45,14 @@ public class ElementalSpirit extends Allay {
 
         @Override
         @SuppressWarnings("all")
-        public void tick() {
+        public void start() {
             LivingEntity auraTarget = this.elementalSpirit;
             if (auraTarget != null) {
                 ElementComponent component = ElementComponent.KEY.get(auraTarget);
                 ElementalApplication application = ElementalApplications.gaugeUnits(
                         auraTarget,
                         this.elementalSpirit.getElement(),
-                        50.0,
+                        16384.0,
                         true
                 );
                 component.addElementalApplication(application, InternalCooldownContext.ofNone());
@@ -119,6 +122,21 @@ public class ElementalSpirit extends Allay {
         }
     }
      */
+
+    @Override
+    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+        return InteractionResult.PASS;
+    }
+
+    @Override
+    public boolean canPickUpLoot() {
+        return false;
+    }
+
+    @Override
+    public boolean canHoldItem(ItemStack stack) {
+        return false;
+    }
 
     private static class ResetTargetGoal extends Goal {
         private final ElementalSpirit elementalSpirit;

@@ -9,6 +9,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.storage.loot.LootParams;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -21,6 +22,7 @@ public class IceCrystalBlock extends Block {
     public static Properties PROPERTIES = Properties.of()
             .ignitedByLava()
             .sound(SoundType.GLASS)
+            .mapColor(MapColor.ICE)
             .strength(1.0f, 1.5f)
             .noOcclusion();
 

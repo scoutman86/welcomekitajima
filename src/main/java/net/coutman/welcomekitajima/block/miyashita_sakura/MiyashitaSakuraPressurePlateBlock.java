@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -23,7 +24,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class MiyashitaSakuraPressurePlateBlock extends PressurePlateBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
+	public static Properties PROPERTIES = Properties.of()
+			.ignitedByLava()
+			.instrument(NoteBlockInstrument.BASS)
+			.sound(SoundType.WOOD)
+			.strength(2f, 3f)
+			.mapColor(MapColor.COLOR_PINK);
 
 	public MiyashitaSakuraPressurePlateBlock() {
 		super(Sensitivity.EVERYTHING, PROPERTIES, BlockSetType.OAK);

@@ -43,14 +43,14 @@ public class ElementalGolem extends IronGolem {
 
         @Override
         @SuppressWarnings("all")
-        public void tick() {
+        public void start() {
             LivingEntity auraTarget = this.elementalGolem;
             if (auraTarget != null) {
                 ElementComponent component = ElementComponent.KEY.get(auraTarget);
                 ElementalApplication application = ElementalApplications.gaugeUnits(
                         auraTarget,
                         this.elementalGolem.getElement(),
-                        50.0,
+                        16384.0,
                         true
                 );
                 component.addElementalApplication(application, InternalCooldownContext.ofNone());

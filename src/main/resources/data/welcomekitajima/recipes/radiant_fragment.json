@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "welcomekitajima:radiant_shards"
+	},
+	{
+	  "item": "welcomekitajima:radiant_shards"
+	},
+	{
+	  "item": "welcomekitajima:radiant_shards"
+	}
+  ],
+  "result": {
+    "item": "welcomekitajima:radiant_fragment",
+    "count": 1
+  }
+}

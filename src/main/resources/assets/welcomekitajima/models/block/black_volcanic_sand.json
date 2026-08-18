@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "welcomekitajima:block/black_volcanic_sand",
+    "particle": "welcomekitajima:block/black_volcanic_sand"
+  },
+  "render_type": "solid"
+}

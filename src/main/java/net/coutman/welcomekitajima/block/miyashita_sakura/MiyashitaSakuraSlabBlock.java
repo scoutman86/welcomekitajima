@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.SlabBlock;
@@ -23,7 +24,13 @@ import java.util.Collections;
 import java.util.List;
 
 public class MiyashitaSakuraSlabBlock extends SlabBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().instrument(NoteBlockInstrument.BASS).sound(SoundType.WOOD).strength(2f, 3f);
+	public static Properties PROPERTIES = Properties.of()
+			.ignitedByLava()
+			.instrument(NoteBlockInstrument.BASS)
+			.sound(SoundType.WOOD)
+			.strength(2f, 3f)
+			.mapColor(MapColor.COLOR_PINK);
+
 
 	public MiyashitaSakuraSlabBlock() {
 		super(PROPERTIES);

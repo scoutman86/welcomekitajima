@@ -14,6 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -26,7 +27,7 @@ public class AshwoodStairsBlock extends StairBlock {
 	public static Properties PROPERTIES = Properties.of()
 			.ignitedByLava()
 			.instrument(NoteBlockInstrument.BASS)
-			.sound(SoundType.WOOD)
+			.sound(SoundType.WOOD).mapColor(MapColor.METAL)
 			.strength(3f, 2f)
 			.dynamicShape();
 

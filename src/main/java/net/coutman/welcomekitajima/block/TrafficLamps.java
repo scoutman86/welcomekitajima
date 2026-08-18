@@ -24,6 +24,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
+import net.minecraft.world.level.material.MapColor;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -72,6 +73,7 @@ public class TrafficLamps extends Block {
             .lightLevel((state) -> state.getValue(TrafficLamps.LIT) ? 15 : 0)
             .instrument(NoteBlockInstrument.PLING)
             .sound(SoundType.GLASS)
+            .mapColor(MapColor.METAL)
             .strength(1.8f, 10f);
 
     private static final DyeColor[] MODERN_COLOR_ORDER = new DyeColor[]{

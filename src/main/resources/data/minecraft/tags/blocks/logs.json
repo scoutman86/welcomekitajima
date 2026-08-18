@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "welcomekitajima:fuyuki_log",
+    "welcomekitajima:fuyuki_wood",
+    "welcomekitajima:stripped_fuyuki_log",
+    "welcomekitajima:stripped_fuyuki_wood",
+	"welcomekitajima:miyashita_sakura_log",
+    "welcomekitajima:miyashita_sakura_wood",
+    "welcomekitajima:stripped_miyashita_sakura_log",
+    "welcomekitajima:stripped_miyashita_sakura_wood",
+	"welcomekitajima:ashwood_log",
+    "welcomekitajima:ashwood_wood",
+    "welcomekitajima:stripped_ashwood_log",
+    "welcomekitajima:stripped_ashwood_wood"
+  ]
+}

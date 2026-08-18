@@ -10,18 +10,25 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.storage.loot.LootParams;
 
 import java.util.Collections;
 import java.util.List;
 
 public class MiyashitaSakuraLeavesBlock extends LeavesBlock {
-	public static Properties PROPERTIES = Properties.of().ignitedByLava().sound(SoundType.GRASS).strength(0.2f).noOcclusion();
+	public static Properties PROPERTIES = Properties.of()
+			.ignitedByLava()
+			.sound(SoundType.CHERRY_LEAVES)
+			.mapColor(MapColor.COLOR_PINK)
+			.strength(0.2f)
+			.noOcclusion();
 
 	public MiyashitaSakuraLeavesBlock() {
 		super(PROPERTIES);

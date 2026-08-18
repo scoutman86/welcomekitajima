@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "item/nocturne_reverie_pulling_0"
+    }
+}

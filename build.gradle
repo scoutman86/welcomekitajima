@@ -6,7 +6,7 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = 'welcomekitajima'
-version = '2.8.0-pre'
+version = '2.8.0'
 group = 'net.coutman.welcomekitajima'
 
 loom {

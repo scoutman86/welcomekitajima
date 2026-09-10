@@ -1,6 +1,6 @@
 {
     "parent": "item/bow",
     "textures": {
-        "layer0": "item/nocturne_reverie_pulling_1"
+        "layer0": "welcomekitajima:item/bow/nocturne_reverie_pulling_1"
     }
 }

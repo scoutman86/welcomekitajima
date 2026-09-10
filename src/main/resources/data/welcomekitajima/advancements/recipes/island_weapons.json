@@ -1,0 +1,34 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"island_billet": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"tag": "welcomekitajima:is_island_billet"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"island_billet"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"welcomekitajima:frostbearer_might_recipe",
+			"welcomekitajima:frigid_will_recipe",
+			"welcomekitajima:frostbearer_strength_recipe",
+			"welcomekitajima:frigid_core_recipe",
+			"welcomekitajima:frostbearer_staff_recipe",
+			"welcomekitajima:starseeker_blade_recipe",
+			"welcomekitajima:dusk_piercer_recipe",
+			"welcomekitajima:stelliform_greatsword_recipe",
+			"welcomekitajima:glimmering_twilight_recipe",
+			"welcomekitajima:celestial_spear_recipe"
+		]
+	}
+}

@@ -2,10 +2,12 @@ package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.entity.*;
+import net.coutman.welcomekitajima.init.SoundRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -41,9 +43,18 @@ public class CatalystWeapon extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         if (!level.isClientSide) {
                 CatalystProjectile projectile = new CatalystProjectile(level, player);
-
+                projectile.sevenelements$setOriginStack(player.getItemInHand(hand));
                 projectile.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
                 level.addFreshEntity(projectile);
+
+                level.playSound(
+                        null,
+                        player.getX(), player.getY(), player.getZ(),
+                        SoundRegistry.CATALYST_SHOOT,
+                        net.minecraft.sounds.SoundSource.PLAYERS,
+                        0.8F,
+                        1.0F
+                );
 
                 player.getCooldowns().addCooldown(this, 10);
             }

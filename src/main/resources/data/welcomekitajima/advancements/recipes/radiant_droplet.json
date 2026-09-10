@@ -1,0 +1,25 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"radiant_fragment": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "welcomekitajima:radiant_fragment"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"radiant_fragment"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"welcomekitajima:radiant_droplet"
+		]
+	}
+}

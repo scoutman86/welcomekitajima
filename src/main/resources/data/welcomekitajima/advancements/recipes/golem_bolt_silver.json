@@ -1,0 +1,25 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"golem_bronze": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "welcomekitajima:golem_bolt_bronze"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"golem_bronze"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"welcomekitajima:golem_bolt_silver_recipe"
+		]
+	}
+}

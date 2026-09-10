@@ -1,0 +1,25 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"radiant_shard": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "welcomekitajima:radiant_shards"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"radiant_shard"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"welcomekitajima:radiant_fragment"
+		]
+	}
+}

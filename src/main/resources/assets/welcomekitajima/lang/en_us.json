@@ -358,5 +358,6 @@
   "entity.welcomekitajima.pyro_spirit": "Pyro Spirit",
   "entity.welcomekitajima.hydro_spirit": "Hydro Spirit",
   "entity.welcomekitajima.electro_spirit": "Electro Spirit",
-  "entity.welcomekitajima.cryo_spirit": "Cryo Spirit"
+  "entity.welcomekitajima.cryo_spirit": "Cryo Spirit",
+  "subtitles.welcomekitajima.catalyst_shoot": "Catalyst fires"
 }

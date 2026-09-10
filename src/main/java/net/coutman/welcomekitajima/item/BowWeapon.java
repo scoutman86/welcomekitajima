@@ -2,6 +2,7 @@ package net.coutman.welcomekitajima.item;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
@@ -36,6 +37,23 @@ public class BowWeapon extends BowItem {
             Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, entry.registryName), item);
 
             BOW_REGISTRY.put(entry.registryName, item);
+        }
+    }
+
+    public static void registerBowPredicates() {
+        for (BowItem bow : BowWeapon.BOW_REGISTRY.values()) {
+            ItemProperties.register(bow, new ResourceLocation("pulling"), (stack, world, entity, seed) ->
+                    entity != null && entity.isUsingItem() && entity.getUseItem() == stack ? 1.0F : 0.0F
+            );
+
+            ItemProperties.register(bow, new ResourceLocation("pull"), (stack, world, entity, seed) -> {
+                if (entity == null) {
+                    return 0.0F;
+                } else {
+                    return entity.getUseItem() != stack ? 0.0F :
+                            (float)(stack.getUseDuration() - entity.getUseItemRemainingTicks()) / 20.0F;
+                }
+            });
         }
     }
 }

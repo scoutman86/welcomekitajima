@@ -51,6 +51,17 @@ public class EntityRegistry {
         return type;
     }
 
+    // you're special. you get the vanilla builder.
+    public static final EntityType<CatalystProjectile> CATALYST_PROJECTILE = Registry.register(
+            BuiltInRegistries.ENTITY_TYPE,
+            new ResourceLocation(WelcomeKitajima.MODID, "catalyst_projectile"),
+            EntityType.Builder.<CatalystProjectile>of(CatalystProjectile::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(4)
+                    .updateInterval(10)
+                    .build("catalyst_projectile")
+    );
+
     public static final EntityType<ElementalGolem> GEO_GOLEM_ENTITY_TYPE = registerGolem("geo_golem", Element.GEO);
     public static final EntityType<ElementalGolem> DENDRO_GOLEM_ENTITY_TYPE = registerGolem("dendro_golem", Element.DENDRO);
     public static final EntityType<ElementalGolem> ANEMO_GOLEM_ENTITY_TYPE = registerGolem("anemo_golem", Element.ANEMO);
@@ -65,6 +76,9 @@ public class EntityRegistry {
     }
 
     public static void clientLoadRenderer(){
+        // no no, you go first. I insist
+        EntityRendererRegistry.register(CATALYST_PROJECTILE, CatalystProjectileRenderer::new);
+
         EntityRendererRegistry.register(EntityRegistry.ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
         EntityRendererRegistry.register(GEO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);
         EntityRendererRegistry.register(DENDRO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);

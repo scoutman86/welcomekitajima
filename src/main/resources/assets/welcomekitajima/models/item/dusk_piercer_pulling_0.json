@@ -1,6 +1,6 @@
 {
     "parent": "item/bow",
     "textures": {
-        "layer0": "item/dusk_piercer_pulling_0"
+        "layer0": "welcomekitajima:item/bow/dusk_piercer_pulling_0"
     }
 }

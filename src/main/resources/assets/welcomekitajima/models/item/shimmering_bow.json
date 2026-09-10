@@ -30,21 +30,21 @@
             "predicate": {
                 "pulling": 1
             },
-            "model": "welcomekitajima:item/bow/shimmering_bow_pulling_0"
+            "model": "welcomekitajima:item/shimmering_bow_pulling_0"
         },
         {
             "predicate": {
                 "pulling": 1,
                 "pull": 0.65
             },
-            "model": "welcomekitajima:item/bow/shimmering_bow_pulling_1"
+            "model": "welcomekitajima:item/shimmering_bow_pulling_1"
         },
         {
             "predicate": {
                 "pulling": 1,
                 "pull": 0.9
             },
-            "model": "welcomekitajima:item/bow/shimmering_bow_pulling_2"
+            "model": "welcomekitajima:item/shimmering_bow_pulling_2"
         }
     ]
 }

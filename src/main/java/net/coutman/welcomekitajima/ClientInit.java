@@ -12,13 +12,16 @@
 */
 package net.coutman.welcomekitajima;
 
+import net.coutman.welcomekitajima.entity.models.CatalystProjectileModel;
 import net.coutman.welcomekitajima.init.EntityRegistry;
+import net.coutman.welcomekitajima.item.BowWeapon;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.FoliageColor;
 
@@ -28,7 +31,14 @@ public class ClientInit implements ClientModInitializer {
 	public void onInitializeClient() {
 		// I have no idea what I'm doing so hopefully this works and I don't explode
 		BlockRegistry.clientLoad();
+
+		EntityModelLayerRegistry.registerModelLayer(
+				CatalystProjectileModel.LAYER_LOCATION,
+				CatalystProjectileModel::createBodyLayer
+		);
+
 		EntityRegistry.clientLoadRenderer();
+
 		ColorProviderRegistry.BLOCK.register(
 				(state, world, pos, tintIndex) -> {
 					if (world != null && pos != null) {
@@ -45,5 +55,7 @@ public class ClientInit implements ClientModInitializer {
 				BlockRegistry.FUYUKI_LEAVES,
 				BlockRegistry.ASHWOOD_LEAVES
 		);
+
+		BowWeapon.registerBowPredicates();
 	}
 }

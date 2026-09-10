@@ -1,0 +1,25 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"badge_bronze": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "welcomekitajima:acc_badge_bronze"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"badge_bronze"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"welcomekitajima:acc_badge_silver_recipe"
+		]
+	}
+}

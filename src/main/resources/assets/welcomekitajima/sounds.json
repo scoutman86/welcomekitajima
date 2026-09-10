@@ -1,0 +1,10 @@
+{
+  "item.catalyst.shoot": {
+    "category": "player",
+    "subtitle": "subtitles.welcomekitajima.catalyst_shoot",
+    "sounds": [
+      "welcomekitajima:item/catalyst_shoot_1",
+      "welcomekitajima:item/catalyst_shoot_2"
+    ]
+  }
+}

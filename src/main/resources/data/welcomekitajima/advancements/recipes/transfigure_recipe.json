@@ -1,0 +1,39 @@
+{
+	"parent": "minecraft:recipes/root",
+	"criteria": {
+		"transfiguration": {
+			"trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"item": "welcomekitajima:transformation_essence"
+					}
+				]
+			}
+		}
+	},
+	"requirements": [
+		[
+			"transfiguration"
+		]
+	],
+	"rewards": {
+		"recipes": [
+			"welcomekitajima:transfigure_billet_to_basin_bow",
+			"welcomekitajima:transfigure_billet_to_basin_catalyst",
+			"welcomekitajima:transfigure_billet_to_basin_claymore",
+			"welcomekitajima:transfigure_billet_to_basin_polearm",
+			"welcomekitajima:transfigure_billet_to_basin_sword",
+			"welcomekitajima:transfigure_billet_to_highlander_bow",
+			"welcomekitajima:transfigure_billet_to_highlander_catalyst",
+			"welcomekitajima:transfigure_billet_to_highlander_claymore",
+			"welcomekitajima:transfigure_billet_to_highlander_polearm",
+			"welcomekitajima:transfigure_billet_to_highlander_sword",
+			"welcomekitajima:transfigure_billet_to_island_bow",
+			"welcomekitajima:transfigure_billet_to_island_catalyst",
+			"welcomekitajima:transfigure_billet_to_island_claymore",
+			"welcomekitajima:transfigure_billet_to_island_polearm",
+			"welcomekitajima:transfigure_billet_to_island_sword"
+		]
+	}
+}

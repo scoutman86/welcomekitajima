@@ -1,7 +1,7 @@
 
 package net.coutman.welcomekitajima.block.miyashita_sakura;
 
-import net.coutman.welcomekitajima.init.BlockRegistry;
+import net.coutman.welcomekitajima.init.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -34,6 +34,7 @@ public class MiyashitaSakuraPlanksBlock extends Block {
 		super(PROPERTIES);
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
 	}
 
 	@Override

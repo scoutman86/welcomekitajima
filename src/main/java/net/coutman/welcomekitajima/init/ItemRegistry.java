@@ -106,23 +106,6 @@ public class ItemRegistry {
 	public static Item CHISELED_LABYRINTH_STONE;
 	public static Item CHISELED_LABYRINTH_STONE_STAIRS;
 	public static Item CHISELED_LABYRINTH_STONE_SLAB;
-	// i really fucking hate this
-	public static Item MOSSY_LABYRINTH_STONE;
-	public static Item MOSSY_COBBLED_LABYRINTH_STONE;
-	public static Item MOSSY_COBBLED_LABYRINTH_STONE_STAIRS;
-	public static Item MOSSY_COBBLED_LABYRINTH_STONE_SLAB;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_STAIRS;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_SLAB;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_BRICKS;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_TILES;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS;
-	public static Item MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB;
-	public static Item MOSSY_CHISELED_LABYRINTH_STONE;
-	public static Item MOSSY_CHISELED_LABYRINTH_STONE_STAIRS;
-	public static Item MOSSY_CHISELED_LABYRINTH_STONE_SLAB;
 
 	public static void load() {
 		// empty sekai blocks
@@ -148,10 +131,8 @@ public class ItemRegistry {
 		METAL_MIPS_DOOR = register("metal_mips_door", new BlockItem(BlockRegistry.METAL_MIPS_DOOR, new Item.Properties()));
 
 
-		if (WelcomeKitajima.IncludeExperimentalElementalFeatures)
-		{
-			Vision.register();
-		}
+		Vision.register();
+		Projection.register();
 
 		ACCBadges.register();
 		GolemBolts.register();
@@ -258,22 +239,6 @@ public class ItemRegistry {
 		CHISELED_LABYRINTH_STONE = register("chiseled_labyrinth_stone", new BlockItem(BlockRegistry.CHISELED_LABYRINTH_STONE, new Item.Properties()));
 		CHISELED_LABYRINTH_STONE_STAIRS = register("chiseled_labyrinth_stone_stairs", new BlockItem(BlockRegistry.CHISELED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
 		CHISELED_LABYRINTH_STONE_SLAB = register("chiseled_labyrinth_stone_slab", new BlockItem(BlockRegistry.CHISELED_LABYRINTH_STONE_SLAB, new Item.Properties()));
-		MOSSY_LABYRINTH_STONE = register("mossy_labyrinth_stone", new BlockItem(BlockRegistry.MOSSY_LABYRINTH_STONE, new Item.Properties()));
-		MOSSY_COBBLED_LABYRINTH_STONE = register("mossy_cobbled_labyrinth_stone", new BlockItem(BlockRegistry.MOSSY_COBBLED_LABYRINTH_STONE, new Item.Properties()));
-		MOSSY_COBBLED_LABYRINTH_STONE_STAIRS = register("mossy_cobbled_labyrinth_stone_stairs", new BlockItem(BlockRegistry.MOSSY_COBBLED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
-		MOSSY_COBBLED_LABYRINTH_STONE_SLAB = register("mossy_cobbled_labyrinth_stone_slab", new BlockItem(BlockRegistry.MOSSY_COBBLED_LABYRINTH_STONE_SLAB, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE = register("mossy_polished_labyrinth_stone", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_STAIRS = register("mossy_polished_labyrinth_stone_stairs", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_SLAB = register("mossy_polished_labyrinth_stone_slab", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_SLAB, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_BRICKS = register("mossy_polished_labyrinth_stone_bricks", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_BRICKS, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS = register("mossy_polished_labyrinth_stone_brick_stairs", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB = register("mossy_polished_labyrinth_stone_brick_slab", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_TILES = register("mossy_polished_labyrinth_stone_tiles", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_TILES, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS = register("mossy_polished_labyrinth_stone_tile_stairs", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS, new Item.Properties()));
-		MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB = register("mossy_polished_labyrinth_stone_tile_slab", new BlockItem(BlockRegistry.MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB, new Item.Properties()));
-		MOSSY_CHISELED_LABYRINTH_STONE = register("mossy_chiseled_labyrinth_stone", new BlockItem(BlockRegistry.MOSSY_CHISELED_LABYRINTH_STONE, new Item.Properties()));
-		MOSSY_CHISELED_LABYRINTH_STONE_STAIRS = register("mossy_chiseled_labyrinth_stone_stairs", new BlockItem(BlockRegistry.MOSSY_CHISELED_LABYRINTH_STONE_STAIRS, new Item.Properties()));
-		MOSSY_CHISELED_LABYRINTH_STONE_SLAB = register("mossy_chiseled_labyrinth_stone_slab", new BlockItem(BlockRegistry.MOSSY_CHISELED_LABYRINTH_STONE_SLAB, new Item.Properties()));
 	}
 
 	private static Item register(String registryName, Item item) {

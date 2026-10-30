@@ -21,6 +21,8 @@ public class WinterIceleaBlock extends FlowerBlock {
     public WinterIceleaBlock() {
         super(MobEffects.DAMAGE_RESISTANCE, 0, PROPERTIES);
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
+
     }
 
     @Override

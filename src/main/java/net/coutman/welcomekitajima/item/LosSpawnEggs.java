@@ -1,5 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
+import net.coutman.welcomekitajima.init.*;
+
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.block.MiyashitaSakuraBlock;
 import net.coutman.welcomekitajima.init.CreativeTabRegistry;
@@ -30,6 +32,7 @@ public class LosSpawnEggs extends SpawnEggItem {
     public LosSpawnEggs(EntityType<? extends Mob> type, int primaryColor, int secondaryColor, Properties properties) {
         super(type, primaryColor, secondaryColor, properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.SPAWN_EGGS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public static final List<Egg> LOS_EGGS = List.of(

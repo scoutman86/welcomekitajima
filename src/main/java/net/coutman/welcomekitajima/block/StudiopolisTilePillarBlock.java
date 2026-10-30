@@ -1,4 +1,3 @@
-
 package net.coutman.welcomekitajima.block;
 
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
@@ -26,6 +25,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
 import net.coutman.welcomekitajima.init.BlockRegistry;
+import net.coutman.welcomekitajima.init.*;
 
 import java.util.List;
 import java.util.Collections;
@@ -40,6 +40,8 @@ public class StudiopolisTilePillarBlock extends Block {
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
+
 	}
 
 	@Override

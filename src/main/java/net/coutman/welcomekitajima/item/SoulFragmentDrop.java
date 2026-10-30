@@ -26,6 +26,7 @@ public class SoulFragmentDrop extends Item {
                         .maxCount(1)
         );
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.TAB_BOSS_DROPS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public static Item SOUL_FRAGMENT_DROP;

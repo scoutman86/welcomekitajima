@@ -1,4 +1,3 @@
-
 package net.coutman.welcomekitajima.block;
 
 import net.minecraft.world.item.CreativeModeTabs;
@@ -19,6 +18,8 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
 import net.coutman.welcomekitajima.init.BlockRegistry;
+import net.coutman.welcomekitajima.init.*;
+
 
 import java.util.List;
 import java.util.Collections;
@@ -29,6 +30,8 @@ public class EmptySEKAITilesBlock extends Block {
 	public EmptySEKAITilesBlock() {
 		super(PROPERTIES);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
+
 	}
 
 	@Override

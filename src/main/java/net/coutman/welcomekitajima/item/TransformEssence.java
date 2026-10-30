@@ -13,6 +13,7 @@ public class TransformEssence extends Item {
     public TransformEssence() {
         super(new FabricItemSettings().rarity(Rarity.EPIC));
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public static Item TRANSFORM_ESSENCE;

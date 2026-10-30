@@ -1,5 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
+import net.coutman.welcomekitajima.init.*;
+
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.Registry;
@@ -15,6 +17,7 @@ public class ClaymoreWeapon extends AxeItem {
     public ClaymoreWeapon(Tier tier, int damage, float attackSpeed, Properties properties) {
         super(tier, damage, attackSpeed, properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public record ClaymoreList(String registryName, Tier tier, int damage, float attackSpeed, Rarity rarity) {

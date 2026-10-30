@@ -1,10 +1,8 @@
-
-/*
- *	MCreator note: This file will be REGENERATED on each build.
- */
 package net.coutman.welcomekitajima.init;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
+import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -14,7 +12,7 @@ import net.coutman.welcomekitajima.block.*;
 import net.coutman.welcomekitajima.block.fuyuki.*;
 import net.coutman.welcomekitajima.block.miyashita_sakura.*;
 import net.coutman.welcomekitajima.block.ashwood.*;
-import net.coutman.welcomekitajima.block.labyrinth.*;
+import net.minecraft.world.level.block.Blocks;
 
 public class BlockRegistry {
 	public static Block EMPTY_SEKAI_STONE;
@@ -97,23 +95,6 @@ public class BlockRegistry {
 	public static Block CHISELED_LABYRINTH_STONE;
 	public static Block CHISELED_LABYRINTH_STONE_STAIRS;
 	public static Block CHISELED_LABYRINTH_STONE_SLAB;
-	// i really hate this
-	public static Block MOSSY_LABYRINTH_STONE;
-	public static Block MOSSY_COBBLED_LABYRINTH_STONE;
-	public static Block MOSSY_COBBLED_LABYRINTH_STONE_STAIRS;
-	public static Block MOSSY_COBBLED_LABYRINTH_STONE_SLAB;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_STAIRS;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_SLAB;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_BRICKS;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_TILES;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS;
-	public static Block MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB;
-	public static Block MOSSY_CHISELED_LABYRINTH_STONE;
-	public static Block MOSSY_CHISELED_LABYRINTH_STONE_STAIRS;
-	public static Block MOSSY_CHISELED_LABYRINTH_STONE_SLAB;
 
 	public static void load() {
 		EMPTY_SEKAI_STONE = register("empty_sekai_stone", new EmptySEKAIStoneBlock());
@@ -149,6 +130,7 @@ public class BlockRegistry {
 		FUYUKI_TRAPDOOR = register("fuyuki_trapdoor", new FuyukiTrapdoorBlock());
 		STRIPPED_FUYUKI_LOG = register("stripped_fuyuki_log", new FuyukiStrippedLogBlock());
 		STRIPPED_FUYUKI_WOOD = register("stripped_fuyuki_wood", new FuyukiStrippedWoodBlock());
+		FuyukiSignBlock.register();
 		// Miyashita Sakura Blocks
 		MIYASHITA_SAKURA_WOOD = register("miyashita_sakura_wood", new MiyashitaSakuraWoodBlock());
 		MIYASHITA_SAKURA_LOG = register("miyashita_sakura_log", new MiyashitaSakuraLogBlock());
@@ -164,6 +146,7 @@ public class BlockRegistry {
 		MIYASHITA_SAKURA_TRAPDOOR = register("miyashita_sakura_trapdoor", new MiyashitaSakuraTrapdoorBlock());
 		STRIPPED_MIYASHITA_SAKURA_LOG = register("stripped_miyashita_sakura_log", new MiyashitaSakuraStrippedLogBlock());
 		STRIPPED_MIYASHITA_SAKURA_WOOD = register("stripped_miyashita_sakura_wood", new MiyashitaSakuraStrippedWoodBlock());
+		MiyashitaSakuraSignBlock.register();
 		// Ashwood Blocks
 		ASHWOOD_WOOD = register("ashwood_wood", new AshwoodWoodBlock());
 		ASHWOOD_LOG = register("ashwood_log", new AshwoodLogBlock());
@@ -179,46 +162,56 @@ public class BlockRegistry {
 		ASHWOOD_TRAPDOOR = register("ashwood_trapdoor", new AshwoodTrapdoorBlock());
 		STRIPPED_ASHWOOD_LOG = register("stripped_ashwood_log", new AshwoodStrippedLogBlock());
 		STRIPPED_ASHWOOD_WOOD = register("stripped_ashwood_wood", new AshwoodStrippedWoodBlock());
+		AshwoodSignBlock.register();
 		// fuck you
-		LABYRINTH_STONE = register("labyrinth_stone", new LabyrinthStoneBlock());
+		LABYRINTH_STONE = register("labyrinth_stone",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseBlock(LabyrinthStoneBlockFamily.PROPERTIES, () -> COBBLED_LABYRINTH_STONE.asItem()));
 		// cobbled
-		COBBLED_LABYRINTH_STONE = register("cobbled_labyrinth_stone", new CobbledLabyrinthStoneBlock());
-		COBBLED_LABYRINTH_STONE_STAIRS = register("cobbled_labyrinth_stone_stairs", new CobbledLabyrinthStoneStairsBlock());
-		COBBLED_LABYRINTH_STONE_SLAB = register("cobbled_labyrinth_stone_slab", new CobbledLabyrinthStoneSlabBlock());
+		COBBLED_LABYRINTH_STONE = register("cobbled_labyrinth_stone",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+		COBBLED_LABYRINTH_STONE_STAIRS = register("cobbled_labyrinth_stone_stairs",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseStairBlock(Blocks.AIR.defaultBlockState(), LabyrinthStoneBlockFamily.PROPERTIES, null));
+		COBBLED_LABYRINTH_STONE_SLAB = register("cobbled_labyrinth_stone_slab",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseSlabBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
 		// polished
-		POLISHED_LABYRINTH_STONE = register("polished_labyrinth_stone", new PolishedLabyrinthStoneBlock());
-		POLISHED_LABYRINTH_STONE_STAIRS = register("polished_labyrinth_stone_stairs", new PolishedLabyrinthStoneStairsBlock());
-		POLISHED_LABYRINTH_STONE_SLAB = register("polished_labyrinth_stone_slab", new PolishedLabyrinthStoneSlabBlock());
-		POLISHED_LABYRINTH_STONE_BRICKS = register("polished_labyrinth_stone_bricks", new PolishedLabyrinthStoneBricksBlock());
-		POLISHED_LABYRINTH_STONE_BRICK_STAIRS = register("polished_labyrinth_stone_brick_stairs", new PolishedLabyrinthStoneBrickStairsBlock());
-		POLISHED_LABYRINTH_STONE_BRICK_SLAB = register("polished_labyrinth_stone_brick_slab", new PolishedLabyrinthStoneBrickSlabBlock());
-		POLISHED_LABYRINTH_STONE_TILES = register("polished_labyrinth_stone_tiles", new PolishedLabyrinthStoneTilesBlock());
-		POLISHED_LABYRINTH_STONE_TILE_STAIRS = register("polished_labyrinth_stone_tile_stairs", new PolishedLabyrinthStoneTileStairsBlock());
-		POLISHED_LABYRINTH_STONE_TILE_SLAB = register("polished_labyrinth_stone_tile_slab", new PolishedLabyrinthStoneTileSlabBlock());
-		CHISELED_LABYRINTH_STONE = register("chiseled_labyrinth_stone", new ChiseledLabyrinthStoneBlock());
-		CHISELED_LABYRINTH_STONE_STAIRS = register("chiseled_labyrinth_stone_stairs", new ChiseledLabyrinthStoneStairsBlock());
-		CHISELED_LABYRINTH_STONE_SLAB = register("chiseled_labyrinth_stone_slab", new ChiseledLabyrinthStoneSlabBlock());
+		POLISHED_LABYRINTH_STONE = register("polished_labyrinth_stone",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+		POLISHED_LABYRINTH_STONE_STAIRS = register("polished_labyrinth_stone_stairs",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseStairBlock(Blocks.AIR.defaultBlockState(), LabyrinthStoneBlockFamily.PROPERTIES, null));
+		POLISHED_LABYRINTH_STONE_SLAB = register("polished_labyrinth_stone_slab",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseSlabBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+
+		POLISHED_LABYRINTH_STONE_BRICKS = register("polished_labyrinth_stone_bricks",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+		POLISHED_LABYRINTH_STONE_BRICK_STAIRS = register("polished_labyrinth_stone_brick_stairs",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseStairBlock(Blocks.AIR.defaultBlockState(), LabyrinthStoneBlockFamily.PROPERTIES, null));
+		POLISHED_LABYRINTH_STONE_BRICK_SLAB = register("polished_labyrinth_stone_brick_slab",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseSlabBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+
+		POLISHED_LABYRINTH_STONE_TILES = register("polished_labyrinth_stone_tiles",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+		POLISHED_LABYRINTH_STONE_TILE_STAIRS = register("polished_labyrinth_stone_tile_stairs",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseStairBlock(Blocks.AIR.defaultBlockState(), LabyrinthStoneBlockFamily.PROPERTIES, null));
+		POLISHED_LABYRINTH_STONE_TILE_SLAB = register("polished_labyrinth_stone_tile_slab",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseSlabBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+
+		CHISELED_LABYRINTH_STONE = register("chiseled_labyrinth_stone",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
+		CHISELED_LABYRINTH_STONE_STAIRS = register("chiseled_labyrinth_stone_stairs",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseStairBlock(Blocks.AIR.defaultBlockState(), LabyrinthStoneBlockFamily.PROPERTIES, null));
+		CHISELED_LABYRINTH_STONE_SLAB = register("chiseled_labyrinth_stone_slab",
+				new LabyrinthStoneBlockFamily.LabyrinthBaseSlabBlock(LabyrinthStoneBlockFamily.PROPERTIES, null));
 
 		TrafficLamps.registerBlocks();
 		BlackVolcanicSand.register();
 
-		// AAAAAAAAAAAAAAAAAAA
-		MOSSY_LABYRINTH_STONE = register("mossy_labyrinth_stone", new MossyLabyrinthStoneBlock());
-		MOSSY_COBBLED_LABYRINTH_STONE = register("mossy_cobbled_labyrinth_stone", new MossyCobbledLabyrinthStoneBlock());
-		MOSSY_COBBLED_LABYRINTH_STONE_STAIRS = register("mossy_cobbled_labyrinth_stone_stairs", new MossyCobbledLabyrinthStoneStairsBlock());
-		MOSSY_COBBLED_LABYRINTH_STONE_SLAB = register("mossy_cobbled_labyrinth_stone_slab", new MossyCobbledLabyrinthStoneSlabBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE = register("mossy_polished_labyrinth_stone", new MossyPolishedLabyrinthStoneBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_STAIRS = register("mossy_polished_labyrinth_stone_stairs", new MossyPolishedLabyrinthStoneStairsBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_SLAB = register("mossy_polished_labyrinth_stone_slab", new MossyPolishedLabyrinthStoneSlabBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_BRICKS = register("mossy_polished_labyrinth_stone_bricks", new MossyPolishedLabyrinthStoneBricksBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_BRICK_STAIRS = register("mossy_polished_labyrinth_stone_brick_stairs", new MossyPolishedLabyrinthStoneBrickStairsBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_BRICK_SLAB = register("mossy_polished_labyrinth_stone_brick_slab", new MossyPolishedLabyrinthStoneBrickSlabBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_TILES = register("mossy_polished_labyrinth_stone_tiles", new MossyPolishedLabyrinthStoneTilesBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_TILE_STAIRS = register("mossy_polished_labyrinth_stone_tile_stairs", new MossyPolishedLabyrinthStoneTileStairsBlock());
-		MOSSY_POLISHED_LABYRINTH_STONE_TILE_SLAB = register("mossy_polished_labyrinth_stone_tile_slab", new MossyPolishedLabyrinthStoneTileSlabBlock());
-		MOSSY_CHISELED_LABYRINTH_STONE = register("mossy_chiseled_labyrinth_stone", new MossyChiseledLabyrinthStoneBlock());
-		MOSSY_CHISELED_LABYRINTH_STONE_STAIRS = register("mossy_chiseled_labyrinth_stone_stairs", new MossyChiseledLabyrinthStoneStairsBlock());
-		MOSSY_CHISELED_LABYRINTH_STONE_SLAB = register("mossy_chiseled_labyrinth_stone_slab", new MossyChiseledLabyrinthStoneSlabBlock());
+		// stripping??!?!!??!! in MY family friendly video game???!?!?!?
+		StrippableBlockRegistry.register(FUYUKI_LOG, STRIPPED_FUYUKI_LOG);
+		StrippableBlockRegistry.register(FUYUKI_WOOD, STRIPPED_FUYUKI_WOOD);
+		StrippableBlockRegistry.register(MIYASHITA_SAKURA_LOG, MIYASHITA_SAKURA_LOG);
+		StrippableBlockRegistry.register(MIYASHITA_SAKURA_WOOD, MIYASHITA_SAKURA_WOOD);
+		StrippableBlockRegistry.register(ASHWOOD_LOG, STRIPPED_ASHWOOD_LOG);
+		StrippableBlockRegistry.register(ASHWOOD_WOOD, STRIPPED_ASHWOOD_WOOD);
 	}
 
 	public static void clientLoad() {
@@ -279,45 +272,10 @@ public class BlockRegistry {
 		AshwoodDoorBlock.clientInit();
 		AshwoodTrapdoorBlock.clientInit();
 
+		LabyrinthStoneBlockFamily.clientInit();
+
 		TrafficLamps.clientInit();
 		BlackVolcanicSand.clientInit();
-
-		LabyrinthStoneBlock.clientInit();
-
-		CobbledLabyrinthStoneBlock.clientInit();
-		CobbledLabyrinthStoneStairsBlock.clientInit();
-		CobbledLabyrinthStoneSlabBlock.clientInit();
-
-		PolishedLabyrinthStoneBlock.clientInit();
-		PolishedLabyrinthStoneStairsBlock.clientInit();
-		PolishedLabyrinthStoneSlabBlock.clientInit();
-		PolishedLabyrinthStoneBricksBlock.clientInit();
-		PolishedLabyrinthStoneBrickStairsBlock.clientInit();
-		PolishedLabyrinthStoneBrickSlabBlock.clientInit();
-		PolishedLabyrinthStoneTilesBlock.clientInit();
-		PolishedLabyrinthStoneTileStairsBlock.clientInit();
-		PolishedLabyrinthStoneTileSlabBlock.clientInit();
-
-		ChiseledLabyrinthStoneBlock.clientInit();
-		ChiseledLabyrinthStoneStairsBlock.clientInit();
-		ChiseledLabyrinthStoneSlabBlock.clientInit();
-
-		MossyLabyrinthStoneBlock.clientInit();
-		MossyCobbledLabyrinthStoneBlock.clientInit();
-		MossyCobbledLabyrinthStoneStairsBlock.clientInit();
-		MossyCobbledLabyrinthStoneSlabBlock.clientInit();
-		MossyPolishedLabyrinthStoneBlock.clientInit();
-		MossyPolishedLabyrinthStoneStairsBlock.clientInit();
-		MossyPolishedLabyrinthStoneSlabBlock.clientInit();
-		MossyPolishedLabyrinthStoneBricksBlock.clientInit();
-		MossyPolishedLabyrinthStoneBrickStairsBlock.clientInit();
-		MossyPolishedLabyrinthStoneBrickSlabBlock.clientInit();
-		MossyPolishedLabyrinthStoneTilesBlock.clientInit();
-		MossyPolishedLabyrinthStoneTileStairsBlock.clientInit();
-		MossyPolishedLabyrinthStoneTileSlabBlock.clientInit();
-		MossyChiseledLabyrinthStoneBlock.clientInit();
-		MossyChiseledLabyrinthStoneStairsBlock.clientInit();
-		MossyChiseledLabyrinthStoneSlabBlock.clientInit();
 	}
 
 	private static Block register(String registryName, Block block) {

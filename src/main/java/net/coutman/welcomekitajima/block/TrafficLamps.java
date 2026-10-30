@@ -1,6 +1,7 @@
 package net.coutman.welcomekitajima.block;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.init.*;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.renderer.RenderType;
@@ -109,6 +110,7 @@ public class TrafficLamps extends Block {
         Block block = Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, registryName), call);
         Item item = Registry.register(BuiltInRegistries.ITEM, new ResourceLocation(WelcomeKitajima.MODID, registryName), new BlockItem(block, new Item.Properties()));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COLORED_BLOCKS).register(content -> content.accept(item));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(item));
     }
 
     public static void clientInit() {

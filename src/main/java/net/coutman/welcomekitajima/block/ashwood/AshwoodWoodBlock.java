@@ -1,7 +1,7 @@
 
 package net.coutman.welcomekitajima.block.ashwood;
 
-import net.coutman.welcomekitajima.init.BlockRegistry;
+import net.coutman.welcomekitajima.init.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -37,6 +37,7 @@ public class AshwoodWoodBlock extends Block {
 		this.registerDefaultState(this.stateDefinition.any().setValue(AXIS, Direction.Axis.Y));
 		FlammableBlockRegistry.getDefaultInstance().add(this, 5, 0);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
 	}
 
 	@Override

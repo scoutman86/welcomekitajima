@@ -16,6 +16,7 @@ public class WelcomeKitajima implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Welcome to Kitajima!");
 		CreativeTabRegistry.load();
+		WoodRegistry.registerWoodTypes();
 		BlockRegistry.load();
 		ItemRegistry.load();
 		EntityRegistry.load();

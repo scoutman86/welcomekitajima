@@ -1,5 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
+import net.coutman.welcomekitajima.init.*;
+
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.entity.*;
 import net.coutman.welcomekitajima.init.SoundRegistry;
@@ -24,6 +26,7 @@ public class CatalystWeapon extends Item {
     public CatalystWeapon(Properties properties) {
         super(properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public record CatalystList(String registryName, Rarity rarity) {

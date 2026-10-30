@@ -23,6 +23,7 @@ public class CreativeTabRegistry {
 	public static ResourceKey<CreativeModeTab> TAB_SPECIALTIES = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(WelcomeKitajima.MODID, "specialties"));
 	public static ResourceKey<CreativeModeTab> TAB_BOSS_DROPS = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(WelcomeKitajima.MODID, "boss_drops"));
 	public static ResourceKey<CreativeModeTab> SMITHING_CRAFTING_ITEMS = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(WelcomeKitajima.MODID, "crafting_materials"));
+	public static ResourceKey<CreativeModeTab> GENERAL_KITAJIMA_TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(WelcomeKitajima.MODID, "general_kitajima_tab"));
 
 	public static void load() {
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, TAB_SPECIALTIES,
@@ -31,5 +32,7 @@ public class CreativeTabRegistry {
 				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.boss_drops")).icon(() -> new ItemStack(ItemRegistry.PROJECTION_PYRO_DROP)).build());
 		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, SMITHING_CRAFTING_ITEMS,
 				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.crafting_materials")).icon(() -> new ItemStack(TransformEssence.TRANSFORM_ESSENCE)).build());
+		Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, GENERAL_KITAJIMA_TAB,
+				FabricItemGroup.builder().title(Component.translatable("item_group.welcomekitajima.general_kitajima_tab")).icon(() -> new ItemStack(Vision.DENDRO_VISION)).build());
 	}
 }

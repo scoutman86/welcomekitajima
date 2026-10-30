@@ -27,6 +27,7 @@ public class MiyashitaLocalSpecialty extends Item {
     public MiyashitaLocalSpecialty(Properties properties) {
         super(properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public static final List<LocalSpecialties> LOCAL_SPECIALTIES = List.of(

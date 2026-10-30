@@ -12,6 +12,9 @@
 */
 package net.coutman.welcomekitajima;
 
+import net.coutman.welcomekitajima.block.ashwood.AshwoodSignBlock;
+import net.coutman.welcomekitajima.block.fuyuki.FuyukiSignBlock;
+import net.coutman.welcomekitajima.block.miyashita_sakura.MiyashitaSakuraSignBlock;
 import net.coutman.welcomekitajima.entity.models.CatalystProjectileModel;
 import net.coutman.welcomekitajima.init.EntityRegistry;
 import net.coutman.welcomekitajima.item.BowWeapon;
@@ -22,7 +25,13 @@ import net.fabricmc.api.ClientModInitializer;
 import net.coutman.welcomekitajima.init.BlockRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.data.models.ModelProvider;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.FoliageColor;
 
 @Environment(EnvType.CLIENT)
@@ -32,13 +41,15 @@ public class ClientInit implements ClientModInitializer {
 		// I have no idea what I'm doing so hopefully this works and I don't explode
 		BlockRegistry.clientLoad();
 
+		BlockEntityRenderers.register(AshwoodSignBlock.ASHWOOD_SIGN_BLOCK_ENTITY, SignRenderer::new);
+		BlockEntityRenderers.register(MiyashitaSakuraSignBlock.MIYASHITA_SAKURA_SIGN_BLOCK_ENTITY, SignRenderer::new);
+		BlockEntityRenderers.register(FuyukiSignBlock.FUYUKI_SIGN_BLOCK_ENTITY, SignRenderer::new);
+
 		EntityModelLayerRegistry.registerModelLayer(
 				CatalystProjectileModel.LAYER_LOCATION,
 				CatalystProjectileModel::createBodyLayer
 		);
-
 		EntityRegistry.clientLoadRenderer();
-
 		ColorProviderRegistry.BLOCK.register(
 				(state, world, pos, tintIndex) -> {
 					if (world != null && pos != null) {

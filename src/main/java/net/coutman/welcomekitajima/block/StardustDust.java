@@ -27,8 +27,11 @@ public class StardustDust extends Block {
     public StardustDust() {
         super(PROPERTIES);
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
+
     }
     @Override
+    @SuppressWarnings("deprecation")
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {
         return SHAPE;
     }
@@ -43,6 +46,7 @@ public class StardustDust extends Block {
     }
 
     @Override
+    @SuppressWarnings("deprecation")
     public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
         List<ItemStack> dropsOriginal = super.getDrops(state, builder);
         if (!dropsOriginal.isEmpty())

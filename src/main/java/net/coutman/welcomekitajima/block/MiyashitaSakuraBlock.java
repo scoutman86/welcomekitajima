@@ -35,6 +35,8 @@ public class MiyashitaSakuraBlock extends Block {
         super(PROPERTIES);
         this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.DOWN));
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
+
     }
     @Override
     public VoxelShape getShape(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos, CollisionContext collisionContext) {

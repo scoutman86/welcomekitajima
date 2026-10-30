@@ -1,5 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
+import net.coutman.welcomekitajima.init.*;
+
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.core.registries.Registries;
@@ -19,5 +21,6 @@ public class MiyashitaSakuraPatternItem extends BannerPatternItem {
         super(MIYASHITA_SAKURA_PATTERN_TAG,
                 new FabricItemSettings().maxCount(1));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.INGREDIENTS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 }

@@ -6,7 +6,7 @@ sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 archivesBaseName = 'welcomekitajima'
-version = '2.8.1'
+version = '3.0.0'
 group = 'net.coutman.welcomekitajima'
 
 loom {
@@ -38,7 +38,7 @@ dependencies {
     mappings loom.officialMojangMappings()
     modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_ver}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.92.6+1.20.1"
-    include modImplementation (annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.0"))
+    include modImplementation (annotationProcessor("io.github.llamalad7:mixinextras-fabric:0.5.3"))
 
     // add support for seven elements and its requirements
     modImplementation "maven.modrinth:seven-elements:${project.seven_elements_version}"

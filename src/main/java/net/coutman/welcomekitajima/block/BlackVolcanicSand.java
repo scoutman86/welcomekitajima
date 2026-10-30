@@ -1,7 +1,7 @@
-
 package net.coutman.welcomekitajima.block;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.init.*;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -39,6 +39,8 @@ public class BlackVolcanicSand extends FallingBlock {
 	public BlackVolcanicSand() {
 		super(PROPERTIES);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.NATURAL_BLOCKS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
+
 	}
 
 	@Override

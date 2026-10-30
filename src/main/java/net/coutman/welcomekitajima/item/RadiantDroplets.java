@@ -19,6 +19,7 @@ public class RadiantDroplets extends Item {
     public RadiantDroplets(Properties properties) {
         super(properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.SMITHING_CRAFTING_ITEMS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public record RadiantDropletList(String registryName, Rarity rarity) {

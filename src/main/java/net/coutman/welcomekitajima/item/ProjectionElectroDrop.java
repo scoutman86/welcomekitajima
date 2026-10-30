@@ -22,6 +22,7 @@ public class ProjectionElectroDrop extends Item {
                         .maxCount(1)
         );
         ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.TAB_BOSS_DROPS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
     @Override
     public void appendHoverText(ItemStack itemStack, @Nullable Level level, List<Component> list, TooltipFlag tooltipFlag) {

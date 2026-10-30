@@ -1,5 +1,7 @@
 package net.coutman.welcomekitajima.item;
 
+import net.coutman.welcomekitajima.init.*;
+
 import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.client.renderer.item.ItemProperties;
@@ -16,6 +18,7 @@ public class BowWeapon extends BowItem {
     public BowWeapon(Properties properties) {
         super(properties);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.COMBAT).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
     }
 
     public record BowList(String registryName, Rarity rarity) {

@@ -20,7 +20,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 
-import net.coutman.welcomekitajima.init.BlockRegistry;
+import net.coutman.welcomekitajima.init.*;
 
 import java.util.List;
 import java.util.Collections;
@@ -31,6 +31,7 @@ public class FuyukiTrapdoorBlock extends TrapDoorBlock {
 	public FuyukiTrapdoorBlock() {
 		super(PROPERTIES, BlockSetType.OAK);
 		ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.BUILDING_BLOCKS).register(content -> content.accept(this));
+		ItemGroupEvents.modifyEntriesEvent(CreativeTabRegistry.GENERAL_KITAJIMA_TAB).register(content -> content.accept(this));
 	}
 
 	@Override

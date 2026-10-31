@@ -79,7 +79,7 @@ public class EntityRegistry {
         // no no, you go first. I insist
         EntityRendererRegistry.register(CATALYST_PROJECTILE, CatalystProjectileRenderer::new);
 
-        EntityRendererRegistry.register(EntityRegistry.ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
+        EntityRendererRegistry.register(ACC_GRUNT_ENTITY_TYPE, ACCGruntRenderer::new);
         EntityRendererRegistry.register(GEO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);
         EntityRendererRegistry.register(DENDRO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);
         EntityRendererRegistry.register(ANEMO_GOLEM_ENTITY_TYPE, ElementalGolemRenderer::new);

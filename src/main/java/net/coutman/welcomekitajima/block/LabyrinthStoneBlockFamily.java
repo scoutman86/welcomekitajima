@@ -1,9 +1,7 @@
 package net.coutman.welcomekitajima.block;
 
-import net.coutman.welcomekitajima.init.BlockRegistry;
-import net.coutman.welcomekitajima.init.*;
-
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.init.BlockRegistry;
 
 import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
@@ -11,6 +9,9 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.*;
@@ -30,6 +31,11 @@ public class LabyrinthStoneBlockFamily {
             .strength(1.8f, 10f)
             .requiresCorrectToolForDrops();
 
+    static final TagKey<Block> LABYRINTH_BLOCK_FAMILY = TagKey.create(
+            Registries.BLOCK,
+            new ResourceLocation(WelcomeKitajima.MODID, "labyrinth_block")
+    );
+
     public static class LabyrinthBaseBlock extends Block {
         private final Supplier<Item> drop;
 
@@ -45,6 +51,7 @@ public class LabyrinthStoneBlockFamily {
         }
 
         @Override
+        @SuppressWarnings("deprecation")
         public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
             List<ItemStack> dropsOriginal = super.getDrops(state, builder);
             if (!dropsOriginal.isEmpty()) return dropsOriginal;
@@ -67,6 +74,7 @@ public class LabyrinthStoneBlockFamily {
         }
 
         @Override
+        @SuppressWarnings("deprecation")
         public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
             List<ItemStack> dropsOriginal = super.getDrops(state, builder);
             if (!dropsOriginal.isEmpty()) return dropsOriginal;
@@ -89,11 +97,13 @@ public class LabyrinthStoneBlockFamily {
         }
 
         @Override
+        @SuppressWarnings("deprecation")
         public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
             return 0;
         }
 
         @Override
+        @SuppressWarnings("deprecation")
         public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
             List<ItemStack> dropsOriginal = super.getDrops(state, builder);
             if (!dropsOriginal.isEmpty()) return dropsOriginal;

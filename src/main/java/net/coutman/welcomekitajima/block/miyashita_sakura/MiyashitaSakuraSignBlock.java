@@ -4,6 +4,7 @@ import net.coutman.welcomekitajima.WelcomeKitajima;
 import net.coutman.welcomekitajima.init.CreativeTabRegistry;
 import net.coutman.welcomekitajima.init.WoodRegistry;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.core.Registry;
@@ -36,10 +37,7 @@ public class MiyashitaSakuraSignBlock {
     public static BlockEntityType<SignBlockEntity> MIYASHITA_SAKURA_SIGN_BLOCK_ENTITY = Registry.register(
             BuiltInRegistries.BLOCK_ENTITY_TYPE,
             new ResourceLocation(WelcomeKitajima.MODID, "miyashita_sakura_sign_entity"),
-            BlockEntityType.Builder.of(
-                    SignBlockEntity::new,
-                    MIYASHITA_SAKURA_SIGN, MIYASHITA_SAKURA_WALL_SIGN
-            ).build(null)
+            FabricBlockEntityTypeBuilder.create(SignBlockEntity::new, MIYASHITA_SAKURA_SIGN, MIYASHITA_SAKURA_WALL_SIGN).build(null)
     );
 
     private static void registerSign(String woodName, Block standingSign, Block wallSign) {

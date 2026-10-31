@@ -1,15 +1,3 @@
-/*
-*	MCreator note:
-*
-*	If you lock base mod element files, you can edit this file and the proxy files
-*	and they won't get overwritten. If you change your mod package or modid, you
-*	need to apply these changes to this file MANUALLY.
-*
-*
-*	If you do not lock base mod element files in Workspace settings, this file
-*	will be REGENERATED on each build.
-*
-*/
 package net.coutman.welcomekitajima;
 
 import net.coutman.welcomekitajima.block.ashwood.AshwoodSignBlock;
@@ -17,21 +5,19 @@ import net.coutman.welcomekitajima.block.fuyuki.FuyukiSignBlock;
 import net.coutman.welcomekitajima.block.miyashita_sakura.MiyashitaSakuraSignBlock;
 import net.coutman.welcomekitajima.entity.models.CatalystProjectileModel;
 import net.coutman.welcomekitajima.init.EntityRegistry;
+import net.coutman.welcomekitajima.init.WoodRegistry;
 import net.coutman.welcomekitajima.item.BowWeapon;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.coutman.welcomekitajima.init.BlockRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockEntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
-import net.minecraft.client.model.geom.ModelLayerLocation;
-import net.minecraft.client.model.geom.ModelPart;
+import net.minecraft.client.model.geom.ModelLayers;
 import net.minecraft.client.renderer.BiomeColors;
-import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
-import net.minecraft.data.models.ModelProvider;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.FoliageColor;
 
 @Environment(EnvType.CLIENT)
@@ -39,11 +25,26 @@ public class ClientInit implements ClientModInitializer {
 	@Override
 	public void onInitializeClient() {
 		// I have no idea what I'm doing so hopefully this works and I don't explode
-		BlockRegistry.clientLoad();
+		WoodRegistry.registerWoodTypes();
 
-		BlockEntityRenderers.register(AshwoodSignBlock.ASHWOOD_SIGN_BLOCK_ENTITY, SignRenderer::new);
-		BlockEntityRenderers.register(MiyashitaSakuraSignBlock.MIYASHITA_SAKURA_SIGN_BLOCK_ENTITY, SignRenderer::new);
-		BlockEntityRenderers.register(FuyukiSignBlock.FUYUKI_SIGN_BLOCK_ENTITY, SignRenderer::new);
+		EntityModelLayerRegistry.registerModelLayer(
+				ModelLayers.createSignModelName(WoodRegistry.FUYUKI_WOOD_TYPE),
+				SignRenderer::createSignLayer
+		);
+		EntityModelLayerRegistry.registerModelLayer(
+				ModelLayers.createSignModelName(WoodRegistry.MIYASHITA_SAKURA_WOOD_TYPE),
+				SignRenderer::createSignLayer
+		);
+		EntityModelLayerRegistry.registerModelLayer(
+				ModelLayers.createSignModelName(WoodRegistry.ASHWOOD_WOOD_TYPE),
+				SignRenderer::createSignLayer
+		);
+
+		BlockEntityRendererRegistry.register(FuyukiSignBlock.FUYUKI_SIGN_BLOCK_ENTITY, SignRenderer::new);
+		BlockEntityRendererRegistry.register(MiyashitaSakuraSignBlock.MIYASHITA_SAKURA_SIGN_BLOCK_ENTITY, SignRenderer::new);
+		BlockEntityRendererRegistry.register(AshwoodSignBlock.ASHWOOD_SIGN_BLOCK_ENTITY, SignRenderer::new);
+
+		BlockRegistry.clientLoad();
 
 		EntityModelLayerRegistry.registerModelLayer(
 				CatalystProjectileModel.LAYER_LOCATION,

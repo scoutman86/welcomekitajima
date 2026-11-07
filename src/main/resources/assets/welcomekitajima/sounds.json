@@ -6,5 +6,19 @@
       "welcomekitajima:item/catalyst_shoot_1",
       "welcomekitajima:item/catalyst_shoot_2"
     ]
+  },
+    "block.note_block.labyrinth_guitar": {
+    "category": "player",
+    "subtitle": "subtitles.welcomekitajima.catalyst_shoot",
+    "sounds": [
+      "welcomekitajima:note/labyrinth_guitar"
+    ]
+  },
+    "item.shotgun.shoot": {
+    "category": "player",
+    "subtitle": "subtitles.welcomekitajima.catalyst_shoot",
+    "sounds": [
+      "welcomekitajima:item/shotgun_shoot"
+    ]
   }
 }

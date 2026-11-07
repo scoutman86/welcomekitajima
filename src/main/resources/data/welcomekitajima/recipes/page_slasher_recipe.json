@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "welcomekitajima:peridot_cluster"
+  },
+  "base": {
+    "item": "minecraft:raw_iron"
+  },
+  "result": {
+    "item": "welcomekitajima:page_slasher"
+  },
+  "template": {
+    "item": "welcomekitajima:island_claymore_billet"
+  }
+}

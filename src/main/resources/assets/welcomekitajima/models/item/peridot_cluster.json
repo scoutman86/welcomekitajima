@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "welcomekitajima:item/standalone_cout"
+    "layer0": "welcomekitajima:item/peridot_cluster"
   }
 }

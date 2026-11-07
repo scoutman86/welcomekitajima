@@ -53,7 +53,7 @@ public class CatalystProjectileRenderer extends EntityRenderer<CatalystProjectil
                 vertexConsumer,
                 packedLight,
                 OverlayTexture.NO_OVERLAY,
-                1.0F, 1.0F, 1.0F, 1.0F // RGBA color tinting (White with 100% opacity)
+                1.0F, 1.0F, 1.0F, 1.0F
         );
 
         poseStack.popPose();

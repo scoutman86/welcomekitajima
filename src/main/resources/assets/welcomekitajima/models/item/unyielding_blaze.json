@@ -1,0 +1,18 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "welcomekitajima:item/catalyst/shotgun"
+  },
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [-45, 90, 0],
+      "translation": [0, 1, -1],
+      "scale": [1, 1, 1]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-45, -90, 0],
+      "translation": [0, 1, -1],
+      "scale": [1, 1, 1]
+    }
+  }
+}

@@ -39,7 +39,6 @@ public class MiyashitaLocalSpecialty extends Item {
     public static void register() {
         for (LocalSpecialties entry : LOCAL_SPECIALTIES) {
             if (entry.isBlock && entry.block != null) {
-                // heavy assumptions are being made here
                 Registry.register(BuiltInRegistries.BLOCK, new ResourceLocation(WelcomeKitajima.MODID, entry.specialtyName), entry.block);
             }
 

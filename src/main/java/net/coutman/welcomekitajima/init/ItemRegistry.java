@@ -60,6 +60,7 @@ public class ItemRegistry {
 	public static Item STRIPPED_FUYUKI_LOG;
 	public static Item STRIPPED_FUYUKI_WOOD;
 	// miyashita sakura
+	public static Item MIYASHITA_SAKURA_SAPLING;
 	public static Item MIYASHITA_SAKURA_WOOD;
 	public static Item MIYASHITA_SAKURA_LOG;
 	public static Item MIYASHITA_SAKURA_PLANKS;
@@ -140,6 +141,7 @@ public class ItemRegistry {
 
 		KitajimaLocalSpecialty.register();
 		MiyashitaLocalSpecialty.register();
+		HanasatoLocalSpecialty.register();
 
 		TransformEssence.register();
 
@@ -191,6 +193,7 @@ public class ItemRegistry {
 		FUYUKI_BUTTON = register("fuyuki_button", new BlockItem(BlockRegistry.FUYUKI_BUTTON, new Item.Properties()));
 
 		// miyashita_sakura
+		MIYASHITA_SAKURA_SAPLING = register("miyashita_sakura_sapling", new BlockItem(BlockRegistry.MIYASHITA_SAKURA_SAPLING, new Item.Properties()));
 		MIYASHITA_SAKURA_LOG = register("miyashita_sakura_log", new BlockItem(BlockRegistry.MIYASHITA_SAKURA_LOG, new Item.Properties()));
 		MIYASHITA_SAKURA_WOOD = register("miyashita_sakura_wood", new BlockItem(BlockRegistry.MIYASHITA_SAKURA_WOOD, new Item.Properties()));
 		STRIPPED_MIYASHITA_SAKURA_LOG = register("stripped_miyashita_sakura_log", new BlockItem(BlockRegistry.STRIPPED_MIYASHITA_SAKURA_LOG, new Item.Properties()));

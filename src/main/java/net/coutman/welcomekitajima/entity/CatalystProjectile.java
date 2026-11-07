@@ -8,6 +8,7 @@ import io.github.xrickastley.sevenelements.interfaces.InfusableProjectile;
 import io.github.xrickastley.sevenelements.component.ElementalInfusionComponent;
 
 import net.coutman.welcomekitajima.WelcomeKitajima;
+import net.coutman.welcomekitajima.enchantment.FanfareEnchantment;
 import net.coutman.welcomekitajima.init.EntityRegistry;
 
 import net.minecraft.core.particles.DustParticleOptions;
@@ -31,6 +32,7 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
@@ -149,14 +151,24 @@ public class CatalystProjectile extends Projectile implements InfusableProjectil
         Entity owner = this.getOwner();
 
         if (!this.level().isClientSide && target instanceof LivingEntity livingTarget && owner instanceof Player betterOwner) {
+            ItemStack catalystOrigin = getItemStack();
+            int fanfareLevel = 0;
+            if (catalystOrigin != null && !catalystOrigin.isEmpty()) {
+                fanfareLevel = EnchantmentHelper.getItemEnchantmentLevel(FanfareEnchantment.FANFARE, catalystOrigin);
+            }
+
+            float baseDMG = 3.0F;
+            float dmgBonus = 1.5F;
+            float dmg = baseDMG + (fanfareLevel * dmgBonus);
+
             var baseDamageSource = damageSources().playerAttack(betterOwner);
 
             var infusedDamageSource = this.sevenelements$attemptInfusion(baseDamageSource, target);
 
             if (infusedDamageSource.isPresent()) {
-                livingTarget.hurt(infusedDamageSource.get(), 3.0F);
+                livingTarget.hurt(infusedDamageSource.get(), dmg);
             } else {
-                livingTarget.hurt(baseDamageSource, 3.0F);
+                livingTarget.hurt(baseDamageSource, dmg);
             }
 
             this.discard();

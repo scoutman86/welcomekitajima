@@ -8,11 +8,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 
+import net.coutman.welcomekitajima.init.TreeRegistry.*;
+
 import net.coutman.welcomekitajima.block.*;
 import net.coutman.welcomekitajima.block.fuyuki.*;
 import net.coutman.welcomekitajima.block.miyashita_sakura.*;
 import net.coutman.welcomekitajima.block.ashwood.*;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 
 public class BlockRegistry {
 	public static Block EMPTY_SEKAI_STONE;
@@ -49,6 +53,7 @@ public class BlockRegistry {
 	public static Block STRIPPED_FUYUKI_LOG;
 	public static Block STRIPPED_FUYUKI_WOOD;
 	// miyashita sakura
+	public static Block MIYASHITA_SAKURA_SAPLING;
 	public static Block MIYASHITA_SAKURA_WOOD;
 	public static Block MIYASHITA_SAKURA_LOG;
 	public static Block MIYASHITA_SAKURA_PLANKS;
@@ -132,6 +137,7 @@ public class BlockRegistry {
 		STRIPPED_FUYUKI_WOOD = register("stripped_fuyuki_wood", new FuyukiStrippedWoodBlock());
 		FuyukiSignBlock.register();
 		// Miyashita Sakura Blocks
+		MIYASHITA_SAKURA_SAPLING = register("miyashita_sakura_sapling", Saplings.MIYASHITA_SAKURA_SAPLING);
 		MIYASHITA_SAKURA_WOOD = register("miyashita_sakura_wood", new MiyashitaSakuraWoodBlock());
 		MIYASHITA_SAKURA_LOG = register("miyashita_sakura_log", new MiyashitaSakuraLogBlock());
 		MIYASHITA_SAKURA_PLANKS = register("miyashita_sakura_planks", new MiyashitaSakuraPlanksBlock());

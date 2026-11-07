@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 public class SoundRegistry {
 	public static final SoundEvent CATALYST_SHOOT = SoundEvent.createVariableRangeEvent(new ResourceLocation(WelcomeKitajima.MODID, "item.catalyst.shoot"));
 	public static final SoundEvent LABYRINTH_GUITAR = SoundEvent.createVariableRangeEvent(new ResourceLocation(WelcomeKitajima.MODID, "block.note_block.labyrinth_guitar"));
+	public static final SoundEvent SHOTGUN_SHOOT = SoundEvent.createVariableRangeEvent(new ResourceLocation(WelcomeKitajima.MODID, "item.shotgun.shoot"));
 
 	public static void load() {
 		Registry.register(
@@ -22,6 +23,11 @@ public class SoundRegistry {
 				BuiltInRegistries.SOUND_EVENT,
 				new ResourceLocation(WelcomeKitajima.MODID, "block.note_block.labyrinth_guitar"),
 				LABYRINTH_GUITAR
+		);
+		Registry.register(
+				BuiltInRegistries.SOUND_EVENT,
+				new ResourceLocation(WelcomeKitajima.MODID, "item.shotgun.shoot"),
+				SHOTGUN_SHOOT
 		);
 	}
 }

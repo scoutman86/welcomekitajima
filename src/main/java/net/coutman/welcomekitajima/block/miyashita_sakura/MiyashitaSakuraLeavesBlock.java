@@ -11,16 +11,10 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
-import net.minecraft.world.level.storage.loot.LootParams;
-
-import java.util.Collections;
-import java.util.List;
 
 public class MiyashitaSakuraLeavesBlock extends LeavesBlock {
 	public static Properties PROPERTIES = Properties.of()
@@ -40,14 +34,6 @@ public class MiyashitaSakuraLeavesBlock extends LeavesBlock {
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 1;
-	}
-
-	@Override
-	public List<ItemStack> getDrops(BlockState state, LootParams.Builder builder) {
-		List<ItemStack> dropsOriginal = super.getDrops(state, builder);
-		if (!dropsOriginal.isEmpty())
-			return dropsOriginal;
-		return Collections.singletonList(new ItemStack(this, 1));
 	}
 
 	@Environment(EnvType.CLIENT)
